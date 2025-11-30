@@ -340,7 +340,11 @@ ul {
     display: flex;
     gap: 0;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 10px;
+}
+
+.home-value-input-group:last-of-type {
+    margin-bottom: 0;
 }
 
 .home-value-input-group input {
@@ -354,6 +358,11 @@ ul {
     color: var(--color-white);
     outline: none;
     transition: all var(--transition-normal);
+}
+
+.home-value-input-group input:only-child,
+.home-value-input-group input:last-of-type {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .home-value-input-group input::placeholder {

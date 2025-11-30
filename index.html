@@ -38,13 +38,16 @@
                 <p class="hero-tagline-top"><span>WEALTH</span><span>LIVING</span><span>INVESTMENT</span><span>REAL ESTATE</span></p>
                 <p class="hero-phone">415-910-3958</p>
                 <p class="hero-subtitle">YOUR TRUSTED REAL ESTATE PROFESSIONAL</p>
-                <p class="hero-tagline">Helping you find your dream home</p>
                 <form class="home-value-form" name="home-value" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="home-value">
                     <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
                     <label class="home-value-label">How much is my house worth?</label>
                     <div class="home-value-input-group">
-                        <input type="text" name="address" placeholder="Enter your address" required>
+                        <input type="text" name="address" placeholder="Enter your address">
+                    </div>
+                    <div class="home-value-input-group">
+                        <input type="tel" name="phone" placeholder="Enter your phone" required>
+                        <input type="email" name="email" placeholder="Enter your email">
                         <button type="submit" class="btn btn-primary">SUBMIT</button>
                     </div>
                 </form>
