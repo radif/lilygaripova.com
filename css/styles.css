@@ -320,6 +320,56 @@ ul {
     animation: fadeInUp 1s ease 0.6s backwards;
 }
 
+/* Home Value Form */
+.home-value-form {
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.5s backwards;
+}
+
+.home-value-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.home-value-input-group {
+    display: flex;
+    gap: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.home-value-input-group input {
+    flex: 1;
+    padding: 15px 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    outline: none;
+    transition: all var(--transition-normal);
+}
+
+.home-value-input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.home-value-input-group input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.home-value-input-group .btn {
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1048,6 +1098,19 @@ ul {
 
     .hero-box {
         padding: 40px 30px;
+    }
+
+    .home-value-input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-value-input-group input {
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .home-value-input-group .btn {
+        width: 100%;
     }
 
     .about-image::before {

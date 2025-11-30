@@ -132,6 +132,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Home value form submission handler for Netlify
+    const homeValueForm = document.querySelector('.home-value-form');
+    if (homeValueForm) {
+        homeValueForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const formData = new FormData(form);
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Thank you! Lily will contact you with your home valuation soon.');
+                    form.reset();
+                } else {
+                    alert('There was a problem submitting your request. Please try again.');
+                }
+            })
+            .catch(function(error) {
+                alert('There was a problem submitting your request. Please try again.');
+            });
+        });
+    }
+
     // Animate elements on scroll
     const observerOptions = {
         threshold: 0.1,

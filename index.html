@@ -39,6 +39,15 @@
                 <p class="hero-phone">415-910-3958</p>
                 <p class="hero-subtitle">YOUR TRUSTED REAL ESTATE PROFESSIONAL</p>
                 <p class="hero-tagline">Helping you find your dream home</p>
+                <form class="home-value-form" name="home-value" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="home-value">
+                    <p class="hidden" style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+                    <label class="home-value-label">How much is my house worth?</label>
+                    <div class="home-value-input-group">
+                        <input type="text" name="address" placeholder="Enter your address" required>
+                        <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                </form>
                 <a href="#contact" class="btn btn-primary">GET IN TOUCH</a>
             </div>
         </div>
