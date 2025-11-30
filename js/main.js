@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(function(response) {
                 if (response.ok) {
-                    alert('Thank you for your message! Lily will get back to you soon.');
+                    alert('Thank you for your message! Lily will get back to you soon.\n\nYou can also reach Lily directly at 415-910-3958');
                     form.reset();
                 } else {
                     alert('There was a problem submitting your message. Please try again.');
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(function(response) {
                 if (response.ok) {
-                    alert('Thank you! Lily will contact you with your home valuation soon.');
+                    alert('Thank you! Lily will contact you with your home valuation soon.\n\nYou can also reach Lily directly at 415-910-3958');
                     form.reset();
                 } else {
                     alert('There was a problem submitting your request. Please try again.');
