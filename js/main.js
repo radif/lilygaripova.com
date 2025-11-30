@@ -104,20 +104,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission handler
+    // Form submission handler for Netlify
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
+            const form = this;
+            const formData = new FormData(form);
 
-            // Here you would typically send the data to a server
-            // For now, show a success message
-            alert('Thank you for your message! Lily will get back to you soon.');
-            this.reset();
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Thank you for your message! Lily will get back to you soon.');
+                    form.reset();
+                } else {
+                    alert('There was a problem submitting your message. Please try again.');
+                }
+            })
+            .catch(function(error) {
+                alert('There was a problem submitting your message. Please try again.');
+            });
         });
     }
 
