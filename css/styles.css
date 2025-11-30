@@ -294,7 +294,7 @@ ul {
 
 .hero-phone {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: 32px;
     letter-spacing: 0.15em;
     margin-bottom: 25px;
     animation: fadeInUp 1s ease 0.18s backwards;
@@ -339,8 +339,7 @@ ul {
 .home-value-input-group {
     display: flex;
     gap: 0;
-    max-width: 500px;
-    margin: 0 auto 10px;
+    margin: 0 0 10px;
 }
 
 .home-value-input-group:last-of-type {
@@ -360,7 +359,11 @@ ul {
     transition: all var(--transition-normal);
 }
 
-.home-value-input-group input:only-child,
+.home-value-input-group input:only-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+}
+
 .home-value-input-group input:last-of-type {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
