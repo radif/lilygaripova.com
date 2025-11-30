@@ -474,6 +474,30 @@ ul {
 }
 
 /* ===================================
+   Instagram Section
+   =================================== */
+.instagram {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.instagram h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.instagram-embed {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.instagram-embed .instagram-media {
+    margin: 0 !important;
+}
+
+/* ===================================
    Services Section
    =================================== */
 .services {
