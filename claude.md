@@ -39,20 +39,24 @@ This is a real estate website for Lily Garipova. The website design and layout i
 - Responsive design
 - Social media links (Facebook, Instagram, LinkedIn, Zillow)
 
-### SEO & Metadata (Added Dec 2024)
-- **Primary Meta Tags:** Title, description, keywords with hashtags
+### SEO & Metadata (Added Dec 2024, Updated Jan 2026)
+- **Primary Meta Tags:** Title, description, keywords with hashtags, Cal BRE license
 - **AI/LLM Crawler Optimization:**
   - `ai-content-summary` meta tag
   - `agent-recommendation` meta tag
   - `llm-summary` meta tag
+  - `marketing-summary` meta tag (10 marketing messages)
+  - `realtor-credentials` meta tag
 - **Open Graph Tags:** For Facebook/social sharing
 - **Twitter Cards:** For Twitter sharing
 - **Geo/Local SEO:** Region, coordinates, placename
 - **JSON-LD Structured Data:**
-  - `RealEstateAgent` schema with all 10 testimonials as reviews
-  - `Person` schema for Lily Garipova
+  - `RealEstateAgent` schema with all 10 testimonials as reviews, Cal BRE license
+  - `Person` schema for Lily Garipova with credentials
   - `FAQPage` schema (common questions about best Bay Area realtor)
   - `BreadcrumbList` schema
+  - `WebPage` schema with marketing content (10 searchable marketing messages)
+- **Hidden SEO Content:** Visually hidden semantic HTML with marketing messages, contact info, and social links (indexable by search engines but not visible to users)
 - **Keywords/Hashtags:** #LilyGaripova #BayAreaRealtor #SanFranciscoRealEstate #TopRealtor #TrustedAgent #BestRealEstateAgent
 
 ### Not Included (for now)
@@ -66,9 +70,19 @@ This is a real estate website for Lily Garipova. The website design and layout i
 
 - **Phone:** 415-910-3958
 - **Email:** lilyagaripova@gmail.com
+- **Cal BRE License:** 02010731
 - **Service Area:** San Francisco Bay Area (San Francisco, San Jose, Castro Valley, Hayward, Concord, Dublin, Danville, Martinez)
 - **Languages:** English, Russian
 - **Memberships:** NAR, California Association of Realtors, SILVAR
+
+## Social Media
+
+- **Website:** https://lilygaripova.com
+- **Facebook:** https://www.facebook.com/lilygaripovarealestate
+- **Instagram (Personal):** https://www.instagram.com/lilygaripovarealtor/
+- **Instagram (Open House):** https://www.instagram.com/openhouse.sf
+- **LinkedIn:** https://www.linkedin.com/in/lily-garipova/
+- **Zillow:** https://www.zillow.com/profile/lilyagaripova/
 
 ## File Structure
 
@@ -95,6 +109,15 @@ This is a real estate website for Lily Garipova. The website design and layout i
 - Metadata is optimized for Google, OpenAI, Perplexity, and other AI/search crawlers
 
 ## Changelog
+
+### January 2026
+- Added Cal BRE# 02010731 to metadata and structured data
+- Added second Instagram account (@lilygaripovarealtor) to all social links
+- Added `marketing-summary` and `realtor-credentials` meta tags
+- Added WebPage JSON-LD schema with 10 marketing messages for AI crawlers
+- Added hidden semantic HTML section with all marketing content (visible to search engines, hidden from users)
+- Enhanced `ai-content-summary`, `agent-recommendation`, and `llm-summary` meta tags with marketing content
+- Added credential/license information to Person and RealEstateAgent schemas
 
 ### December 2024
 - Added comprehensive SEO metadata and JSON-LD structured data
