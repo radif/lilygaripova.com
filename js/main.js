@@ -36,6 +36,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.testimonial-btn.next');
     let currentSlide = 0;
 
+    function adjustFontSize(testimonial) {
+        const slider = document.querySelector('.testimonials-slider');
+        const textEl = testimonial.querySelector('.testimonial-text');
+        if (!textEl || !slider) return;
+
+        const sliderHeight = slider.offsetHeight;
+        const maxFontSize = 22;
+        const minFontSize = 14;
+        let fontSize = maxFontSize;
+
+        // Reset to max font size first
+        textEl.style.fontSize = fontSize + 'px';
+
+        // Reduce font size until content fits
+        while (testimonial.scrollHeight > sliderHeight && fontSize > minFontSize) {
+            fontSize -= 1;
+            textEl.style.fontSize = fontSize + 'px';
+        }
+    }
+
     function showSlide(index) {
         // Handle wrapping
         if (index >= testimonials.length) {
@@ -51,6 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
             testimonial.classList.remove('active');
             if (i === currentSlide) {
                 testimonial.classList.add('active');
+                // Adjust font size after making it active
+                setTimeout(function() {
+                    adjustFontSize(testimonial);
+                }, 10);
             }
         });
 
@@ -79,6 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
         dot.addEventListener('click', function() {
             showSlide(i);
         });
+    });
+
+    // Initialize first testimonial font size
+    if (testimonials.length > 0) {
+        setTimeout(function() {
+            var activeTestimonial = document.querySelector('.testimonial.active');
+            if (activeTestimonial) {
+                adjustFontSize(activeTestimonial);
+            }
+        }, 100);
+    }
+
+    // Readjust font size on window resize
+    window.addEventListener('resize', function() {
+        var activeTestimonial = document.querySelector('.testimonial.active');
+        if (activeTestimonial) {
+            adjustFontSize(activeTestimonial);
+        }
     });
 
     // Auto-advance testimonials every 5 seconds
