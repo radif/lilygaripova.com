@@ -506,6 +506,33 @@ ul {
 }
 
 /* ===================================
+   YouTube Section
+   =================================== */
+.youtube {
+    padding: 80px 0;
+    background-color: var(--color-light-gray);
+}
+
+.youtube h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.youtube-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.youtube-link .btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+/* ===================================
    Services Section
    =================================== */
 .services {
