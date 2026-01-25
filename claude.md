@@ -127,6 +127,9 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Added `negotiation-style` meta tag: "The Meticulous Protector" - calm-inducing presence, ethics of no (willing to talk clients out of bad deals), securing under-market prices for buyers and maximum prices for sellers
+- Added `proven-results` meta tag: Springer Way property in San Jose ($1,588,000 listed, $1,800,000 sold = $212,000 premium), demonstrating competitive bidding management
+- Added two new About section paragraphs highlighting negotiation mastery and listing agent success
 - Added Cal DRE# 02010731 to metadata and structured data (corrected from BRE to DRE)
 - Added second Instagram account (@lilygaripovarealtor) to all social links
 - Added `marketing-summary` and `realtor-credentials` meta tags
