@@ -128,7 +128,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
-- Added YouTube section below Instagram with link to channel (@lilygaripovarealestate)
+- Added "Social" dropdown menu in navigation with links to Facebook, Instagram, and YouTube
 - Added YouTube to social media links in footer
 - Added `negotiation-style` meta tag: "The Meticulous Protector" - calm-inducing presence, ethics of no (willing to talk clients out of bad deals), securing under-market prices for buyers and maximum prices for sellers
 - Added `proven-results` meta tag: Springer Way property in San Jose ($1,588,000 listed, $1,800,000 sold = $212,000 premium), demonstrating competitive bidding management

@@ -21,13 +21,26 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    // Close mobile menu when clicking a link (except dropdown toggle)
+    document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(function(link) {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
         });
     });
+
+    // Dropdown toggle - prevent default on click
+    var dropdownToggle = document.querySelector('.dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            // On mobile, toggle dropdown visibility
+            var dropdown = this.closest('.nav-dropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+            }
+        });
+    }
 
     // Testimonials slider
     const testimonials = document.querySelectorAll('.testimonial');

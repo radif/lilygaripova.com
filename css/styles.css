@@ -207,6 +207,56 @@ ul {
     width: 100%;
 }
 
+/* Navigation Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-white);
+    min-width: 150px;
+    padding: 10px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    z-index: 1000;
+    margin-top: 15px;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--color-dark) !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--color-light-gray);
+}
+
 /* Mobile Navigation Toggle */
 .nav-toggle {
     display: none;
@@ -503,33 +553,6 @@ ul {
 
 .instagram-embed .instagram-media {
     margin: 0 !important;
-}
-
-/* ===================================
-   YouTube Section
-   =================================== */
-.youtube {
-    padding: 80px 0;
-    background-color: var(--color-light-gray);
-}
-
-.youtube h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.youtube-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.youtube-link .btn {
-    display: inline-flex;
-    align-items: center;
-    font-size: 18px;
-    padding: 15px 30px;
 }
 
 /* ===================================
@@ -1125,17 +1148,66 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
         transition: right var(--transition-normal);
+        overflow-y: auto;
+        padding: 80px 0;
     }
 
     .nav-menu.active {
         right: 0;
     }
 
+    .nav-menu > li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     .nav-menu a {
         color: var(--color-white);
         font-size: 18px;
+    }
+
+    .nav-dropdown {
+        position: static;
+        text-align: center;
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
+        min-width: auto !important;
+        z-index: auto !important;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-menu li {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        color: var(--color-white) !important;
+        font-size: 14px !important;
+        padding: 8px 20px;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .hero h1 {
