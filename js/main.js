@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation scroll effect
     const navbar = document.querySelector('.navbar');
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const navMobile = document.querySelector('.nav-mobile');
 
     // Add scrolled class to navbar on scroll
     window.addEventListener('scroll', function() {
@@ -17,28 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile navigation toggle
     navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+        navMobile.classList.toggle('active');
         navToggle.classList.toggle('active');
     });
 
-    // Close mobile menu when clicking a link (except dropdown toggle)
-    document.querySelectorAll('.nav-menu a:not(.dropdown-toggle)').forEach(function(link) {
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-mobile a').forEach(function(link) {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
+            navMobile.classList.remove('active');
             navToggle.classList.remove('active');
         });
     });
 
-    // Dropdown toggle - prevent default on click
+    // Dropdown toggle - prevent default on click (desktop only)
     var dropdownToggle = document.querySelector('.dropdown-toggle');
     if (dropdownToggle) {
         dropdownToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            // On mobile, toggle dropdown visibility
-            var dropdown = this.closest('.nav-dropdown');
-            if (dropdown) {
-                dropdown.classList.toggle('open');
-            }
         });
     }
 
