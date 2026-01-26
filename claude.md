@@ -128,6 +128,12 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Improved testimonial dots pagination for mobile:
+  - Dots container now has max-width of 120px on mobile (shows ~6 dots at a time)
+  - Added `.testimonial-dots-inner` wrapper for smooth scroll/transform animation
+  - Active dot automatically centers in the viewport when navigating
+  - Uses CSS transform with 0.3s ease transition for smooth sliding effect
+  - JavaScript `centerActiveDot()` function calculates offset and clamps to valid range
 - Added 12 new testimonials from Facebook reviews (total now 22 testimonials from Zillow and Facebook)
 - Added "Social" dropdown menu in desktop navigation with links to Facebook, Instagram, and YouTube
 - Added separate flat mobile menu with full-screen overlay:

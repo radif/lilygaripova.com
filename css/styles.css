@@ -789,7 +789,13 @@ ul {
 
 .testimonial-dots {
     display: flex;
+    overflow: hidden;
+}
+
+.testimonial-dots-inner {
+    display: flex;
     gap: 10px;
+    transition: transform 0.3s ease;
 }
 
 .dot {
@@ -1260,6 +1266,10 @@ ul {
 
     .testimonials-slider {
         height: 400px;
+    }
+
+    .testimonial-dots {
+        max-width: 120px;
     }
 
     .contact-form-wrapper {

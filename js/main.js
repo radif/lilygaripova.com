@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Testimonials slider
     const testimonials = document.querySelectorAll('.testimonial');
     const dots = document.querySelectorAll('.dot');
+    const dotsInner = document.querySelector('.testimonial-dots-inner');
+    const dotsContainer = document.querySelector('.testimonial-dots');
     const prevBtn = document.querySelector('.testimonial-btn.prev');
     const nextBtn = document.querySelector('.testimonial-btn.next');
     let currentSlide = 0;
@@ -93,6 +95,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 dot.classList.add('active');
             }
         });
+
+        // Center active dot on mobile
+        centerActiveDot();
+    }
+
+    function centerActiveDot() {
+        if (!dotsInner || !dotsContainer || dots.length === 0) return;
+
+        var containerWidth = dotsContainer.offsetWidth;
+        var dotWidth = 10; // dot width
+        var dotGap = 10; // gap between dots
+        var dotTotalWidth = dotWidth + dotGap;
+
+        // Calculate offset to center the current dot
+        var offset = (currentSlide * dotTotalWidth) - (containerWidth / 2) + (dotWidth / 2);
+
+        // Clamp offset to valid range
+        var maxOffset = (dots.length * dotTotalWidth) - dotGap - containerWidth;
+        offset = Math.max(0, Math.min(offset, maxOffset));
+
+        dotsInner.style.transform = 'translateX(' + (-offset) + 'px)';
     }
 
     // Navigation buttons
@@ -113,22 +136,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize first testimonial font size
+    // Initialize first testimonial font size and dots position
     if (testimonials.length > 0) {
         setTimeout(function() {
             var activeTestimonial = document.querySelector('.testimonial.active');
             if (activeTestimonial) {
                 adjustFontSize(activeTestimonial);
             }
+            centerActiveDot();
         }, 100);
     }
 
-    // Readjust font size on window resize
+    // Readjust font size and dots on window resize
     window.addEventListener('resize', function() {
         var activeTestimonial = document.querySelector('.testimonial.active');
         if (activeTestimonial) {
             adjustFontSize(activeTestimonial);
         }
+        centerActiveDot();
     });
 
     // Auto-advance testimonials every 5 seconds
