@@ -1217,6 +1217,10 @@ ul {
         content: "";
     }
 
+    .hero-content {
+        padding-top: 160px;
+    }
+
     .hero-box {
         padding: 40px 30px;
     }
