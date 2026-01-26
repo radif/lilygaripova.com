@@ -1140,6 +1140,7 @@ ul {
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
+        z-index: 10;
     }
 
     .nav-desktop {
@@ -1149,10 +1150,10 @@ ul {
     .nav-mobile {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
         right: 0;
-        height: calc(100vh - 60px);
+        height: 100vh;
         background-color: var(--color-dark);
         flex-direction: column;
         justify-content: center;
@@ -1160,10 +1161,15 @@ ul {
         gap: 25px;
         list-style: none;
         margin: 0;
+        z-index: 5;
     }
 
     .nav-mobile.active {
         display: flex;
+    }
+
+    .nav-toggle.active span {
+        background-color: var(--color-white);
     }
 
     .nav-mobile li {
