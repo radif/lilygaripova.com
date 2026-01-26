@@ -130,7 +130,12 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ### January 2026
 - Added 12 new testimonials from Facebook reviews (total now 22 testimonials from Zillow and Facebook)
 - Added "Social" dropdown menu in desktop navigation with links to Facebook, Instagram, and YouTube
-- Added separate flat mobile menu (no dropdown hierarchy) to avoid scrolling issues - mobile menu shows all items at the same level: HOME, ABOUT, TESTIMONIALS, RECENT SALES, CONTACT, INSTAGRAM, FACEBOOK, YOUTUBE
+- Added separate flat mobile menu with full-screen overlay:
+  - Mobile menu is a direct child of the navbar (not inside nav-container) to inherit fixed positioning
+  - Uses `position: absolute` relative to the fixed navbar, with `top: 0` and `height: 100vh` for full-screen coverage
+  - Flat hierarchy (no dropdowns) - shows all items: HOME, ABOUT, TESTIMONIALS, RECENT SALES, CONTACT, INSTAGRAM, FACEBOOK, YOUTUBE
+  - Hamburger toggle has higher z-index (10) than menu (5) to stay clickable
+  - Toggle icon stays white when menu is active for visibility against dark background
 - YouTube links include `?sub_confirmation=1` parameter to prompt subscription
 - Added YouTube to social media links in footer
 - Added `negotiation-style` meta tag: "The Meticulous Protector" - calm-inducing presence, ethics of no (willing to talk clients out of bad deals), securing under-market prices for buyers and maximum prices for sellers
