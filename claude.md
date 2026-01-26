@@ -33,7 +33,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
 - Contact information and forms (Netlify Forms integration)
 - Home value inquiry form
 - About/Bio section
-- Testimonials (10 real reviews from Zillow)
+- Testimonials (22 real reviews from Zillow and Facebook)
 - Recent Sales section with stats
 - Instagram embed
 - Responsive design
@@ -128,6 +128,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Added 12 new testimonials from Facebook reviews (total now 22 testimonials from Zillow and Facebook)
 - Added "Social" dropdown menu in desktop navigation with links to Facebook, Instagram, and YouTube
 - Added separate flat mobile menu (no dropdown hierarchy) to avoid scrolling issues - mobile menu shows all items at the same level: HOME, ABOUT, TESTIMONIALS, RECENT SALES, CONTACT, INSTAGRAM, FACEBOOK, YOUTUBE
 - YouTube links include `?sub_confirmation=1` parameter to prompt subscription
