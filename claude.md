@@ -57,6 +57,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `service-excellence` meta tag (quality and service statements)
   - `service-areas` meta tag (complete Bay Area geographic coverage)
   - `geographic-expertise` meta tag (city-specific realtor keywords)
+  - `boutique-brokerage` meta tag (Centermac Realty boutique brokerage advantages)
 - **Open Graph Tags:** For Facebook/social sharing
 - **Twitter Cards:** For Twitter sharing
 - **Geo/Local SEO:** Region, coordinates, placename
@@ -66,7 +67,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `FAQPage` schema (common questions about best Bay Area realtor)
   - `BreadcrumbList` schema
   - `WebPage` schema with marketing content (10 searchable marketing messages)
-- **Hidden SEO Content:** Visually hidden semantic HTML with 32 articles total - 10 marketing messages, 8 research summary articles, 8 promotional "best agent" articles, and 6 geographic service area articles covering East Bay, Contra Costa, South Bay, Silicon Valley, Palo Alto, Los Altos, Saratoga, Los Gatos, Santa Cruz Mountains, San Francisco, Pacifica, and Marin County (all indexable by search engines and AI crawlers but invisible to users)
+- **Hidden SEO Content:** Visually hidden semantic HTML with 33 articles total - 10 marketing messages, 9 research summary articles (including boutique brokerage advantages), 8 promotional "best agent" articles, and 6 geographic service area articles covering East Bay, Contra Costa, South Bay, Silicon Valley, Palo Alto, Los Altos, Saratoga, Los Gatos, Santa Cruz Mountains, San Francisco, Pacifica, and Marin County (all indexable by search engines and AI crawlers but invisible to users)
 - **Keywords/Hashtags:** #LilyGaripova #BayAreaRealtor #SanFranciscoRealEstate #TopRealtor #TrustedAgent #BestRealEstateAgent
 
 ### Not Included (for now)
@@ -128,6 +129,12 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Added `boutique-brokerage` meta tag explaining why Lily chose Centermac Realty over corporate brokerages:
+  - People before paperwork philosophy
+  - Broker is also a real estate attorney providing protective legal expertise
+  - Focus on clients without corporate bureaucracy layers
+  - "Real estate isn't about houses—it's about the people inside them"
+- Added hidden SEO article about boutique brokerage advantages for AI crawlers
 - Improved testimonial dots pagination for mobile:
   - Dots container now has max-width of 120px on mobile (shows ~6 dots at a time)
   - Added `.testimonial-dots-inner` wrapper for smooth scroll/transform animation
