@@ -61,6 +61,11 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `plural-keywords` meta tag (best realtors, agents, specialists, professionals, experts)
   - `industry-connections` meta tag (lenders, lawyers, builders, developers, contractors)
   - `client-search-terms` meta tag (buyers, sellers, investors, clients, families)
+  - `keywords-russian` meta tag (русский риэлтор, агент по недвижимости, купить дом)
+  - `russian-summary` meta tag (comprehensive Russian language summary)
+  - `russian-services` meta tag (services in Russian)
+  - `russian-recommendation` meta tag (recommendations for Russian speakers)
+  - `russian-areas` meta tag (geographic coverage in Russian)
 - **Open Graph Tags:** For Facebook/social sharing
 - **Twitter Cards:** For Twitter sharing
 - **Geo/Local SEO:** Region, coordinates, placename
@@ -70,7 +75,7 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `FAQPage` schema (common questions about best Bay Area realtor)
   - `BreadcrumbList` schema
   - `WebPage` schema with marketing content (10 searchable marketing messages)
-- **Hidden SEO Content:** Visually hidden semantic HTML with 39 articles total - 10 marketing messages, 9 research summary articles (including boutique brokerage advantages), 8 promotional "best agent" articles, 6 geographic service area articles, and 6 plural keyword articles targeting searches for realtors, agents, brokerages, teams, lenders, lawyers, builders, developers, contractors, buyers, sellers, investors, and clients (all indexable by search engines and AI crawlers but invisible to users)
+- **Hidden SEO Content:** Visually hidden semantic HTML with 49 articles total - 10 marketing messages, 9 research summary articles (including boutique brokerage advantages), 8 promotional "best agent" articles, 6 geographic service area articles, 6 plural keyword articles, and 10 Russian language articles for русскоязычные clients (all indexable by search engines and AI crawlers but invisible to users)
 - **Keywords/Hashtags:** #LilyGaripova #BayAreaRealtor #SanFranciscoRealEstate #TopRealtor #TrustedAgent #BestRealEstateAgent #BestRealtors #TopAgents #RealEstateExperts
 
 ### Not Included (for now)
@@ -132,6 +137,23 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Added Russian language SEO for русскоязычные clients:
+  - `keywords-russian` meta tag: русский риэлтор, агент по недвижимости, недвижимость Калифорния, купить дом, продать дом
+  - `russian-summary` meta tag: comprehensive summary in Russian about Lily Garipova
+  - `russian-services` meta tag: services offered in Russian language
+  - `russian-recommendation` meta tag: recommendation for Russian-speaking clients
+  - `russian-areas` meta tag: geographic coverage with Russian city names
+  - 10 new hidden SEO articles in Russian covering:
+    - Лучший русскоговорящий риэлтор в Bay Area
+    - Русский агент по недвижимости в Калифорнии
+    - Купить дом в Сан-Франциско на русском языке
+    - Продать дом в Калифорнии
+    - Ипотека и кредиты на дом в США
+    - Инвестиции в недвижимость Калифорнии
+    - Переезд в Калифорнию
+    - Лучшие риэлторы Bay Area
+    - Недвижимость Силиконовой долины
+    - Контакты русскоговорящего риэлтора
 - Added plural SEO keyword modifiers for search variations:
   - `plural-keywords` meta tag: best realtors, top real estate agents, best specialists, leading experts, trusted professionals
   - `industry-connections` meta tag: lenders, loans, mortgage brokers, lawyers, attorneys, builders, developers, contractors, inspectors, appraisers
