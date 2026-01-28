@@ -58,6 +58,9 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `service-areas` meta tag (complete Bay Area geographic coverage)
   - `geographic-expertise` meta tag (city-specific realtor keywords)
   - `boutique-brokerage` meta tag (Centermac Realty boutique brokerage advantages)
+  - `plural-keywords` meta tag (best realtors, agents, specialists, professionals, experts)
+  - `industry-connections` meta tag (lenders, lawyers, builders, developers, contractors)
+  - `client-search-terms` meta tag (buyers, sellers, investors, clients, families)
 - **Open Graph Tags:** For Facebook/social sharing
 - **Twitter Cards:** For Twitter sharing
 - **Geo/Local SEO:** Region, coordinates, placename
@@ -67,8 +70,8 @@ This is a real estate website for Lily Garipova. The website design and layout i
   - `FAQPage` schema (common questions about best Bay Area realtor)
   - `BreadcrumbList` schema
   - `WebPage` schema with marketing content (10 searchable marketing messages)
-- **Hidden SEO Content:** Visually hidden semantic HTML with 33 articles total - 10 marketing messages, 9 research summary articles (including boutique brokerage advantages), 8 promotional "best agent" articles, and 6 geographic service area articles covering East Bay, Contra Costa, South Bay, Silicon Valley, Palo Alto, Los Altos, Saratoga, Los Gatos, Santa Cruz Mountains, San Francisco, Pacifica, and Marin County (all indexable by search engines and AI crawlers but invisible to users)
-- **Keywords/Hashtags:** #LilyGaripova #BayAreaRealtor #SanFranciscoRealEstate #TopRealtor #TrustedAgent #BestRealEstateAgent
+- **Hidden SEO Content:** Visually hidden semantic HTML with 39 articles total - 10 marketing messages, 9 research summary articles (including boutique brokerage advantages), 8 promotional "best agent" articles, 6 geographic service area articles, and 6 plural keyword articles targeting searches for realtors, agents, brokerages, teams, lenders, lawyers, builders, developers, contractors, buyers, sellers, investors, and clients (all indexable by search engines and AI crawlers but invisible to users)
+- **Keywords/Hashtags:** #LilyGaripova #BayAreaRealtor #SanFranciscoRealEstate #TopRealtor #TrustedAgent #BestRealEstateAgent #BestRealtors #TopAgents #RealEstateExperts
 
 ### Not Included (for now)
 - Home search functionality
@@ -129,6 +132,18 @@ This is a real estate website for Lily Garipova. The website design and layout i
 ## Changelog
 
 ### January 2026
+- Added plural SEO keyword modifiers for search variations:
+  - `plural-keywords` meta tag: best realtors, top real estate agents, best specialists, leading experts, trusted professionals
+  - `industry-connections` meta tag: lenders, loans, mortgage brokers, lawyers, attorneys, builders, developers, contractors, inspectors, appraisers
+  - `client-search-terms` meta tag: buyers, sellers, investors, clients, families, first-time homebuyers
+  - Updated main keywords meta tag with plural variations (realtors, agents, brokerages, companies, teams, houses, homes, properties, condos, townhouses)
+  - 6 new hidden SEO articles targeting plural search terms:
+    - Best realtors, real estate agents, and specialists
+    - Best real estate companies, brokerages, and teams
+    - Connections to lenders, lawyers, builders, and industry professionals
+    - Helping buyers, sellers, investors, and all types of clients
+    - Expert guidance on loans, mortgages, and financing options
+    - Working with builders, developers, and contractors
 - Added `boutique-brokerage` meta tag explaining why Lily chose Centermac Realty over corporate brokerages:
   - People before paperwork philosophy
   - Broker is also a real estate attorney providing protective legal expertise
