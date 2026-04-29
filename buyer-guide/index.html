@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бесплатный гайд по покупке недвижимости в Калифорнии — Лилия Гарипова</title>
+    <meta name="description" content="Получите бесплатный гайд (24 страницы) по покупке недвижимости в Калифорнии в 2026 году. Пошаговый процесс, программы помощи первым покупателям, чеклист документов.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://lilygaripova.com/buyer-guide/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Бесплатный гайд по покупке недвижимости в Калифорнии">
+    <meta property="og:description" content="24-страничный гайд с пошаговым процессом покупки недвижимости в 2026 году. От первого знакомства с рынком до закрытия сделки.">
+    <meta property="og:image" content="https://lilygaripova.com/buyer-guide/cover.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-black: #000000;
+            --color-dark: #1a1a1a;
+            --color-accent: #7c7a61;
+            --color-accent-green: #b8d278;
+            --color-cream: #ebe7e0;
+            --color-light-gray: #f5f5f5;
+            --color-white: #ffffff;
+            --color-gray: #888888;
+            --font-heading: 'Tenor Sans', serif;
+            --font-body: 'Questrial', sans-serif;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-cream);
+        }
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Top contact bar */
+        .top-bar {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+        .top-bar a:hover { color: var(--color-accent-green); }
+        .top-bar .contact-row { display: flex; gap: 24px; align-items: center; }
+        .top-bar .brand { font-family: var(--font-heading); letter-spacing: 0.15em; }
+        @media (max-width: 600px) {
+            .top-bar { flex-direction: column; gap: 8px; padding: 10px 16px; font-size: 13px; }
+            .top-bar .contact-row { gap: 16px; }
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 24px 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .hero-headline {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .hero-headline .eyebrow {
+            font-family: var(--font-body);
+            font-size: 13px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 16px;
+        }
+        .hero-headline h1 {
+            font-size: 44px;
+            text-transform: uppercase;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+        .hero-headline .accent-block {
+            display: inline-block;
+            background-color: var(--color-accent-green);
+            color: var(--color-dark);
+            padding: 8px 24px;
+            font-family: var(--font-heading);
+            font-size: 22px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .hero-headline .subtitle {
+            margin-top: 28px;
+            font-size: 18px;
+            color: var(--color-gray);
+            letter-spacing: 0.05em;
+        }
+        @media (max-width: 700px) {
+            .hero { padding: 48px 20px 40px; }
+            .hero-headline h1 { font-size: 30px; }
+            .hero-headline .accent-block { font-size: 17px; padding: 6px 18px; }
+            .hero-headline .subtitle { font-size: 16px; }
+        }
+
+        /* Two-column: cover + form */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 56px;
+        }
+        @media (max-width: 800px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 36px; }
+        }
+
+        .cover-wrap { text-align: center; }
+        .cover-wrap img {
+            max-width: 360px;
+            margin: 0 auto;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 2px;
+        }
+        @media (max-width: 800px) {
+            .cover-wrap img { max-width: 260px; }
+        }
+
+        /* Form card */
+        .form-card {
+            background-color: var(--color-white);
+            padding: 40px 36px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-radius: 2px;
+        }
+        .form-card h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+        .form-card .form-intro {
+            font-size: 14px;
+            color: var(--color-gray);
+            margin-bottom: 28px;
+        }
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 6px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            font-family: var(--font-body);
+            font-size: 15px;
+            background-color: var(--color-light-gray);
+            border: 1px solid transparent;
+            border-radius: 2px;
+            color: var(--color-dark);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background-color: var(--color-white);
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-top: 8px;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover { background-color: var(--color-accent); }
+        .privacy-note {
+            margin-top: 16px;
+            font-size: 12px;
+            color: var(--color-gray);
+            text-align: center;
+            line-height: 1.5;
+        }
+        @media (max-width: 800px) {
+            .form-card { padding: 32px 24px; }
+        }
+
+        /* What's inside */
+        .what-inside {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px 60px;
+        }
+        .what-inside h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 12px;
+            color: var(--color-dark);
+        }
+        .what-inside-divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: 0 auto 48px;
+        }
+        .bullet-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .bullet-list li {
+            background-color: var(--color-white);
+            padding: 32px 28px;
+            border-top: 3px solid var(--color-accent-green);
+        }
+        .bullet-list .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--color-accent-green);
+            color: var(--color-dark);
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .bullet-list h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.08em;
+        }
+        .bullet-list p {
+            font-size: 15px;
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+        @media (max-width: 800px) {
+            .what-inside { padding: 60px 20px 40px; }
+            .bullet-list { grid-template-columns: 1fr; gap: 20px; }
+            .bullet-list li { padding: 24px 20px; }
+        }
+
+        /* Trust strip */
+        .trust-strip {
+            background-color: var(--color-white);
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .trust-strip-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+        }
+        .trust-strip img {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .trust-strip .meta { text-align: left; }
+        .trust-strip .name {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-dark);
+            margin-bottom: 4px;
+        }
+        .trust-strip .role {
+            font-size: 14px;
+            color: var(--color-gray);
+            margin-bottom: 6px;
+        }
+        .trust-strip .credentials {
+            font-size: 13px;
+            color: var(--color-accent);
+            letter-spacing: 0.05em;
+        }
+        @media (max-width: 600px) {
+            .trust-strip-inner { flex-direction: column; gap: 16px; }
+            .trust-strip .meta { text-align: center; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+        }
+        footer a:hover { color: var(--color-accent-green); }
+        footer .footer-row {
+            margin-bottom: 8px;
+        }
+        footer .copyright {
+            color: var(--color-gray);
+            font-size: 12px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top contact bar -->
+<div class="top-bar">
+    <a href="https://lilygaripova.com/" class="brand">LILY GARIPOVA</a>
+    <div class="contact-row">
+        <a href="tel:+14159103958">📞 (415) 910-3958</a>
+        <a href="mailto:lilyagaripova@gmail.com">✉ lilyagaripova@gmail.com</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-headline">
+        <div class="eyebrow">Бесплатно · 24 страницы · PDF</div>
+        <h1>Гайд по покупке<br>недвижимости в Калифорнии</h1>
+        <span class="accent-block">в 2026 году</span>
+        <p class="subtitle">Пошаговый процесс, программы помощи первым покупателям и чеклист документов — всё, что нужно знать перед сделкой.</p>
+    </div>
+
+    <div class="hero-grid">
+        <div class="cover-wrap">
+            <img src="cover.jpg" alt="Гайд по покупке недвижимости в Калифорнии — обложка">
+        </div>
+
+        <div class="form-card">
+            <h2>Получить гайд</h2>
+            <p class="form-intro">Введите свои данные — гайд будет доступен сразу после отправки формы.</p>
+
+            <form name="buyer-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/buyer-guide/thanks">
+                <input type="hidden" name="form-name" value="buyer-guide">
+                <p style="display:none;"><label>Не заполняйте: <input name="bot-field"></label></p>
+
+                <div class="form-group">
+                    <label for="bg-name">Имя и фамилия *</label>
+                    <input id="bg-name" type="text" name="full_name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="bg-email">E-mail *</label>
+                    <input id="bg-email" type="email" name="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="bg-phone">Телефон *</label>
+                    <input id="bg-phone" type="tel" name="phone" required autocomplete="tel">
+                </div>
+
+                <button type="submit" class="submit-btn">Получить гайд</button>
+                <p class="privacy-note">Ваши данные не передаются третьим лицам. Мы пишем вам только по делу — не чаще пары раз в месяц.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- What's inside -->
+<section class="what-inside">
+    <h2>Что внутри</h2>
+    <div class="what-inside-divider"></div>
+    <ul class="bullet-list">
+        <li>
+            <span class="num">1</span>
+            <h3>Процесс покупки от А до Я</h3>
+            <p>Как устроен рынок Bay Area, что такое asking price, contingencies, escrow и appraisal — простыми словами, без жаргона.</p>
+        </li>
+        <li>
+            <span class="num">2</span>
+            <h3>Программы помощи покупателям</h3>
+            <p>CalHFA, Dream For All, Forgivable Equity Builder Loan — кому подходят, как подавать заявку и сколько можно получить.</p>
+        </li>
+        <li>
+            <span class="num">3</span>
+            <h3>Чеклист документов и ошибок</h3>
+            <p>Что готовить заранее, на что смотреть в инспекции и какие ошибки чаще всего стоят покупателям десятки тысяч долларов.</p>
+        </li>
+    </ul>
+</section>
+
+<!-- Trust strip -->
+<section class="trust-strip">
+    <div class="trust-strip-inner">
+        <img src="../photos/Lily.jpg" alt="Лилия Гарипова">
+        <div class="meta">
+            <div class="name">Лилия Гарипова</div>
+            <div class="role">Риэлтор · Centermac Realty</div>
+            <div class="credentials">Cal DRE# 02010731 · 11+ лет практики · 99 сделок · $105M+</div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-row">
+        <a href="tel:+14159103958">(415) 910-3958</a> &nbsp;·&nbsp;
+        <a href="mailto:lilyagaripova@gmail.com">lilyagaripova@gmail.com</a>
+    </div>
+    <div class="footer-row">
+        <a href="https://lilygaripova.com/">lilygaripova.com</a>
+    </div>
+    <div class="copyright">© 2026 Lily Garipova Real Estate. Cal DRE# 02010731. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо! Скачайте ваш гайд — Лилия Гарипова</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-dark: #1a1a1a;
+            --color-accent: #7c7a61;
+            --color-accent-green: #b8d278;
+            --color-cream: #ebe7e0;
+            --color-white: #ffffff;
+            --color-gray: #888888;
+            --font-heading: 'Tenor Sans', serif;
+            --font-body: 'Questrial', sans-serif;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-cream);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+        }
+        a { text-decoration: none; color: inherit; }
+
+        /* Top bar */
+        .top-bar {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+        .top-bar a:hover { color: var(--color-accent-green); }
+        .top-bar .contact-row { display: flex; gap: 24px; }
+        .top-bar .brand { font-family: var(--font-heading); letter-spacing: 0.15em; }
+        @media (max-width: 600px) {
+            .top-bar { flex-direction: column; gap: 8px; padding: 10px 16px; font-size: 13px; }
+            .top-bar .contact-row { gap: 16px; }
+        }
+
+        /* Main */
+        .main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 24px;
+        }
+        .card {
+            max-width: 560px;
+            width: 100%;
+            background-color: var(--color-white);
+            padding: 56px 48px;
+            text-align: center;
+            box-shadow: 0 16px 50px rgba(0,0,0,0.10);
+            border-top: 4px solid var(--color-accent-green);
+        }
+        .checkmark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: var(--color-accent-green);
+            margin-bottom: 24px;
+            font-size: 36px;
+            color: var(--color-dark);
+            font-weight: bold;
+        }
+        .card h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: var(--color-dark);
+        }
+        .card p.lead {
+            font-size: 17px;
+            color: var(--color-dark);
+            margin-bottom: 32px;
+        }
+        .card p.detail {
+            font-size: 15px;
+            color: var(--color-gray);
+            margin-top: 24px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 18px 48px;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover { background-color: var(--color-accent); color: var(--color-white); }
+
+        .secondary-link {
+            display: block;
+            margin-top: 28px;
+            font-size: 14px;
+            color: var(--color-accent);
+            letter-spacing: 0.05em;
+        }
+        .secondary-link:hover { color: var(--color-dark); }
+
+        @media (max-width: 600px) {
+            .card { padding: 44px 28px; }
+            .card h1 { font-size: 24px; }
+            .download-btn { padding: 16px 32px; font-size: 13px; letter-spacing: 0.15em; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 28px 24px;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+        }
+        footer a:hover { color: var(--color-accent-green); }
+        footer .copyright {
+            color: var(--color-gray);
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="https://lilygaripova.com/" class="brand">LILY GARIPOVA</a>
+    <div class="contact-row">
+        <a href="tel:+14159103958">📞 (415) 910-3958</a>
+        <a href="mailto:lilyagaripova@gmail.com">✉ lilyagaripova@gmail.com</a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="card">
+        <div class="checkmark">✓</div>
+        <h1>Готово!</h1>
+        <p class="lead">Спасибо! Кликните на кнопку, чтобы скачать ваш гайд.</p>
+
+        <a href="https://lilygaripova.com/assets/guide.pdf" class="download-btn" download="lily-garipova-buyer-guide-2026.pdf">
+            Скачать гайд (PDF)
+        </a>
+
+        <p class="detail">
+            Если у вас появятся вопросы — пишите или звоните напрямую. Я отвечаю лично, в тот же день.
+        </p>
+
+        <a href="https://lilygaripova.com/" class="secondary-link">← Вернуться на главную</a>
+    </div>
+</div>
+
+<footer>
+    <div>
+        <a href="tel:+14159103958">(415) 910-3958</a> &nbsp;·&nbsp;
+        <a href="mailto:lilyagaripova@gmail.com">lilyagaripova@gmail.com</a>
+    </div>
+    <div class="copyright">© 2026 Lily Garipova Real Estate. Cal DRE# 02010731.</div>
+</footer>
+
+</body>
+</html>
