@@ -114,17 +114,95 @@ This is a real estate website for Lily Garipova. The website design and layout i
 
 ```
 /
-├── index.html          # Main website (single page)
+├── index.html              # Main website (single page)
 ├── css/
-│   └── styles.css      # All styles
+│   └── styles.css          # All styles for the main site
 ├── js/
-│   └── main.js         # JavaScript interactions
+│   └── main.js             # JavaScript interactions for the main site
 ├── photos/
-│   ├── Lily.jpg        # Profile photo
-│   ├── logo.png        # Logo
-│   └── ...             # Other images
-└── CLAUDE.md           # This file
+│   ├── Lily.jpg            # Profile photo (also used by landers)
+│   ├── logo.png            # Logo
+│   └── ...                 # Other images
+├── assets/
+│   └── guide.pdf           # 24-page Russian buyer guide (PDF lead magnet)
+├── buyer-guide/            # "Buyer Guide" lead magnet (PDF download)
+│   └── ru/                 #   Russian variant
+│       ├── index.html
+│       ├── thanks.html
+│       └── cover.jpg       #   PDF cover thumbnail (page 1)
+├── off-market/             # "Off-market listings" lead magnet (subscription)
+│   ├── ru/                 #   Russian variant
+│   │   ├── index.html
+│   │   └── thanks.html
+│   └── en/                 #   English variant
+│       ├── index.html
+│       └── thanks.html
+└── CLAUDE.md               # This file
 ```
+
+## Lead-Magnet Landers
+
+Funnel-style landing pages for capturing leads. Each lander is a self-contained two-file unit (`index.html` + `thanks.html`) with embedded CSS — they do **not** depend on `css/styles.css` so they can evolve independently from the main site.
+
+### Path convention
+
+Language-aware structure: `<asset-name>/<lang>/`. Each language variant gets its own folder so URLs stay clean and simple per locale, and Netlify form buckets stay separated by language.
+
+| Lander | URL | Audience |
+|---|---|---|
+| Buyer Guide RU | `https://lilygaripova.com/buyer-guide/ru/` | Russian-speaking buyers (24-page PDF download) |
+| Off-Market RU | `https://lilygaripova.com/off-market/ru/` | Russian-speaking buyers (subscription) |
+| Off-Market EN | `https://lilygaripova.com/off-market/en/` | English-speaking buyers (subscription) |
+
+### Netlify form naming
+
+Each language variant uses a language-suffixed form name so submissions land in separate buckets in the Netlify dashboard:
+
+- `buyer-guide-ru`
+- `off-market-ru`
+- `off-market-en`
+
+The form's `name` attribute, hidden `<input name="form-name" value="...">`, and the URL slug in `action="..."` must all match. Form submissions appear in **Netlify dashboard → Forms → \<form-name\>** after the first real submission.
+
+### Path rules inside a `<asset>/<lang>/` directory
+
+When inside a lander page (e.g., `off-market/en/index.html`), all relative paths assume two-level depth:
+
+- Photos from the main site: `../../photos/Lily.jpg`
+- Sibling-language link: `../<other-lang>/`
+- Form action: absolute path including the language segment, no `.html` extension and no trailing slash (e.g., `/off-market/en/thanks` — Netlify pretty-URLs resolve this to `thanks.html`).
+- Canonical URL: full URL including the language segment, with trailing slash (e.g., `https://lilygaripova.com/off-market/en/`).
+
+### Adding a new language variant
+
+1. Create `<asset>/<new-lang>/` directory.
+2. Copy `index.html` and `thanks.html` from an existing language variant.
+3. Translate all visible copy.
+4. Update these per-file fields: `<html lang="...">`, `<title>`, `<meta name="description">`, `<link rel="canonical">`, `<meta property="og:title">`, `<meta property="og:description">`, `<meta property="og:locale">`, the `<form name>` + `<input name="form-name" value>` + `action` (use language suffix, e.g., `<asset>-<lang>`), and all visible UI strings.
+5. Verify `../../photos/Lily.jpg` resolves (must remain at two-level depth from page).
+
+### Adding a new lead-magnet asset
+
+1. Create `<new-asset>/<lang>/` directory at the repo root.
+2. Use an existing lander as a template — they're all self-contained.
+3. Pick a unique form name like `<new-asset>-<lang>` (e.g., `seller-kit-ru`, `home-valuation-en`).
+4. Decide on the deliverable mechanic:
+   - **PDF download** (like buyer-guide): thanks page has a download button linking to a PDF in `assets/`.
+   - **Subscription / list signup** (like off-market): thanks page is confirmation-only, no download.
+   - **Tool / report** (e.g., home-valuation): thanks page may show a result, embed a calculator, or just confirm a follow-up call.
+5. Add an entry to the brain at `raw/marketing/lead-magnets/<asset>.md` documenting the funnel.
+
+### Why landers don't share `css/styles.css`
+
+The main site's stylesheet is large (it carries the entire homepage's testimonial carousel, navigation, hero, recent-sales grid, etc.). Landers only need a small slice of styling, and pulling in the full file would slow them down and couple their fate to main-site refactors. Each lander embeds ~3–5 KB of scoped CSS using the same CSS variable tokens (`--color-dark`, `--color-accent`, `--color-accent-green`, `--color-cream`, etc.) so they remain visually consistent without a hard dependency.
+
+### `noindex` policy
+
+All lander pages set `<meta name="robots" content="noindex, nofollow">` because:
+
+- Funnel pages should not compete with the main site for branded queries.
+- Landers carry minimal content compared to the main site and would dilute the brand's organic search profile.
+- AI crawlers should be answering with the canonical site, not the funnel.
 
 ## Development Notes
 
@@ -135,6 +213,12 @@ This is a real estate website for Lily Garipova. The website design and layout i
 - Metadata is optimized for Google, OpenAI, Perplexity, and other AI/search crawlers
 
 ## Changelog
+
+### April 2026
+- Added language-aware lead-magnet lander structure: `<asset>/<lang>/`.
+- Added Buyer Guide funnel at `/buyer-guide/ru/` — Russian-language landing for the 24-page PDF buyer guide hosted at `/assets/guide.pdf`. Captures `full_name`, `email`, `phone`. Form name `buyer-guide-ru`. Thanks page delivers the PDF via on-page download button. Modeled on Kate Fomina's Russian moving-checklist funnel but built on Netlify Forms instead of GoHighLevel.
+- Added Off-Market Listings funnel at `/off-market/ru/` and `/off-market/en/` — Russian and English variants. Subscription-style (no PDF deliverable); thanks page is confirmation-only. Captures `full_name`, `email`, `phone` (required) plus `price_range` and `preferred_areas` (optional). Form names `off-market-ru` and `off-market-en`. Visual anchor is a stack of three "sneak preview" listing cards with CSS-blurred addresses and Off-Market / Coming Soon / Pocket badges.
+- All landers are self-contained (embedded CSS, no `styles.css` dependency) and set `noindex, nofollow` so they don't dilute the main site's organic search profile.
 
 ### January 2026
 - Added Russian language SEO for русскоязычные clients:
