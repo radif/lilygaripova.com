@@ -1,0 +1,54 @@
+# Lily Garipova Real Estate — robots.txt
+# Allow indexing of canonical brand pages; block lead-magnet landers (also marked noindex in HTML).
+
+User-agent: *
+Allow: /
+
+# Lead-magnet landers and thanks pages — keep out of search results
+Disallow: /faq-pdf/
+Disallow: /off-market/
+Disallow: /ru/faq-pdf/
+Disallow: /ru/off-market/
+Disallow: /ru/buyer-guide/
+
+# Asset deliverables (PDFs reachable only via thanks pages)
+Disallow: /assets/
+
+# AI-engine-friendly explicit allow for crawlers that respect it
+User-agent: GPTBot
+Allow: /
+Disallow: /faq-pdf/
+Disallow: /off-market/
+Disallow: /ru/faq-pdf/
+Disallow: /ru/off-market/
+Disallow: /ru/buyer-guide/
+Disallow: /assets/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /faq-pdf/
+Disallow: /off-market/
+Disallow: /ru/faq-pdf/
+Disallow: /ru/off-market/
+Disallow: /ru/buyer-guide/
+Disallow: /assets/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /faq-pdf/
+Disallow: /off-market/
+Disallow: /ru/faq-pdf/
+Disallow: /ru/off-market/
+Disallow: /ru/buyer-guide/
+Disallow: /assets/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /faq-pdf/
+Disallow: /off-market/
+Disallow: /ru/faq-pdf/
+Disallow: /ru/off-market/
+Disallow: /ru/buyer-guide/
+Disallow: /assets/
+
+Sitemap: https://lilygaripova.com/sitemap.xml
