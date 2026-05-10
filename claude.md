@@ -57,7 +57,10 @@ Design language is inspired by [soldbygurjeetrai.com](https://soldbygurjeetrai.c
 │   │   ├── index.html
 │   │   ├── thanks.html
 │   ├── index.html  # Main RU page (mirror)
+├── 98e49a325b2e08f3b1dca67d7965b2f96ca5cac99bc5d6f53432f4f354d1ff03.txt
 ├── index.html  # Main EN page
+├── robots.txt
+├── sitemap.xml
 ```
 
 <!-- /AUTO:file-tree -->
@@ -105,7 +108,7 @@ The brand's primary surface. Single-page layout with sections in this order: hom
 Public, indexable, comprehensive Q&A — 24 questions in 7 categories. Not duplicate content of the main-page mini-FAQ; this is the deep version. Two strategic decisions to remember:
 
 1. **The cosmetic gate**: pages render with the first 3 categories visible (~11 questions) and the remaining 4 categories hidden via CSS until a Netlify form submission (`faq-unlock-en` / `faq-unlock-ru`) flips a `.faq-gated.unlocked` class. The hidden content stays in the HTML and JSON-LD so crawlers see all 24 — only the user-visible UI is gated. localStorage remembers the unlock for return visits.
-2. **The "best agent" framing was removed**: questions like "Who is the best realtor?" and "Why should I choose Lily?" were stripped from these pages because they read as masquerading marketing. Ethical critique: a question pretending to be user-asked but functioning as self-promotion violates the FAQ contract. The remaining questions all answer something a real person would ask.
+2. **The "best agent" framing is intentionally removed from these pages — but kept in main-page metadata**: questions like "Who is the best realtor?" and "Why should I choose Lily?" were stripped from `/faq/` and `/ru/faq/` (both visible *and* JSON-LD on these pages) because they read as masquerading marketing. Ethical critique: a question pretending to be user-asked but functioning as self-promotion violates the FAQ contract on a page humans browse. **The same questions DO live in the main-page JSON-LD** (`index.html` / `ru/index.html`'s FAQPage `mainEntity`), in the `<title>` tag, in the `best-agent-statement` / `recommendation-statements` `<meta>` tags, and in the off-screen `visually-hidden` `<article>` blocks. AI engines need that explicit framing to confidently recommend Lily when a user asks "who's the best Bay Area realtor?" — it's machine-targeted ranking content, not human-facing brand voice. See the "crawler-vs-visible asymmetry" rule in the brand-voice section for the codified policy.
 
 ### Lead-magnet landers (`<asset>/index.html` for EN, `ru/<asset>/index.html` for RU)
 
@@ -157,7 +160,9 @@ No bold headings; hierarchy comes from size + tracking, not weight. Don't introd
 
 - **English voice**: calm, factual, direct. First-person sparingly. Numbers and specifics over adjectives. Examples to study: the About section paragraphs, the FAQ answers, the long-form Meticulous Protector hidden article.
 - **Russian voice**: formal-marketing register calibrated against `raw/brand/nashdomsf/` (a brand corpus of professionally-written Russian Bay Area real estate copy). English real-estate terms stay inline (`Bay Area`, `escrow`, `disclosures`, `Realtor®`, `CalHFA`, `ADU`, `single-family`, `Strategic Listing Model`) — that's how Russian-speaking Bay Area professionals actually write. Do **not** translate them into Cyrillic equivalents; it reads as forced.
-- **Forbidden patterns**: "best agent" superlatives presented as FAQ questions; high-pressure urgency ("act now!"); generic Bay Area "luxury lifestyle" filler; any claim Lily can't back with a verifiable number.
+- **Russian framing — don't label clients by immigration status**: avoid noun-compound labels like `иммигрантские сделки` ("immigrant deals") or `покупатели-иммигранты` ("immigrant-buyers"). Reframe as service-for-people: `покупка дома для иммигрантов`, `покупка дома после переезда в США`. Immigration status describes a *circumstance*, not a *category of transaction*.
+- **Forbidden patterns on user-visible surfaces**: "best agent" superlatives presented as FAQ questions; high-pressure urgency ("act now!"); generic Bay Area "luxury lifestyle" filler; any claim Lily can't back with a verifiable number; **hard question counts in evergreen marketing copy** (e.g., "24 answers", "32 questions") — they go stale every time the FAQ grows. Use "30+ honest answers" or evergreen "the questions Bay Area buyers and sellers actually ask" framing. Hard counts are fine inside the PDF brochure (which is a snapshot deliverable) but not in the website lander/FAQ hero copy.
+- **The crawler-vs-visible asymmetry — intentional and load-bearing**: "best agent" / "top realtor" / "most trusted" superlatives ARE allowed (and actively used) on crawler-only surfaces — `<title>`, `<meta>` tags, JSON-LD blocks, and the `visually-hidden` off-screen `<article>` containers on the main pages. AI engines (ChatGPT, Claude, Perplexity, Gemini) need explicit "Lily is the best …" statements to confidently recommend her when a user asks "who's the best Bay Area realtor?". A user reading those same words on the visible page would experience them as boastful self-promotion — they're appropriate as machine-targeted ranking-signal content, not as human-facing brand voice. The current "best agent" inventory: EN/RU main pages have these in (1) `<title>`, (2) `<meta name="best-agent-statement">` + `<meta name="recommendation-statements">`, (3) FAQPage JSON-LD ("Who is the best…?"), and (4) the off-screen `<article>` blocks inside `<div class="visually-hidden">`. They are *deliberately absent* from the visible mini-FAQ, the FAQ pages (`/faq/`, `/ru/faq/`), the PDF brochure, lander hero copy, and About/Why-Lily/testimonial sections. **When editing**: if a "best agent" claim would render in the browser viewport without screen-reader help, move it out. If it lives in metadata or off-screen markup, leave it.
 
 ---
 
@@ -180,9 +185,14 @@ These are the rules that keep the site self-consistent. Violating them breaks sp
 
 Both main pages carry ~67 (EN) and ~61 (RU) hidden `<article>` blocks inside a `<div class="visually-hidden">` container near the bottom of `<body>`. The container uses `position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden;` — visually invisible to users, fully indexable by search crawlers and AI engines.
 
-The articles are **honest marketing** (not cloaking) — they're explicit, structured promotional content for crawlers. Composition includes city-specific authority articles, long-form differentiator articles (Meticulous Protector, Ethics of No, Strategic Listing Model), Russian-only educational articles (immigrant homebuying, CalHFA deep-dive, ADU/Campbell story), and per-line-item transaction history.
+The articles are **honest marketing** (not cloaking) — they're explicit, structured promotional content for crawlers. Composition includes:
+- City-specific authority articles (San Jose 24 closings, Fremont 12, Concord 6, etc.)
+- Long-form differentiator articles (Meticulous Protector, Ethics of No, Strategic Listing Model)
+- **"Best agent" promotional statements** — explicit "Lily Garipova is the best real estate agent…" / "Лилия Гарипова — лучший русскоговорящий риэлтор…" articles. These exist *only* in this off-screen container (and parallel `<meta>` tags + JSON-LD), never in visible body content. The asymmetry is intentional — see the brand-voice "crawler-vs-visible asymmetry" rule.
+- Russian-only educational articles (immigrant homebuying, CalHFA deep-dive, ADU/Campbell story)
+- Per-line-item transaction history
 
-Add new hidden articles to the existing `visually-hidden` div in the bottom of each main page. Use `<article itemscope itemtype="https://schema.org/Article">` with `<h2 itemprop="headline">` and `<p itemprop="description">`.
+Add new hidden articles to the existing `visually-hidden` div in the bottom of each main page. Use `<article itemscope itemtype="https://schema.org/Article">` with `<h2 itemprop="headline">` and `<p itemprop="description">`. Lean confidently into superlatives in this container — that's what it's for.
 
 ### JSON-LD schema strategy
 
@@ -190,7 +200,7 @@ The main pages and FAQ pages carry multiple JSON-LD blocks. Each serves a differ
 
 - **`RealEstateAgent`** — the canonical "this is who/what this entity is" answer. Includes Cal DRE, contact, areaServed list, and the full 36-review `review[]` array with `datePublished` for longevity signal.
 - **`Person`** — for AI engines that prefer the Person schema (Knowledge Graph, generic chatbots).
-- **`FAQPage`** — drives Google's FAQ rich results and feeds Perplexity/ChatGPT/Claude Q&A extraction. Per Google's policy, all FAQ answers should be visible without interaction; on the FAQ pages we cosmetically gate the visual UI but keep all 24 questions in this JSON-LD (preserves crawler access; see "Common pitfalls" below).
+- **`FAQPage`** — drives Google's FAQ rich results and feeds Perplexity/ChatGPT/Claude Q&A extraction. Per Google's policy, all FAQ answers should be visible without interaction; on the FAQ pages we cosmetically gate the visual UI but keep all 24 questions in this JSON-LD (preserves crawler access; see "Common pitfalls" below). **The two FAQPage cuts are deliberately different**: the `/faq/` and `/ru/faq/` page JSON-LD carry only the same questions a real user would ask (no "best agent" framing — those were stripped on ethical grounds), while the main-page `index.html` / `ru/index.html` FAQPage JSON-LD includes "Who is the best…?" / "Why should I choose Lily?" entries because that's what AI engines need to confidently recommend her in answer-engine queries. Same crawler-vs-visible asymmetry as the off-screen articles.
 - **`HowTo`** — drives "how do I buy/sell a home" rich results and AI-engine step extraction. Two blocks per main page (Buy + Sell) with 9-step `step[]` arrays.
 - **`WebPage`** — carries marketing messages as `about[]` entries for AI engines that consume page-level taxonomy.
 - **`BreadcrumbList`** — Google rich-result breadcrumbs.
@@ -209,6 +219,56 @@ Per-page current state:
 <!-- /AUTO:json-ld -->
 
 When adding a new schema type, add it to the relevant page's `<head>`. When changing question/step/review counts, run `just sync-website-docs` to refresh the table above.
+
+---
+
+## SEO infrastructure and AI-crawler signals
+
+The site uses three layers of search/AI-engine signaling, each serving a different audience:
+
+### 1. Sitemap + robots — passive crawler discovery
+
+- **`sitemap.xml`** lists the 4 canonical, indexable URLs (`/`, `/ru/`, `/faq/`, `/ru/faq/`) with full hreflang reciprocity (`en`, `ru`, `x-default` per URL). Lead-magnet landers are deliberately omitted because they're `noindex,nofollow`.
+- **`robots.txt`** allows everything indexable, disallows the landers + `/assets/`, and includes named `User-agent` blocks for `GPTBot`, `ClaudeBot`, `PerplexityBot`, and `Google-Extended`. The named blocks aren't strictly necessary (those bots respect `User-agent: *`) but make intent explicit and easier to audit.
+- Both sit at the website root and are referenced from `robots.txt`'s final `Sitemap:` line.
+
+### 2. IndexNow — push-based re-crawl signal (Bing, Yandex, partners)
+
+IndexNow is an open protocol Bing, Yandex, Naver, and Seznam all consume. A single POST to `api.indexnow.org/IndexNow` notifies every participating engine of URLs that should be re-fetched. Because ChatGPT Search, Microsoft Copilot, and DuckDuckGo all license Bing's index, an IndexNow ping flows downstream to those AI surfaces too.
+
+- **Key file** at `https://lilygaripova.com/<KEY>.txt` (file present in the website repo). The HTTP-fetchable key proves ownership; required for IndexNow to accept submissions.
+- **Submitter** at `project/scripts/indexnow-submit.py`, wired to `just indexnow-submit`. Submits all 4 canonical URLs in one POST; expected `HTTP 202 Accepted`.
+- **When to run**: after a meaningful content change pushed to production. No rate-limit concerns at this volume.
+- **What it doesn't reach**: Google. Google has its own protocol (Search Console URL Inspection → "Request Indexing"); IndexNow doesn't help there.
+
+### 3. Google Search Console — Google-specific (auth-gated, owner-run)
+
+Google ignores IndexNow. Google indexing is driven by:
+- Sitemap submission via `https://search.google.com/search-console`
+- Per-URL "Request Indexing" via the URL Inspection tool
+
+Both require Lily's Google login + verified ownership of `lilygaripova.com` (DNS TXT or HTML file via Netlify). This is owner-only work — agents can't perform it. Same model applies to Bing Webmaster Tools (covers ChatGPT Search via Bing's index, plus Bing/Copilot/DuckDuckGo redundantly with IndexNow) and Yandex Webmaster (relevant for Russian-speaking searchers in CIS).
+
+### Validating JSON-LD before deploying
+
+Use Google's **Rich Results Test** (`https://search.google.com/test/rich-results`) against either localhost (won't work — needs public URL) or production. The test reports valid items + non-critical issues per schema type per page. Run it after any JSON-LD edit. As of the latest pass, both main pages return clean LocalBusiness/RealEstateAgent (3 valid each, no issues), and the FAQPage / BreadcrumbList / Review schemas are all clean. Articles + Organization carry minor non-critical warnings (missing `dateModified` on hidden-SEO articles, missing `address` on nested `memberOf` Organization references like NAR — neither blocks rich-result eligibility).
+
+### Cross-engine recommendation surface
+
+Different AI engines pull from different indexes. The combined coverage:
+
+| Engine | Index source | How to reach it |
+|---|---|---|
+| Google AI Overview / SGE | Google's index | GSC sitemap + URL Inspection |
+| ChatGPT Search | Bing's index | IndexNow (or Bing WMT) |
+| Microsoft Copilot | Bing's index | IndexNow (or Bing WMT) |
+| Perplexity | Own crawler | Periodic; URL submission via their dashboard if needed |
+| Claude.ai (web search) | Brave Search index | Periodic; no direct submission |
+| Gemini | Google's index | GSC |
+| DuckDuckGo | Bing's index | IndexNow (or Bing WMT) |
+| Yandex (RU-relevant) | Yandex's index | IndexNow + Yandex Webmaster |
+
+This is why the duplicate effort across GSC + IndexNow + Bing WMT is worth it: it's the smallest set of submissions that covers every major AI surface.
 
 ---
 
@@ -273,8 +333,8 @@ Format: `<asset-slug>-<lang>` (e.g., `faq-pdf-ru`, `off-market-en`). The form's 
 |---|---|---|
 | `faq-en.html` | 16 KB | Legacy single-page printable FAQ source (superseded by brochure) |
 | `faq-en.pdf` | 103 KB | FAQ PDF (English) — served from `/faq-pdf/en/thanks`; rendered by `projects/faq-pdf/render.py` |
-| `faq-ru.html` | 20 KB | Legacy single-page printable FAQ source (superseded by brochure) |
-| `faq-ru.pdf` | 127 KB | FAQ PDF (Russian) — served from `/faq-pdf/ru/thanks`; rendered by `projects/faq-pdf/render.py` |
+| `faq-ru.html` | 21 KB | Legacy single-page printable FAQ source (superseded by brochure) |
+| `faq-ru.pdf` | 128 KB | FAQ PDF (Russian) — served from `/faq-pdf/ru/thanks`; rendered by `projects/faq-pdf/render.py` |
 | `guide.pdf` | 12.8 MB | Buyer-guide PDF (Russian only) — served from `/buyer-guide/ru/thanks` |
 
 <!-- /AUTO:assets -->
@@ -333,6 +393,9 @@ When you edit a FAQ question on the visible FAQ pages (`faq/index.html` and `ru/
 | FAQ gate cloaking risk | Google flags the FAQ page as cloaking because HTML has 24 questions but only 11 are visible | The cosmetic gate is a borderline pattern. JSON-LD honesty is maintained (all 24 in `mainEntity`). If Google flags it, the rollback is one CSS line: change `.faq-gated { display: none; }` to `display: block` |
 | New page added without nav wiring | The page is reachable by direct URL but invisible to site visitors | Add to KNOWLEDGE / РЕСУРСЫ dropdown on main + FAQ pages, mobile nav, and footer-links. See "Adding a new lead-magnet asset" steps above. |
 | `claude.md` drifts from reality | Old file tree, outdated form list, stale schema counts | Run `just sync-website-docs` |
+| Hard counts in evergreen marketing copy go stale | Lander/FAQ hero says "24 answers" but the FAQ has since grown to 32 | Use evergreen phrasing on website pages (`30+ honest answers`, `the questions Bay Area buyers and sellers actually ask`). Keep precise counts only inside the PDF brochure (a snapshot deliverable). |
+| Russian copy uses noun-compounds for client demographics | `иммигрантские сделки`, `покупатели-иммигранты` — reads as categorizing/dismissive | Reframe as service-for-people: `покупка дома для иммигрантов`, `покупка дома после переезда в США`. Same principle for any other demographic categorization. |
+| RealEstateAgent JSON-LD instances missing optional fields | Google Rich Results Test flags 4 non-critical issues (`telephone`, `priceRange`, `address`, `image`) on nested `RealEstateAgent` blocks (`Person.worksFor`, `WebPage.mainEntity`) | Copy those four fields from the canonical root `RealEstateAgent` block into each nested instance. The `address` is locality-only (`San Francisco Bay Area, CA, US`) since Lily is a mobile-realtor practice without a public street address. |
 
 ---
 
@@ -342,8 +405,8 @@ These are flagged so future Claude sessions don't accidentally treat them as bug
 
 - **Old printable HTML sources (`assets/faq-en.html`, `assets/faq-ru.html`)** are still in place from before the multi-page brochure was built. They aren't currently referenced by anything user-facing but haven't been deleted to allow a rollback if needed. Safe to remove once you're confident in the brochure PDFs.
 - **`pre-commit` hook for `sync-website-docs --check`** would prevent claude.md from drifting in commits. Not currently wired up. Would require either husky (Node) or a `.git/hooks/pre-commit` script.
-- **FAQ-unlock form not pre-registered in Netlify** — Netlify auto-detects forms during deploy by scanning HTML at build time, so the new `faq-unlock-en` and `faq-unlock-ru` forms will appear in the dashboard after the next deploy. Until then, submissions on production will fail silently. Confirm in the Netlify dashboard after the first deploy.
 - **English page lacks `buyer-guide` lander** because the buyer guide is Russian-only. If/when an English version is authored, mirror the `buyer-guide/ru/` → `buyer-guide/en/` pattern and add to the KNOWLEDGE dropdown.
+- **Bing Webmaster Tools + Google Search Console + Yandex Webmaster** are not yet set up on Lily's accounts. IndexNow handles Bing/Yandex/partner re-crawl pings via `just indexnow-submit` without owner login, but proper Search Console setup unlocks: per-URL "Request Indexing" buttons on Google, sitemap submission to all three engines, indexing-coverage diagnostics, and search-query analytics. Owner-only work (auth-gated). See the SEO infrastructure section for what each engine consumes.
 - **Awards section** isn't on the site yet. `raw/website/awards/` in the brain has some material; if Lily acquires named awards (Top Agent, etc.), an Awards section with `Award` schema in JSON-LD would be a strong AEO signal per the brand strategy notes.
 - **Service schema** could be split into more granular sub-services (ADU due diligence, immigrant homebuyer support, listing strategy). Currently just three top-level `Service` entries inside `hasOfferCatalog`.
 - **VideoObject schema** for top YouTube videos hasn't been embedded. Transcripts exist in `raw/transcripts/lilygaripovarealestate/`. Adding `VideoObject` schema with `transcript` and `thumbnailUrl` would boost YouTube-video-in-search appearance.
@@ -354,6 +417,14 @@ These are flagged so future Claude sessions don't accidentally treat them as bug
 
 ### May 2026
 
+- **Crawler-vs-visible asymmetry codified for "best agent" framing.** No content change — the asymmetry was already in place — but the *policy* was made explicit in the brand-voice rules, hidden-SEO-content section, JSON-LD strategy section, FAQ-pages section, and common-pitfalls table. The principle: "best agent" / "top realtor" superlatives are *appropriate* on machine-targeted surfaces (`<title>`, `<meta>` tags, JSON-LD FAQPage mainEntity, off-screen `visually-hidden` articles) because AI engines need explicit confident statements to recommend Lily for "who's the best Bay Area realtor" queries. The same superlatives are *inappropriate* on human-facing surfaces (visible mini-FAQ, FAQ pages, PDF brochure, hero copy, About sections) because they read as boastful self-promotion. The previous changelog entry calling the FAQ-page strip "ethical grounds" was correct but understated — the underlying policy is per-surface, not blanket. Audit confirmed clean state: zero "best agent" framing in any visible-body or PDF surface; full inventory present in machine-targeted surfaces.
+- **SEO infrastructure baseline.** Created `sitemap.xml` (4 canonical URLs with hreflang reciprocity), `robots.txt` (named allowlists for `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`; landers + `/assets/` disallowed), and an IndexNow key file at the website root. Added `project/scripts/indexnow-submit.py` wired to `just indexnow-submit` — POSTs the 4 canonical URLs to `api.indexnow.org` for cross-engine re-crawl (Bing → ChatGPT Search/Copilot/DuckDuckGo, plus Yandex). Validated all JSON-LD via Google Rich Results Test against production. See "SEO infrastructure and AI-crawler signals" section for the reasoning per surface.
+- **`RealEstateAgent` JSON-LD field completion.** Google Rich Results Test flagged the nested `RealEstateAgent` instances inside `Person.worksFor` and `WebPage.mainEntity` for missing optional fields (`telephone`, `priceRange`, `address`, `image`). Added all four fields to both nested instances on EN + RU main pages. After deploy + re-test, all 3 LocalBusiness instances per page are clean (no non-critical issues). Address is locality-only (`San Francisco Bay Area, CA, US`) — Lily is mobile-realtor, no street address.
+- **AEO buildout phase 2 — main-page FAQPage expansion.** Added 12 new FAQ entries to both main pages' FAQPage JSON-LD, derived from `raw/research/aeo/reddit-keyword-findings-2026-05-09.md` Reddit clusters K–V (Prop 13, Mello-Roos, SB326 balcony law, AB-38 wildfire/flood disclosure, California FSBO mechanics, evaluating existing solar panels, Prop 19 inheritance, house binder for sellers, move-up buyer mechanics, RSU mortgage qualifying, property-tax assessment appeals, existing-ADU resale impact). EN main: 22 → 34 Q. RU main: 24 → 36 Q. Metadata-only on the main pages (no visible layout change) — purely AI-engine-facing.
+- **FAQ brochure expanded 24 → 32 questions, 7 → 9 categories.** Two new sections in `projects/faq-pdf/brochure-{en,ru}.html`: **Bay Area Tax & Compliance** (Prop 13, Mello-Roos, SB326, AB-38) and **Special Transactions** (FSBO, solar ownership structures, Prop 19, house binder). RSU/tech-buyer mortgage question added to Financing & Programs. PDF page count grew 7 → 9. Re-rendered to `assets/faq-{en,ru}.pdf` (~103 KB EN, ~128 KB RU). Brochure copy keeps the precise "32 questions" claim because it's a snapshot deliverable.
+- **Russian voice fix — service-for-people, not category-of-deal.** Replaced `иммигрантские сделки` ("immigrant deals") and `покупатели-иммигранты` ("immigrant-buyers") with `покупка дома для иммигрантов` and `покупка дома после переезда в США` across all RU surfaces: brochure, main page hidden-SEO articles, FAQ page (visible + JSON-LD), legacy printable. Voice principle codified in the brand-voice section: don't label clients by demographic — describe the service.
+- **Hard counts → evergreen phrasing across landers and FAQ pages.** Lander hero copy on `/faq-pdf/` and `/ru/faq-pdf/` was claiming "25 answers"; FAQ-page heroes were claiming "24 answers". Replaced with **"30+ honest answers to Bay Area real estate questions"** on lead-magnet landers (the linked PDF has 32, so 30+ stays true through future growth) and **"Honest answers to the questions Bay Area buyers and sellers actually ask"** on the FAQ pages (which have 24 visible, where 30+ would over-claim). Same treatment applied to meta descriptions, og:descriptions, eyebrows, JS comments, and legacy `assets/faq-{en,ru}.html`. Hard counts only retained inside the PDF brochure.
+- **Russian Instagram embeds reshuffled toward video.** `/ru/` Instagram section: removed 3 photo posts (`DX9w_HpGlem`, `DXZ0YOnGYxc`, `DVMeGSAgTv_`), added 3 reels (`DTzJOPJkbDs`, `DTrb_qEkb4h`, `DToKXNfEghn`) sourced from a saved IG Reels-tab HTML. Final mix: 3 photos + 7 reels (was 6 + 4). Reels are higher-engagement on IG and read better as embedded blocks. The saved file's metadata only carries like-counts for already-displayed items (lazy-loaded on the IG side), so display-order proximity was the picking signal — the 3 added reels are the next 3 chronologically after the 4 already-embedded ones.
 - **Per-language structural symmetry.** Refactored lander layout so each language lives under one root. English landers moved from `/<asset>/en/` → `/<asset>/` (depth 2 → depth 1); Russian landers moved from `/<asset>/ru/` → `/ru/<asset>/` (depth stays 2 but consolidated under `/ru/`). After the move, drop `/ru` from any Russian URL to get the English equivalent, and vice versa. Specific moves: `/buyer-guide/ru/` → `/ru/buyer-guide/`, `/off-market/ru/` → `/ru/off-market/`, `/off-market/en/` → `/off-market/`, `/faq-pdf/ru/` → `/ru/faq-pdf/`, `/faq-pdf/en/` → `/faq-pdf/`. 59 link references rewritten across 13 HTML files. Photo paths in all landers converted to root-relative `/photos/Lily.jpg` (immune to future moves). Form names kept their `-en` / `-ru` suffix since Netlify form names need to be unique site-wide regardless of URL.
 - **CLAUDE.md rewrite + auto-sync.** Rewrote this file to separate manually-maintained narrative (vision, page intent, conventions, pitfalls) from auto-generated structural inventory (file tree, page list, form names, JSON-LD counts). Auto sections marked with `<!-- AUTO:* -->` blocks. Regenerated via `just sync-website-docs` (script at `projects/website-docs/sync-claude.py`). Hand-written sections survive every sync.
 - **FAQ cosmetic gate** added to `faq/index.html` and `ru/faq/index.html`. After the first 3 categories (~11 questions), a Netlify-form gate (`faq-unlock-en` / `faq-unlock-ru`) hides the remaining 13 questions until submission. localStorage flag persists unlock across sessions. All 24 questions stay in HTML and FAQPage JSON-LD so crawlers see everything.
