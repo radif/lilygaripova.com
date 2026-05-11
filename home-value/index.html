@@ -1,19 +1,73 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доступ к off-market объектам в Bay Area — Лилия Гарипова</title>
-    <meta name="description" content="Pocket listings, coming-soon объекты и off-market сделки в Bay Area. Личная подборка под ваши критерии — без массовых рассылок.">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://lilygaripova.com/ru/off-market/">
+    <title>How Much Is Your House Worth? Free Bay Area Home Valuation | Lily Garipova</title>
+    <meta name="description" content="Free home valuation in the San Francisco Bay Area. Lily Garipova prepares a personalized comparative market analysis (CMA) based on 100 closed transactions and $105M+ in volume. Cal DRE #02010731.">
+    <meta name="keywords" content="free home valuation, how much is my house worth, Bay Area home value, comparative market analysis, CMA, what is my home worth, Fremont home value, San Jose home value, Castro Valley home value, Lily Garipova">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://lilygaripova.com/home-value/">
+    <link rel="alternate" hreflang="en" href="https://lilygaripova.com/home-value/">
+    <link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/home-value/">
+    <link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/home-value/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Доступ к off-market объектам в Bay Area">
-    <meta property="og:description" content="Off-market и coming-soon объекты до выхода на открытый рынок.">
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="How Much Is Your House Worth? Free Bay Area Home Valuation">
+    <meta property="og:description" content="A personalized comparative market analysis from Lily Garipova, the Bay Area's trusted real-estate agent. 100 closed transactions, $105M+ in volume, 5-star rated.">
+    <meta property="og:url" content="https://lilygaripova.com/home-value/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Free Home Valuation (Bay Area CMA)",
+      "serviceType": "Comparative Market Analysis",
+      "provider": {
+        "@type": "RealEstateAgent",
+        "name": "Lily Garipova",
+        "telephone": "+1-415-910-3958",
+        "email": "lilyagaripova@gmail.com",
+        "url": "https://lilygaripova.com/",
+        "image": "https://lilygaripova.com/photos/Lily.jpg",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Francisco Bay Area",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Cal DRE",
+          "value": "02010731"
+        }
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Fremont"},
+        {"@type": "City", "name": "San Jose"},
+        {"@type": "City", "name": "Castro Valley"},
+        {"@type": "City", "name": "Union City"},
+        {"@type": "City", "name": "Hayward"},
+        {"@type": "City", "name": "Concord"},
+        {"@type": "City", "name": "Walnut Creek"},
+        {"@type": "City", "name": "San Francisco"},
+        {"@type": "City", "name": "Palo Alto"},
+        {"@type": "City", "name": "Menlo Park"}
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "description": "Free comparative market analysis for Bay Area homeowners"
+      }
+    }
+    </script>
 
     <style>
         :root {
@@ -60,6 +114,7 @@
         .top-bar a:hover { color: var(--color-accent-green); }
         .top-bar .contact-row { display: flex; gap: 24px; align-items: center; }
         .top-bar .brand { font-family: var(--font-heading); letter-spacing: 0.15em; }
+        .top-bar .lang-link { color: var(--color-accent-green); font-size: 13px; }
         @media (max-width: 600px) {
             .top-bar { flex-direction: column; gap: 8px; padding: 10px 16px; font-size: 13px; }
             .top-bar .contact-row { gap: 16px; }
@@ -104,7 +159,7 @@
             font-size: 18px;
             color: var(--color-gray);
             letter-spacing: 0.05em;
-            max-width: 720px;
+            max-width: 760px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -115,7 +170,7 @@
             .hero-headline .subtitle { font-size: 16px; }
         }
 
-        /* Two-column: preview cards + form */
+        /* Two-column: CMA preview + form */
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -127,79 +182,72 @@
             .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 36px; }
         }
 
-        /* Preview stack */
-        .preview-stack {
-            position: relative;
+        /* CMA preview card stack */
+        .cma-stack {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            padding: 4px;
+            gap: 18px;
         }
-        .preview-card {
+        .cma-card {
             background-color: var(--color-white);
-            padding: 18px 22px;
+            padding: 24px 26px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.10);
             border-radius: 2px;
-            border-left: 3px solid var(--color-accent-green);
+            border-top: 3px solid var(--color-accent-green);
+        }
+        .cma-card .card-label {
+            font-family: var(--font-body);
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 14px;
+        }
+        .cma-card .card-title {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            letter-spacing: 0.05em;
+            color: var(--color-dark);
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+        .cma-card .card-body {
+            font-size: 14px;
+            color: var(--color-dark);
+            line-height: 1.55;
+        }
+        .cma-card .card-meta {
+            margin-top: 14px;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: var(--color-gray);
+            text-transform: uppercase;
+        }
+        .range-bar {
+            margin-top: 10px;
+            height: 6px;
+            background-color: var(--color-light-gray);
+            border-radius: 3px;
             position: relative;
         }
-        .preview-card .badge {
-            display: inline-block;
-            font-family: var(--font-heading);
-            font-size: 10px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            padding: 4px 10px;
-            margin-bottom: 10px;
-            color: var(--color-white);
+        .range-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18%;
+            width: 64%;
+            height: 100%;
+            background-color: var(--color-accent-green);
+            border-radius: 3px;
         }
-        .preview-card .badge-off-market { background-color: var(--color-dark); }
-        .preview-card .badge-coming-soon { background-color: var(--color-accent); }
-        .preview-card .badge-pocket { background-color: #5a7a3e; }
-        .preview-card .row {
+        .range-bar-labels {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-        }
-        .preview-card .address {
-            font-family: var(--font-heading);
-            font-size: 16px;
-            letter-spacing: 0.04em;
-            color: var(--color-dark);
-            filter: blur(4px);
-            user-select: none;
-            flex: 1;
-        }
-        .preview-card .specs {
-            font-size: 13px;
+            margin-top: 6px;
+            font-size: 12px;
             color: var(--color-gray);
-            letter-spacing: 0.04em;
-            white-space: nowrap;
-            margin-left: 12px;
-        }
-        .preview-card .price {
             font-family: var(--font-heading);
-            font-size: 14px;
-            color: var(--color-accent);
             letter-spacing: 0.05em;
-        }
-        .preview-card .city {
-            font-size: 13px;
-            color: var(--color-gray);
-            letter-spacing: 0.04em;
-        }
-        .preview-stack .lock-hint {
-            margin-top: 14px;
-            text-align: center;
-            font-size: 13px;
-            color: var(--color-accent);
-            letter-spacing: 0.08em;
-            font-style: italic;
-        }
-        @media (max-width: 800px) {
-            .preview-card { padding: 16px 18px; }
-            .preview-card .address { font-size: 14px; }
         }
 
         /* Form card */
@@ -229,8 +277,7 @@
             color: var(--color-accent);
             margin-bottom: 6px;
         }
-        .form-group input,
-        .form-group select {
+        .form-group input {
             width: 100%;
             padding: 12px 14px;
             font-family: var(--font-body);
@@ -241,8 +288,7 @@
             color: var(--color-dark);
             transition: border-color 0.2s ease, background-color 0.2s ease;
         }
-        .form-group input:focus,
-        .form-group select:focus {
+        .form-group input:focus {
             outline: none;
             border-color: var(--color-accent);
             background-color: var(--color-white);
@@ -389,9 +435,7 @@
             letter-spacing: 0.05em;
         }
         footer a:hover { color: var(--color-accent-green); }
-        footer .footer-row {
-            margin-bottom: 8px;
-        }
+        footer .footer-row { margin-bottom: 8px; }
         footer .copyright {
             color: var(--color-gray);
             font-size: 12px;
@@ -405,6 +449,7 @@
 <div class="top-bar">
     <a href="/" class="brand">LILY GARIPOVA</a>
     <div class="contact-row">
+        <a href="/ru/home-value/" class="lang-link">Русский</a>
         <a href="tel:+14159103958">📞 (415) 910-3958</a>
         <a href="mailto:lilyagaripova@gmail.com">✉ lilyagaripova@gmail.com</a>
     </div>
@@ -413,88 +458,62 @@
 <!-- Hero -->
 <section class="hero">
     <div class="hero-headline">
-        <div class="eyebrow">Pocket · Coming Soon · Off-Market</div>
-        <h1>Доступ к off-market<br>объектам в Bay Area</h1>
-        <span class="accent-block">до выхода на рынок</span>
-        <p class="subtitle">Часть сделок в Bay Area проходит без MLS — без открытых домов и без bidding wars. Я вижу эти объекты через сеть агентов раньше, чем они появятся на публичном рынке. Подпишитесь — и узнавайте о них первыми.</p>
+        <div class="eyebrow">Free Comparative Market Analysis · Bay Area</div>
+        <h1>How Much Is Your<br>House Worth?</h1>
+        <span class="accent-block">a personal CMA, not a Zestimate</span>
+        <p class="subtitle">Online estimates rely on broad zip-code averages and miss the details that actually move price: condition, view, schools, recent comparables, neighborhood-specific demand. Tell me where the home is and I will send you a real comparative market analysis tailored to your block, your home, and the current Bay Area market.</p>
     </div>
 
     <div class="hero-grid">
-        <div class="preview-stack" aria-hidden="true">
-            <div class="preview-card">
-                <span class="badge badge-off-market">Off-Market</span>
-                <div class="row">
-                    <span class="address">2648 Royal Ann Drive</span>
-                    <span class="specs">4BR / 3BA</span>
-                </div>
-                <div class="row">
-                    <span class="city">Union City</span>
-                    <span class="price">~ $1.65M</span>
-                </div>
-            </div>
-            <div class="preview-card">
-                <span class="badge badge-coming-soon">Coming Soon</span>
-                <div class="row">
-                    <span class="address">4316 Carol Avenue</span>
-                    <span class="specs">3BR / 2BA</span>
-                </div>
-                <div class="row">
-                    <span class="city">Fremont</span>
-                    <span class="price">~ $1.4M</span>
+        <div class="cma-stack" aria-hidden="true">
+            <div class="cma-card">
+                <div class="card-label">Estimated value range</div>
+                <div class="card-title">Based on 4 recent comparable sales within 0.5 mi</div>
+                <div class="range-bar"></div>
+                <div class="range-bar-labels">
+                    <span>Low</span>
+                    <span>Likely</span>
+                    <span>High</span>
                 </div>
             </div>
-            <div class="preview-card">
-                <span class="badge badge-pocket">Pocket</span>
-                <div class="row">
-                    <span class="address">6130 Springer Way</span>
-                    <span class="specs">5BR / 4BA</span>
-                </div>
-                <div class="row">
-                    <span class="city">San Jose</span>
-                    <span class="price">~ $1.8M</span>
-                </div>
+            <div class="cma-card">
+                <div class="card-label">Recent comparables</div>
+                <div class="card-body">Sold homes within your block, adjusted for square footage, bed/bath count, lot size, and condition. Days on market and over/under-asking ratios included.</div>
             </div>
-            <div class="lock-hint">Полные адреса — только в личной рассылке</div>
+            <div class="cma-card">
+                <div class="card-label">Timing &amp; strategy</div>
+                <div class="card-body">Honest read on whether to list now or wait, what to do to lift value before listing, and which Bay Area sub-market dynamics apply to your address.</div>
+                <div class="card-meta">Delivered in 1 to 2 business days</div>
+            </div>
         </div>
 
         <div class="form-card">
-            <h2>Получить доступ</h2>
-            <p class="form-intro">Заполните форму — и я добавлю вас в список рассылки off-market объектов.</p>
+            <h2>Request your CMA</h2>
+            <p class="form-intro">Four fields, no obligation. I will reply with the CMA personally.</p>
 
-            <form name="off-market-ru" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/ru/off-market/thanks">
-                <input type="hidden" name="form-name" value="off-market-ru">
-                <p style="display:none;"><label>Не заполняйте: <input name="bot-field"></label></p>
+            <form name="home-value-lander-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/home-value/thanks">
+                <input type="hidden" name="form-name" value="home-value-lander-en">
+                <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
                 <div class="form-group">
-                    <label for="om-name">Имя и фамилия *</label>
-                    <input id="om-name" type="text" name="full_name" required autocomplete="name">
+                    <label for="hv-name">Full name *</label>
+                    <input id="hv-name" type="text" name="full_name" required autocomplete="name">
                 </div>
                 <div class="form-group">
-                    <label for="om-email">E-mail *</label>
-                    <input id="om-email" type="email" name="email" required autocomplete="email">
+                    <label for="hv-email">Email *</label>
+                    <input id="hv-email" type="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-group">
-                    <label for="om-phone">Телефон *</label>
-                    <input id="om-phone" type="tel" name="phone" required autocomplete="tel">
+                    <label for="hv-phone">Phone *</label>
+                    <input id="hv-phone" type="tel" name="phone" required autocomplete="tel">
                 </div>
                 <div class="form-group">
-                    <label for="om-budget">Ценовой диапазон</label>
-                    <select id="om-budget" name="price_range">
-                        <option value="">— не указано —</option>
-                        <option value="under-1m">до $1M</option>
-                        <option value="1m-1.5m">$1M – $1.5M</option>
-                        <option value="1.5m-2m">$1.5M – $2M</option>
-                        <option value="2m-3m">$2M – $3M</option>
-                        <option value="3m-plus">$3M+</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="om-areas">Интересующие города / районы</label>
-                    <input id="om-areas" type="text" name="preferred_areas" placeholder="Fremont, Union City, San Jose...">
+                    <label for="hv-address">Property address *</label>
+                    <input id="hv-address" type="text" name="address" required autocomplete="street-address" placeholder="Street, city, ZIP">
                 </div>
 
-                <button type="submit" class="submit-btn">Подписаться</button>
-                <p class="privacy-note">Ваши данные не передаются третьим лицам. Я пишу только когда появляется подходящий объект — без массовых рассылок и спама.</p>
+                <button type="submit" class="submit-btn">Get my free CMA</button>
+                <p class="privacy-note">Your information stays with me. No mass mailings, no spam, no sharing with third parties.</p>
             </form>
         </div>
     </div>
@@ -502,23 +521,23 @@
 
 <!-- What you get -->
 <section class="what-inside">
-    <h2>Что вы получаете</h2>
+    <h2>What's in the CMA</h2>
     <div class="what-inside-divider"></div>
     <ul class="bullet-list">
         <li>
             <span class="num">1</span>
-            <h3>Объекты до MLS</h3>
-            <p>Pocket listings, coming-soon, и off-market сделки — то, что ещё не попало на открытый рынок и куда нет очереди из 15 покупателей.</p>
+            <h3>Comparable sales</h3>
+            <p>Recently sold homes within 0.5 mi of your address, filtered for similar square footage, bed/bath count, lot size, and condition. Days on market and final-vs-asking ratio included.</p>
         </li>
         <li>
             <span class="num">2</span>
-            <h3>Личный подбор</h3>
-            <p>Я отправляю только то, что подходит под ваш бюджет, район и тип жилья. Никаких массовых рассылок «всем подряд».</p>
+            <h3>Realistic value range</h3>
+            <p>A low / likely / high range grounded in those comparables. No Zestimate algorithm, no zip-code averages. Adjustments for view, schools, and the specific market your block belongs to.</p>
         </li>
         <li>
             <span class="num">3</span>
-            <h3>Прямой контакт</h3>
-            <p>Связь со мной напрямую, когда появится подходящий вариант. Без call-центров, без автоматических уведомлений — личный звонок или email.</p>
+            <h3>Honest timing read</h3>
+            <p>Whether to list now or wait, what targeted improvements move your number the most, and which Bay Area sub-market dynamics apply. Educated decision, no pressure to list.</p>
         </li>
     </ul>
 </section>
@@ -526,11 +545,11 @@
 <!-- Trust strip -->
 <section class="trust-strip">
     <div class="trust-strip-inner">
-        <img src="/photos/Lily.jpg" alt="Лилия Гарипова">
+        <img src="/photos/Lily.jpg" alt="Lily Garipova">
         <div class="meta">
-            <div class="name">Лилия Гарипова</div>
-            <div class="role">Риэлтор · Centermac Realty</div>
-            <div class="credentials">Cal DRE# 02010731 · 11+ лет практики · 99 сделок · $105M+</div>
+            <div class="name">Lily Garipova</div>
+            <div class="role">Realtor · Centermac Realty</div>
+            <div class="credentials">Cal DRE# 02010731 · 11+ years · 100 transactions · $105M+ · 5.0★ Zillow</div>
         </div>
     </div>
 </section>
@@ -543,7 +562,9 @@
     </div>
     <div class="footer-row">
         <a href="/">lilygaripova.com</a> &nbsp;·&nbsp;
-        <a href="https://t.me/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+        <a href="/faq/">FAQ</a> &nbsp;·&nbsp;
+        <a href="/off-market/">Off-Market</a> &nbsp;·&nbsp;
+        <a href="/ru/home-value/">Русская версия</a>
     </div>
     <div class="copyright">© 2026 Lily Garipova Real Estate. Cal DRE# 02010731. All rights reserved.</div>
 </footer>

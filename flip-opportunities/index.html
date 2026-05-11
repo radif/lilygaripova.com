@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доступ к off-market объектам в Bay Area — Лилия Гарипова</title>
-    <meta name="description" content="Pocket listings, coming-soon объекты и off-market сделки в Bay Area. Личная подборка под ваши критерии — без массовых рассылок.">
+    <title>Bay Area Flip Opportunities | Lily Garipova</title>
+    <meta name="description" content="Subscribe for Bay Area flip and value-add opportunities. Distressed sales, fixer-uppers, and off-market deals curated for investors. Personally vetted, no mass blasts.">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://lilygaripova.com/ru/off-market/">
+    <link rel="canonical" href="https://lilygaripova.com/flip-opportunities/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Доступ к off-market объектам в Bay Area">
-    <meta property="og:description" content="Off-market и coming-soon объекты до выхода на открытый рынок.">
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Bay Area Flip Opportunities, Sign Up for Updates">
+    <meta property="og:description" content="Distressed, fixer-upper, and off-market value-add properties in the Bay Area. Delivered to investors before they hit the open market.">
+    <meta property="og:url" content="https://lilygaripova.com/flip-opportunities/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&display=swap" rel="stylesheet">
@@ -46,7 +48,6 @@
         a { text-decoration: none; color: inherit; }
         img { max-width: 100%; height: auto; display: block; }
 
-        /* Top contact bar */
         .top-bar {
             background-color: var(--color-dark);
             color: var(--color-white);
@@ -60,21 +61,18 @@
         .top-bar a:hover { color: var(--color-accent-green); }
         .top-bar .contact-row { display: flex; gap: 24px; align-items: center; }
         .top-bar .brand { font-family: var(--font-heading); letter-spacing: 0.15em; }
+        .top-bar .lang-link { color: var(--color-accent-green); font-size: 13px; }
         @media (max-width: 600px) {
             .top-bar { flex-direction: column; gap: 8px; padding: 10px 16px; font-size: 13px; }
             .top-bar .contact-row { gap: 16px; }
         }
 
-        /* Hero */
         .hero {
             padding: 80px 24px 60px;
             max-width: 1100px;
             margin: 0 auto;
         }
-        .hero-headline {
-            text-align: center;
-            margin-bottom: 12px;
-        }
+        .hero-headline { text-align: center; margin-bottom: 12px; }
         .hero-headline .eyebrow {
             font-family: var(--font-body);
             font-size: 13px;
@@ -104,7 +102,7 @@
             font-size: 18px;
             color: var(--color-gray);
             letter-spacing: 0.05em;
-            max-width: 720px;
+            max-width: 740px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -115,7 +113,6 @@
             .hero-headline .subtitle { font-size: 16px; }
         }
 
-        /* Two-column: preview cards + form */
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -127,23 +124,19 @@
             .hero-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 36px; }
         }
 
-        /* Preview stack */
-        .preview-stack {
-            position: relative;
+        .deal-stack {
             display: flex;
             flex-direction: column;
             gap: 14px;
-            padding: 4px;
         }
-        .preview-card {
+        .deal-card {
             background-color: var(--color-white);
-            padding: 18px 22px;
+            padding: 20px 24px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.10);
             border-radius: 2px;
             border-left: 3px solid var(--color-accent-green);
-            position: relative;
         }
-        .preview-card .badge {
+        .deal-card .badge {
             display: inline-block;
             font-family: var(--font-heading);
             font-size: 10px;
@@ -152,44 +145,44 @@
             padding: 4px 10px;
             margin-bottom: 10px;
             color: var(--color-white);
+            background-color: var(--color-dark);
         }
-        .preview-card .badge-off-market { background-color: var(--color-dark); }
-        .preview-card .badge-coming-soon { background-color: var(--color-accent); }
-        .preview-card .badge-pocket { background-color: #5a7a3e; }
-        .preview-card .row {
+        .deal-card .badge-distressed { background-color: #8b3a3a; }
+        .deal-card .badge-fixer { background-color: var(--color-accent); }
+        .deal-card .badge-value-add { background-color: #5a7a3e; }
+        .deal-card .deal-row {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 4px;
         }
-        .preview-card .address {
+        .deal-card .deal-title {
             font-family: var(--font-heading);
-            font-size: 16px;
+            font-size: 15px;
             letter-spacing: 0.04em;
             color: var(--color-dark);
             filter: blur(4px);
             user-select: none;
             flex: 1;
         }
-        .preview-card .specs {
+        .deal-card .deal-specs {
             font-size: 13px;
             color: var(--color-gray);
             letter-spacing: 0.04em;
             white-space: nowrap;
             margin-left: 12px;
         }
-        .preview-card .price {
-            font-family: var(--font-heading);
-            font-size: 14px;
-            color: var(--color-accent);
-            letter-spacing: 0.05em;
-        }
-        .preview-card .city {
+        .deal-card .deal-numbers {
             font-size: 13px;
-            color: var(--color-gray);
-            letter-spacing: 0.04em;
+            color: var(--color-dark);
+            letter-spacing: 0.03em;
+            margin-top: 6px;
         }
-        .preview-stack .lock-hint {
+        .deal-card .deal-numbers strong {
+            font-family: var(--font-heading);
+            color: var(--color-accent);
+        }
+        .deal-stack .lock-hint {
             margin-top: 14px;
             text-align: center;
             font-size: 13px;
@@ -198,11 +191,10 @@
             font-style: italic;
         }
         @media (max-width: 800px) {
-            .preview-card { padding: 16px 18px; }
-            .preview-card .address { font-size: 14px; }
+            .deal-card { padding: 16px 18px; }
+            .deal-card .deal-title { font-size: 14px; }
         }
 
-        /* Form card */
         .form-card {
             background-color: var(--color-white);
             padding: 40px 36px;
@@ -274,7 +266,6 @@
             .form-card { padding: 32px 24px; }
         }
 
-        /* What you get */
         .what-inside {
             max-width: 900px;
             margin: 0 auto;
@@ -335,7 +326,6 @@
             .bullet-list li { padding: 24px 20px; }
         }
 
-        /* Trust strip */
         .trust-strip {
             background-color: var(--color-white);
             padding: 48px 24px;
@@ -379,7 +369,6 @@
             .trust-strip .meta { text-align: center; }
         }
 
-        /* Footer */
         footer {
             background-color: var(--color-dark);
             color: var(--color-white);
@@ -389,9 +378,7 @@
             letter-spacing: 0.05em;
         }
         footer a:hover { color: var(--color-accent-green); }
-        footer .footer-row {
-            margin-bottom: 8px;
-        }
+        footer .footer-row { margin-bottom: 8px; }
         footer .copyright {
             color: var(--color-gray);
             font-size: 12px;
@@ -401,141 +388,139 @@
 </head>
 <body>
 
-<!-- Top contact bar -->
 <div class="top-bar">
     <a href="/" class="brand">LILY GARIPOVA</a>
     <div class="contact-row">
+        <a href="/ru/flip-opportunities/" class="lang-link">Русский</a>
         <a href="tel:+14159103958">📞 (415) 910-3958</a>
         <a href="mailto:lilyagaripova@gmail.com">✉ lilyagaripova@gmail.com</a>
     </div>
 </div>
 
-<!-- Hero -->
 <section class="hero">
     <div class="hero-headline">
-        <div class="eyebrow">Pocket · Coming Soon · Off-Market</div>
-        <h1>Доступ к off-market<br>объектам в Bay Area</h1>
-        <span class="accent-block">до выхода на рынок</span>
-        <p class="subtitle">Часть сделок в Bay Area проходит без MLS — без открытых домов и без bidding wars. Я вижу эти объекты через сеть агентов раньше, чем они появятся на публичном рынке. Подпишитесь — и узнавайте о них первыми.</p>
+        <div class="eyebrow">Distressed · Fixer · Off-Market Value-Add</div>
+        <h1>Looking for Flip<br>Opportunities?</h1>
+        <span class="accent-block">sign up for updates</span>
+        <p class="subtitle">Bay Area flips do not show up on Zillow searches. Distressed sales, fixer-uppers, expired listings, and off-market value-add properties move through the agent network long before the open market sees them. Tell me what you are looking for and I will send the ones that fit your numbers.</p>
     </div>
 
     <div class="hero-grid">
-        <div class="preview-stack" aria-hidden="true">
-            <div class="preview-card">
-                <span class="badge badge-off-market">Off-Market</span>
-                <div class="row">
-                    <span class="address">2648 Royal Ann Drive</span>
-                    <span class="specs">4BR / 3BA</span>
+        <div class="deal-stack" aria-hidden="true">
+            <div class="deal-card">
+                <span class="badge badge-distressed">Distressed</span>
+                <div class="deal-row">
+                    <span class="deal-title">3128 Mowry Avenue</span>
+                    <span class="deal-specs">3BR / 2BA</span>
                 </div>
-                <div class="row">
-                    <span class="city">Union City</span>
-                    <span class="price">~ $1.65M</span>
-                </div>
+                <div class="deal-numbers">List <strong>$780K</strong> · ARV <strong>~$1.15M</strong> · Rehab <strong>~$140K</strong></div>
             </div>
-            <div class="preview-card">
-                <span class="badge badge-coming-soon">Coming Soon</span>
-                <div class="row">
-                    <span class="address">4316 Carol Avenue</span>
-                    <span class="specs">3BR / 2BA</span>
+            <div class="deal-card">
+                <span class="badge badge-fixer">Fixer</span>
+                <div class="deal-row">
+                    <span class="deal-title">2240 Decoto Road</span>
+                    <span class="deal-specs">4BR / 2BA</span>
                 </div>
-                <div class="row">
-                    <span class="city">Fremont</span>
-                    <span class="price">~ $1.4M</span>
-                </div>
+                <div class="deal-numbers">List <strong>$910K</strong> · ARV <strong>~$1.35M</strong> · Rehab <strong>~$120K</strong></div>
             </div>
-            <div class="preview-card">
-                <span class="badge badge-pocket">Pocket</span>
-                <div class="row">
-                    <span class="address">6130 Springer Way</span>
-                    <span class="specs">5BR / 4BA</span>
+            <div class="deal-card">
+                <span class="badge badge-value-add">Value-Add</span>
+                <div class="deal-row">
+                    <span class="deal-title">4116 Stevenson Boulevard</span>
+                    <span class="deal-specs">3BR / 1BA · ADU lot</span>
                 </div>
-                <div class="row">
-                    <span class="city">San Jose</span>
-                    <span class="price">~ $1.8M</span>
-                </div>
+                <div class="deal-numbers">List <strong>$1.05M</strong> · ARV w/ADU <strong>~$1.8M</strong></div>
             </div>
-            <div class="lock-hint">Полные адреса — только в личной рассылке</div>
+            <div class="lock-hint">Full addresses and underwriting sent only to subscribers</div>
         </div>
 
         <div class="form-card">
-            <h2>Получить доступ</h2>
-            <p class="form-intro">Заполните форму — и я добавлю вас в список рассылки off-market объектов.</p>
+            <h2>Get the deal flow</h2>
+            <p class="form-intro">Tell me your numbers. I send only what fits, with the spread already calculated.</p>
 
-            <form name="off-market-ru" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/ru/off-market/thanks">
-                <input type="hidden" name="form-name" value="off-market-ru">
-                <p style="display:none;"><label>Не заполняйте: <input name="bot-field"></label></p>
+            <form name="flip-opportunities-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/flip-opportunities/thanks">
+                <input type="hidden" name="form-name" value="flip-opportunities-en">
+                <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
 
                 <div class="form-group">
-                    <label for="om-name">Имя и фамилия *</label>
-                    <input id="om-name" type="text" name="full_name" required autocomplete="name">
+                    <label for="fl-name">Full name *</label>
+                    <input id="fl-name" type="text" name="full_name" required autocomplete="name">
                 </div>
                 <div class="form-group">
-                    <label for="om-email">E-mail *</label>
-                    <input id="om-email" type="email" name="email" required autocomplete="email">
+                    <label for="fl-email">Email *</label>
+                    <input id="fl-email" type="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-group">
-                    <label for="om-phone">Телефон *</label>
-                    <input id="om-phone" type="tel" name="phone" required autocomplete="tel">
+                    <label for="fl-phone">Phone *</label>
+                    <input id="fl-phone" type="tel" name="phone" required autocomplete="tel">
                 </div>
                 <div class="form-group">
-                    <label for="om-budget">Ценовой диапазон</label>
-                    <select id="om-budget" name="price_range">
-                        <option value="">— не указано —</option>
-                        <option value="under-1m">до $1M</option>
-                        <option value="1m-1.5m">$1M – $1.5M</option>
-                        <option value="1.5m-2m">$1.5M – $2M</option>
-                        <option value="2m-3m">$2M – $3M</option>
-                        <option value="3m-plus">$3M+</option>
+                    <label for="fl-budget">Acquisition budget</label>
+                    <select id="fl-budget" name="acquisition_budget">
+                        <option value="">optional</option>
+                        <option value="under-700k">Under $700K</option>
+                        <option value="700k-1m">$700K to $1M</option>
+                        <option value="1m-1.5m">$1M to $1.5M</option>
+                        <option value="1.5m-2m">$1.5M to $2M</option>
+                        <option value="2m-plus">$2M and up</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="om-areas">Интересующие города / районы</label>
-                    <input id="om-areas" type="text" name="preferred_areas" placeholder="Fremont, Union City, San Jose...">
+                    <label for="fl-experience">Investor experience</label>
+                    <select id="fl-experience" name="investor_experience">
+                        <option value="">optional</option>
+                        <option value="first-flip">First flip</option>
+                        <option value="1-3-flips">1 to 3 flips done</option>
+                        <option value="4-plus-flips">4+ flips done</option>
+                        <option value="contractor">Contractor / builder</option>
+                        <option value="cash-investor">Cash investor / fund</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fl-areas">Cities or neighborhoods</label>
+                    <input id="fl-areas" type="text" name="preferred_areas" placeholder="Fremont, Union City, Hayward, San Jose...">
                 </div>
 
-                <button type="submit" class="submit-btn">Подписаться</button>
-                <p class="privacy-note">Ваши данные не передаются третьим лицам. Я пишу только когда появляется подходящий объект — без массовых рассылок и спама.</p>
+                <button type="submit" class="submit-btn">Subscribe</button>
+                <p class="privacy-note">Curated list, not a blast. I only send what actually pencils for your numbers and your target area.</p>
             </form>
         </div>
     </div>
 </section>
 
-<!-- What you get -->
 <section class="what-inside">
-    <h2>Что вы получаете</h2>
+    <h2>What you get</h2>
     <div class="what-inside-divider"></div>
     <ul class="bullet-list">
         <li>
             <span class="num">1</span>
-            <h3>Объекты до MLS</h3>
-            <p>Pocket listings, coming-soon, и off-market сделки — то, что ещё не попало на открытый рынок и куда нет очереди из 15 покупателей.</p>
+            <h3>Underwritten deals</h3>
+            <p>Each deal arrives with list price, comparable ARV, estimated rehab, and the spread already calculated. No raw MLS dumps, no guessing.</p>
         </li>
         <li>
             <span class="num">2</span>
-            <h3>Личный подбор</h3>
-            <p>Я отправляю только то, что подходит под ваш бюджет, район и тип жилья. Никаких массовых рассылок «всем подряд».</p>
+            <h3>Pre-MLS access</h3>
+            <p>Pocket listings, expired-listing reactivations, off-market distressed sales, ADU-eligible lots. The deals that close before they ever hit Zillow.</p>
         </li>
         <li>
             <span class="num">3</span>
-            <h3>Прямой контакт</h3>
-            <p>Связь со мной напрямую, когда появится подходящий вариант. Без call-центров, без автоматических уведомлений — личный звонок или email.</p>
+            <h3>Filtered to your criteria</h3>
+            <p>I only send deals that fit your budget, target area, and experience level. No mass mailings to "all investors."</p>
         </li>
     </ul>
 </section>
 
-<!-- Trust strip -->
 <section class="trust-strip">
     <div class="trust-strip-inner">
-        <img src="/photos/Lily.jpg" alt="Лилия Гарипова">
+        <img src="/photos/Lily.jpg" alt="Lily Garipova">
         <div class="meta">
-            <div class="name">Лилия Гарипова</div>
-            <div class="role">Риэлтор · Centermac Realty</div>
-            <div class="credentials">Cal DRE# 02010731 · 11+ лет практики · 99 сделок · $105M+</div>
+            <div class="name">Lily Garipova</div>
+            <div class="role">Realtor · Centermac Realty</div>
+            <div class="credentials">Cal DRE# 02010731 · 11+ years · 100 transactions · $105M+</div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <div class="footer-row">
         <a href="tel:+14159103958">(415) 910-3958</a> &nbsp;·&nbsp;
@@ -543,7 +528,9 @@
     </div>
     <div class="footer-row">
         <a href="/">lilygaripova.com</a> &nbsp;·&nbsp;
-        <a href="https://t.me/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
+        <a href="/off-market/">Off-Market</a> &nbsp;·&nbsp;
+        <a href="/home-value/">Home Value</a> &nbsp;·&nbsp;
+        <a href="/ru/flip-opportunities/">Русская версия</a>
     </div>
     <div class="copyright">© 2026 Lily Garipova Real Estate. Cal DRE# 02010731. All rights reserved.</div>
 </footer>

@@ -42,4 +42,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/faq/"/>
   </url>
 
+  <url>
+    <loc>https://lilygaripova.com/home-value/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/home-value/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/home-value/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/home-value/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/home-value/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/home-value/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/home-value/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/home-value/"/>
+  </url>
+
 </urlset>
