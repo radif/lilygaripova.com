@@ -1,2 +1,8 @@
 # Local Netlify folder
 .netlify
+
+# Internal architecture documentation — kept local for editing, NEVER deployed.
+# Netlify deploys whatever is committed; excluding here keeps it out of the build.
+# Both case variants because the host serves case-insensitively.
+claude.md
+CLAUDE.md
