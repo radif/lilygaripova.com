@@ -875,8 +875,16 @@ ul {
 
 .sale-image {
     position: relative;
-    height: 100px;
+    height: 180px;
     background-color: var(--color-light-gray);
+    overflow: hidden;
+}
+
+.sale-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sale-placeholder {
