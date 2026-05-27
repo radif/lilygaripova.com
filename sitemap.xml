@@ -62,4 +62,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/home-value/"/>
   </url>
 
+  <url>
+    <loc>https://lilygaripova.com/ru/walnut-creek/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/walnut-creek/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek/"/>
+  </url>
+
 </urlset>
