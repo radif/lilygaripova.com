@@ -14,8 +14,12 @@
     --color-gray: #888888;
     --color-light-gray: #f5f5f5;
 
-    --font-heading: 'Tenor Sans', serif;
-    --font-body: 'Questrial', sans-serif;
+    /* Latin brand fonts (Tenor Sans, Questrial) have no Cyrillic and no bold weight.
+       Manrope ships Cyrillic glyphs + real 400/600/700 weights, so mixed-language
+       text and bolded body text render uniformly on RU pages. The browser uses the
+       Latin font first; missing glyphs (Cyrillic, real bold) fall through to Manrope. */
+    --font-heading: 'Tenor Sans', 'Manrope', sans-serif;
+    --font-body: 'Questrial', 'Manrope', sans-serif;
 
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -39,6 +43,26 @@ body {
     line-height: 1.6;
     color: var(--color-dark);
     background-color: var(--color-white);
+}
+
+/* Russian pages: swap body font from Questrial to Manrope.
+   Questrial ships only weight 400 and has no Cyrillic glyphs. On RU pages, the
+   browser was using Questrial 400 for Latin (synthetic-bolded to 600) and a
+   system fallback for Cyrillic (real bold). The result was visibly inconsistent
+   weights in mixed-language headings like the FAQ summaries (Russian "Какие
+   ценовые диапазоны в" looked heavy, inline English "Dublin, California" looked
+   half a weight lighter). Manrope ships Cyrillic + real 400/600/700, so swapping
+   gives uniform rendering. Overrides also target the inline-styled selectors in
+   city pages that hardcode 'Questrial' directly. EN pages stay on Questrial,
+   preserving the brand body font for English content. */
+html[lang="ru"] {
+    --font-body: 'Manrope', sans-serif;
+}
+html[lang="ru"] body,
+html[lang="ru"] .city-hero .eyebrow,
+html[lang="ru"] .faq-section summary,
+html[lang="ru"] details summary {
+    font-family: 'Manrope', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -812,6 +836,62 @@ ul {
 }
 
 /* ===================================
+   Recognition Section
+   =================================== */
+.recognition {
+    padding: 100px 0;
+    background-color: var(--color-cream, #f6f4ef);
+}
+
+.recognition h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recognition-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 30px auto 50px;
+    color: var(--color-gray);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.recognition-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-accent-light);
+    padding: 28px 22px;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.recognition-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.recognition-headline {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.recognition-meta {
+    font-size: 13px;
+    color: var(--color-accent);
+    line-height: 1.5;
+}
+
+/* ===================================
    Recent Sales Section
    =================================== */
 .recent-sales {
@@ -936,6 +1016,7 @@ ul {
 
 .recent-sales-cta {
     text-align: center;
+    margin: 32px 0;
 }
 
 /* ===================================

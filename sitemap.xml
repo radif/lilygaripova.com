@@ -63,23 +63,63 @@
   </url>
 
   <url>
-    <loc>https://lilygaripova.com/ru/walnut-creek/</loc>
+    <loc>https://lilygaripova.com/ru/walnut-creek-realtor/</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek-realtor/"/>
   </url>
 
   <url>
-    <loc>https://lilygaripova.com/walnut-creek/</loc>
+    <loc>https://lilygaripova.com/walnut-creek-realtor/</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/walnut-creek-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/walnut-creek-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/walnut-creek-realtor/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/dublin-realtor/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/dublin-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/dublin-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/dublin-realtor/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/dublin-realtor/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/dublin-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/dublin-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/dublin-realtor/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/pleasanton-realtor/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/pleasanton-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/pleasanton-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/pleasanton-realtor/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/pleasanton-realtor/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/pleasanton-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/pleasanton-realtor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/pleasanton-realtor/"/>
   </url>
 
 </urlset>
