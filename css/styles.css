@@ -837,6 +837,9 @@ ul {
 
 /* ===================================
    Recognition Section
+   The EN home page still uses the standalone Recognition section.
+   The RU home page merges these cards into the Testimonials section
+   (see .testimonials-recognition below) per the 2026-05-27 rename.
    =================================== */
 .recognition {
     padding: 100px 0;
@@ -889,6 +892,30 @@ ul {
     font-size: 13px;
     color: var(--color-accent);
     line-height: 1.5;
+}
+
+/* Recognition cards rendered as a sub-block of the dark Testimonials
+   section on RU home (.testimonials-recognition). Heading inherits the
+   light-on-dark testimonials style; cards keep their cream/white surface
+   for visual continuity with the standalone EN Recognition section. */
+.testimonials-recognition {
+    margin-top: 70px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.testimonials-recognition-heading {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.testimonials .testimonials-recognition .recognition-grid {
+    max-width: 1100px;
+    margin: 35px auto 0;
 }
 
 /* ===================================
