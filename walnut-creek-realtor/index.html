@@ -104,7 +104,51 @@
             {"@type": "Place", "name": "Rossmoor"},
             {"@type": "Place", "name": "Northgate, Walnut Creek"},
             {"@type": "Place", "name": "Saranap"},
-            {"@type": "Place", "name": "Lime Ridge, Walnut Creek"}
+            {"@type": "Place", "name": "Lime Ridge, Walnut Creek"},
+            {
+                "@type": "EducationalOrganization",
+                "name": "Walnut Creek School District",
+                "url": "https://www.walnutcreeksd.org/",
+                "telephone": "+1-925-944-6850",
+                "address": {"@type": "PostalAddress", "streetAddress": "960 Ygnacio Valley Rd", "addressLocality": "Walnut Creek", "addressRegion": "CA", "postalCode": "94596", "addressCountry": "US"},
+                "description": "Walnut Creek School District (WCSD) K-8, serves central / south Walnut Creek. 3,603 students. Niche grade A- overall. CAASPP 69% math / 71% reading. Five elementaries (Buena Vista, Indian Valley, Murwood, Parkmead, Walnut Heights) plus K-8 lottery school Tice Creek, all feeding Walnut Creek Intermediate (6-8). WCSD graduates feed Acalanes Union HSD for high school (primarily Las Lomas High)."
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Mt. Diablo Unified School District",
+                "url": "https://www.mdusd.org/",
+                "description": "Mt. Diablo Unified School District (MDUSD) K-12, ~30,000 students across multiple cities. Serves the Northgate area and parts of Lime Ridge / Ygnacio Valley side of Walnut Creek. Northgate High (US News #149 in California) is the MDUSD high school for the Walnut Creek north corridor."
+            },
+            {
+                "@type": "EducationalOrganization",
+                "name": "Acalanes Union High School District",
+                "url": "https://www.acalanes.k12.ca.us/",
+                "description": "Acalanes Union High School District (AUHSD) covers Walnut Creek, Lafayette, Orinda, Moraga at the 9-12 level. Las Lomas High in Walnut Creek (US News #165 in California) is the primary AUHSD high school for WCSD K-8 graduates."
+            },
+            {
+                "@type": "Hospital",
+                "name": "John Muir Medical Center Walnut Creek",
+                "url": "https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html",
+                "address": {"@type": "PostalAddress", "streetAddress": "1601 Ygnacio Valley Rd", "addressLocality": "Walnut Creek", "addressRegion": "CA", "postalCode": "94598", "addressCountry": "US"},
+                "medicalSpecialty": ["Trauma", "NICU", "Obstetrics", "Cardiology", "Oncology"],
+                "description": "503-bed hospital with the only Level III NICU in Contra Costa County (Stanford Children's partnership), only Level II Trauma Center in Contra Costa County (since 1986). New Birth Center tower with 35 postpartum + 35 NICU beds. Nationally recognized OB/GYN per US News."
+            },
+            {
+                "@type": "Hospital",
+                "name": "Kaiser Permanente Walnut Creek Medical Center",
+                "url": "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek",
+                "address": {"@type": "PostalAddress", "streetAddress": "1425 South Main St", "addressLocality": "Walnut Creek", "addressRegion": "CA", "postalCode": "94596", "addressCountry": "US"},
+                "telephone": "+1-925-295-5200",
+                "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"],
+                "description": "Kaiser closed-system hospital for Kaiser members. Full Labor & Delivery, Mother-Baby unit, on-site NICU, board-certified lactation consultants. 24/7 delivery advice line. Also the destination L&D hospital for Tri-Valley Kaiser members."
+            },
+            {
+                "@type": "Hospital",
+                "name": "John Muir Medical Center Concord",
+                "url": "https://www.johnmuirhealth.com/locations/john-muir-medical-center-concord.html",
+                "address": {"@type": "PostalAddress", "streetAddress": "2540 East St", "addressLocality": "Concord", "addressRegion": "CA", "postalCode": "94520", "addressCountry": "US"},
+                "description": "Sister hospital to John Muir Walnut Creek. Full general acute services; not a Level III NICU center."
+            }
         ],
         "address": {
             "@type": "PostalAddress",
@@ -647,7 +691,7 @@
 </section>
 
 <!-- Why Walnut Creek -->
-<section class="wc-section">
+<section id="why-walnut-creek" class="wc-section">
     <h2>Why Walnut Creek</h2>
     <div class="divider"></div>
     <p>
@@ -689,18 +733,92 @@
         </div>
     </div>
     <p style="margin-top: 24px;">
-        Schools matter on this map. Elementary in most of the city is the Walnut Creek School District
-        (Murwood, Indian Valley, Buena Vista, Parkmead, Walnut Heights, Bancroft); middle school is
-        Walnut Creek Intermediate; high school is the Acalanes Union High School District (Las Lomas
-        primarily, Acalanes for parts of the southern city) or Mt Diablo Unified (Northgate High) for
-        the Ygnacio Valley side. Exact assignment is street by street, and Rossmoor sits outside any
-        elementary boundary because it is age-restricted. We verify zone with the district office,
-        not the listing description.
+        Schools matter on this map, and Walnut Creek is unusual in that the city is split between
+        three separate districts depending on which side of the city your address sits. The dedicated
+        Schools section below walks through the WCSD-vs-Mt Diablo split for K-8, the Las Lomas vs
+        Northgate high school question, and typical school assignment by sub-neighborhood.
     </p>
 </section>
 
+<!-- Schools (multi-district: WCSD K-8, MDUSD K-12, Acalanes UHSD 9-12) -->
+<section id="schools" class="wc-section">
+    <h2>Schools (multi-district: Walnut Creek SD, Mt Diablo Unified, Acalanes UHSD)</h2>
+    <div class="divider"></div>
+
+    <p>Walnut Creek is unusual in the East Bay: the city is split between three school districts depending on the address, and the district division matters more than any single school's ranking. The two most common combinations for Walnut Creek family buyers are:</p>
+
+    <ul>
+        <li><strong>Walnut Creek SD (K-8) + Acalanes Union HSD (9-12)</strong> &mdash; central, south, and southwest WC. Children attend a WCSD elementary (Buena Vista, Indian Valley, Murwood, Parkmead, Walnut Heights) or the K-8 lottery school Tice Creek, then Walnut Creek Intermediate for middle, then <a href="https://llhs.acalanes.k12.ca.us/" target="_blank" rel="noopener noreferrer">Las Lomas High</a> (or occasionally Acalanes in Lafayette for southern-edge WC). WCSD has 3,603 students K-8; Niche grades the district A&minus; overall (A Academics, A Teachers, 69% math / 71% reading proficient).</li>
+        <li><strong>Mt Diablo Unified (K-12)</strong> &mdash; north and northeast WC including the Northgate neighborhood and parts of the Ygnacio Valley side. Children attend an MDUSD elementary (Bancroft, Valle Verde) or middle (Foothill Middle), then <a href="https://www.mdusd.org/Northgate-High" target="_blank" rel="noopener noreferrer">Northgate High</a>. MDUSD is much larger (~30,000 students across multiple cities) and runs both K-8 and 9-12 in this corridor.</li>
+        <li><strong>Rossmoor</strong> &mdash; the 55+ age-restricted community sits outside any practical elementary attendance area (no school-age children by ordinance), so school-zone questions are not relevant for the Rossmoor buyer pool.</li>
+    </ul>
+
+    <p><strong>Las Lomas High vs Northgate High by the numbers</strong> (per U.S. News Best High Schools 2025-2026): <strong>Las Lomas</strong> (Acalanes UHSD, 1,568 students, 1460 S Main St) ranks #1,249 nationally and #165 in California, 63% AP-taking. <strong>Northgate</strong> (MDUSD, ~1,500 students) ranks #1,121 nationally and #149 in California, 71% AP-taking, 10% economically disadvantaged. Both are top-of-MDUSD or top-of-Acalanes in their respective districts; the AP-participation gap suggests slightly more college-prep intensity at Northgate, though Las Lomas inherits Acalanes UHSD's broader district-level prestige (Acalanes, Campolindo, Miramonte sister schools all rank very high).</p>
+
+    <h3>Typical assignment by sub-neighborhood</h3>
+
+    <table class="schools-assignment">
+        <thead>
+            <tr><th>Sub-area</th><th>K-8 district</th><th>Elementary / Middle</th><th>High (9-12)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Downtown WC condos (BART corridor)</td><td>Walnut Creek SD</td><td>Murwood or Parkmead Elem &rarr; Walnut Creek Intermediate</td><td>Las Lomas High (Acalanes UHSD)</td></tr>
+            <tr><td>Northgate neighborhood (north WC)</td><td>Mt Diablo Unified</td><td>Bancroft Elem &rarr; Foothill Middle</td><td>Northgate High (MDUSD)</td></tr>
+            <tr><td>Saranap (south-southwest, near Lafayette border)</td><td>Walnut Creek SD</td><td>Walnut Heights or Indian Valley Elem &rarr; Walnut Creek Intermediate</td><td>Las Lomas High (Acalanes UHSD); some southern edges may feed Acalanes High in Lafayette</td></tr>
+            <tr><td>Lime Ridge (central east, near Ygnacio Valley Rd)</td><td>Mt Diablo Unified</td><td>Valle Verde Elem &rarr; Foothill Middle</td><td>Northgate High (MDUSD)</td></tr>
+            <tr><td>Indian Valley / Heather Farm corridor (central north-central)</td><td>Walnut Creek SD</td><td>Indian Valley or Buena Vista Elem &rarr; Walnut Creek Intermediate</td><td>Las Lomas High (Acalanes UHSD)</td></tr>
+            <tr><td>Rossmoor (55+ community)</td><td>n/a</td><td>n/a (age-restricted)</td><td>n/a</td></tr>
+        </tbody>
+    </table>
+
+    <p class="schools-caveat">These assignments are typical, not guaranteed. The WCSD vs MDUSD boundary runs through the middle of Walnut Creek; some pockets along the boundary can surprise. Lily verifies the current district AND school assignment with the relevant registrar before any offer, not the listing description.</p>
+
+    <h3>Highlight schools</h3>
+
+    <ul>
+        <li><strong>Las Lomas High School</strong> (Acalanes UHSD, 9-12, 1568 students, 1460 S Main St) &mdash; US News #1,249 National, #165 California, 63% AP-taking. Acalanes UHSD inherits the district's strong reputation (Acalanes / Campolindo / Miramonte sister schools rank consistently high).</li>
+        <li><strong>Northgate High School</strong> (MDUSD, 9-12, ~1,500 students) &mdash; US News #1,121 National, #149 California, 71% AP-taking, 55% minority enrollment. Opened 1974, draws from Walnut Creek + parts of Concord. Slightly higher US News ranking and AP-participation than Las Lomas.</li>
+        <li><strong>Tice Creek School</strong> (Walnut Creek SD, K-8, lottery-based) &mdash; Niche grade A, the only K-8 in WCSD. Lottery admission, not address-based; popular with families wanting single-school continuity through 8th grade.</li>
+        <li><strong>Walnut Creek Intermediate</strong> (WCSD middle school, 6-8) &mdash; all WCSD elementaries feed here; large enrollment makes it the central WCSD middle-school anchor.</li>
+        <li><strong>Foothill Middle School</strong> (MDUSD, 6-8) &mdash; the MDUSD middle-school feed for the Northgate / Ygnacio Valley corridor of WC.</li>
+    </ul>
+
+    <p class="schools-sources">Sources: <a href="https://www.walnutcreeksd.org/" target="_blank" rel="noopener noreferrer">Walnut Creek School District</a>; <a href="https://www.mdusd.org/" target="_blank" rel="noopener noreferrer">Mt. Diablo Unified School District</a>; <a href="https://www.acalanes.k12.ca.us/" target="_blank" rel="noopener noreferrer">Acalanes Union High School District</a>; <a href="https://dq.cde.ca.gov/" target="_blank" rel="noopener noreferrer">California Department of Education DataQuest</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/acalanes-union-high/las-lomas-high-school-1714" target="_blank" rel="noopener noreferrer">U.S. News Las Lomas High</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/mt-diablo-unified-school-district/northgate-high-school-2847" target="_blank" rel="noopener noreferrer">U.S. News Northgate High</a>; <a href="https://www.niche.com/k12/d/walnut-creek-elementary-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche WCSD</a>; <a href="https://www.niche.com/k12/las-lomas-high-school-walnut-creek-ca/" target="_blank" rel="noopener noreferrer">Niche Las Lomas</a>.</p>
+</section>
+
+<!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+<section id="hospitals" class="wc-section">
+    <h2>Hospitals and birthing centers</h2>
+    <div class="divider"></div>
+
+    <p>Walnut Creek has the strongest hospital landscape of any city in the Tri-Valley / Inner East Bay corridor. <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Medical Center Walnut Creek</a> is the regional Level II Trauma Center (the only one in Contra Costa County since 1986) and runs the only Level III NICU in the county, in partnership with Stanford Children's Health. <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Permanente Walnut Creek Medical Center</a> sits across town for Kaiser members. Both are walking distance or a short drive from most central-WC neighborhoods, and Walnut Creek is also the destination hospital for much of the Tri-Valley Kaiser population.</p>
+
+    <table class="hospitals-list">
+        <thead>
+            <tr><th>Hospital</th><th>Network</th><th>Drive time from central WC</th><th>Key services</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>John Muir Medical Center Walnut Creek</td><td>John Muir Health (PPO)</td><td>in-city (0-10 min)</td><td><strong>Level III NICU</strong> (only one in Contra Costa County, Stanford Children's partnership); <strong>Level II Trauma Center</strong> (only one in Contra Costa County); 503 licensed beds; new Birth Center with 35 postpartum + 35 NICU beds; nationally recognized OB/GYN per US News</td></tr>
+            <tr><td>Kaiser Permanente Walnut Creek Medical Center</td><td>Kaiser (closed)</td><td>in-city (0-10 min)</td><td>Labor &amp; delivery; Mother-Baby unit; on-site NICU; board-certified lactation consultants; 24/7 delivery advice line (925-295-5200); destination hospital for Tri-Valley Kaiser members L&amp;D</td></tr>
+            <tr><td>John Muir Medical Center Concord</td><td>John Muir Health (PPO)</td><td>10-15 min</td><td>Sister hospital to JMMC Walnut Creek; full general acute services; not a Level III NICU site</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Birthing centers: what matters</h3>
+
+    <p><strong>John Muir Walnut Creek is the regional referral center for high-acuity newborn care.</strong> The Level III NICU (only one in Contra Costa County) handles extremely premature infants and the highest-risk pregnancies referred from across the East Bay and through-the-Caldecott from Contra Costa, Solano, and parts of eastern Alameda. The new Birth Center tower opened with 35 postpartum beds and 35 NICU beds. US News has nationally recognized the hospital in OB/GYN. For any high-risk pregnancy buying in Walnut Creek or the broader Contra Costa corridor, JMMC Walnut Creek is the default destination.</p>
+
+    <p><strong>Kaiser Permanente Walnut Creek</strong> is the closed-system option for Kaiser members. Labor &amp; delivery with full LDR rooms, Mother-Baby unit, on-site NICU, board-certified lactation consultants, and a 24/7 delivery advice line. Tri-Valley Kaiser members also deliver here, which means Saturday-morning L&amp;D triage can be busy.</p>
+
+    <p><strong>Rossmoor (55+) is outside the family-buyer pool</strong> on this dimension, but Rossmoor residents do use both John Muir Walnut Creek and Kaiser Walnut Creek for general acute care, cardiology, oncology, and orthopedic specialties. The proximity to JMMC's Level II Trauma Center is a meaningful quality-of-life factor at the older end of the Rossmoor demographic.</p>
+
+    <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+
+    <p class="hospitals-sources">Sources: <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Medical Center Walnut Creek</a> (incl. <a href="https://www.johnmuirhealth.com/services/trauma-services.html" target="_blank" rel="noopener noreferrer">Trauma Services</a>); <a href="https://nicu-directory.cpqcc.org/centers/john-muir-health-walnut-creek-medical-center" target="_blank" rel="noopener noreferrer">CPQCC Level III NICU listing for John Muir Walnut Creek</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Permanente Walnut Creek maternity</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative (CPQCC) NICU Directory</a>.</p>
+</section>
+
 <!-- Documented track record -->
-<section class="track-record">
+<section id="track-record" class="track-record">
     <div class="track-record-inner">
         <h2>Track Record</h2>
         <div class="divider"></div>
@@ -774,7 +892,7 @@
 </section>
 
 <!-- Buying in Walnut Creek -->
-<section class="wc-section">
+<section id="buying-in-wc" class="wc-section">
     <h2>What buying in Walnut Creek actually involves</h2>
     <div class="divider"></div>
     <p>
@@ -828,7 +946,7 @@
 </section>
 
 <!-- Selling in Walnut Creek -->
-<section class="wc-section">
+<section id="selling-in-wc" class="wc-section">
     <h2>What selling in Walnut Creek involves</h2>
     <div class="divider"></div>
     <p>
@@ -853,7 +971,7 @@
 </section>
 
 <!-- Methodology in WC -->
-<section class="wc-section">
+<section id="methodology" class="wc-section">
     <h2>The Meticulous Protector, applied to Walnut Creek</h2>
     <div class="divider"></div>
     <p>
@@ -884,7 +1002,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="wc-section faq-block">
+<section id="faq" class="wc-section faq-block">
     <h2>Walnut Creek FAQ</h2>
     <div class="divider"></div>
 

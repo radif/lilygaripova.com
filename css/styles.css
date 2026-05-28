@@ -894,6 +894,129 @@ ul {
     line-height: 1.5;
 }
 
+/* ===================================
+   City-page Schools section (.schools-assignment table + supporting paragraphs).
+   Used on /<city>-realtor/ and /ru/<city>-realtor/ pages for the per-sub-neighborhood
+   school assignment table. Standalone class, not coupled to the city-hero or wc-section
+   inline styles so it ports cleanly across all city pages.
+   =================================== */
+.schools-assignment {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 12px;
+    font-size: 14.5px;
+    line-height: 1.45;
+}
+.schools-assignment th,
+.schools-assignment td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-accent-light, #ebe7e0);
+    vertical-align: top;
+}
+.schools-assignment thead th {
+    background-color: var(--color-accent-light, #ebe7e0);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark, #1a1a1a);
+}
+.schools-assignment tbody tr:nth-child(odd) {
+    background-color: rgba(124, 122, 97, 0.04);
+}
+.schools-assignment tbody td:first-child {
+    font-weight: 600;
+    color: var(--color-dark, #1a1a1a);
+}
+.schools-caveat {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-gray, #888);
+    margin: 8px 0 20px;
+}
+.schools-sources {
+    font-size: 13px;
+    color: var(--color-gray, #888);
+    line-height: 1.55;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-accent-light, #ebe7e0);
+}
+.schools-sources a {
+    color: var(--color-accent, #7c7a61);
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    .schools-assignment {
+        font-size: 13px;
+    }
+    .schools-assignment th,
+    .schools-assignment td {
+        padding: 8px 8px;
+    }
+}
+
+/* Hospitals + birthing-places section uses the same table-grid + caveat + sources
+   pattern as Schools. Standalone class so both can ship on the same page without
+   selector collision. */
+.hospitals-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 12px;
+    font-size: 14.5px;
+    line-height: 1.45;
+}
+.hospitals-list th,
+.hospitals-list td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-accent-light, #ebe7e0);
+    vertical-align: top;
+}
+.hospitals-list thead th {
+    background-color: var(--color-accent-light, #ebe7e0);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark, #1a1a1a);
+}
+.hospitals-list tbody tr:nth-child(odd) {
+    background-color: rgba(124, 122, 97, 0.04);
+}
+.hospitals-list tbody td:first-child {
+    font-weight: 600;
+    color: var(--color-dark, #1a1a1a);
+}
+.hospitals-caveat {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-gray, #888);
+    margin: 8px 0 20px;
+}
+.hospitals-sources {
+    font-size: 13px;
+    color: var(--color-gray, #888);
+    line-height: 1.55;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-accent-light, #ebe7e0);
+}
+.hospitals-sources a {
+    color: var(--color-accent, #7c7a61);
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    .hospitals-list {
+        font-size: 13px;
+    }
+    .hospitals-list th,
+    .hospitals-list td {
+        padding: 8px 8px;
+    }
+}
+
 /* Recognition cards rendered as a sub-block of the dark Testimonials
    section on RU home (.testimonials-recognition). Heading inherits the
    light-on-dark testimonials style; cards keep their cream/white surface

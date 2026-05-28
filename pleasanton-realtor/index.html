@@ -105,7 +105,49 @@
             {"@type": "Place", "name": "Birdland, Pleasanton"},
             {"@type": "Place", "name": "Vintage Hills, Pleasanton"},
             {"@type": "Place", "name": "Sycamore Heights, Pleasanton"},
-            {"@type": "Place", "name": "East Pleasanton"}
+            {"@type": "Place", "name": "East Pleasanton"},
+            {
+                "@type": "EducationalOrganization",
+                "name": "Pleasanton Unified School District",
+                "url": "https://www.pleasantonusd.net/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "4665 Bernal Avenue",
+                    "addressLocality": "Pleasanton",
+                    "addressRegion": "CA",
+                    "postalCode": "94566",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-925-462-5500",
+                "description": "Pleasanton Unified School District (PUSD) serves about 13,300 students across 13 schools. Per California CAASPP: 74% math proficient, 78% reading proficient. PublicSchoolReview state rank #49 of 1,908. Niche overall A+, #17 of 466 in California. Includes Amador Valley High (US News #59 in California) and Foothill High (US News #75 in California)."
+            },
+            {
+                "@type": "Hospital",
+                "name": "Stanford Health Care Tri-Valley",
+                "alternateName": "ValleyCare",
+                "url": "https://stanfordhealthcare.org/tri-valley/",
+                "address": {"@type": "PostalAddress", "streetAddress": "5555 West Las Positas Blvd", "addressLocality": "Pleasanton", "addressRegion": "CA", "postalCode": "94588", "addressCountry": "US"},
+                "telephone": "+1-925-847-3000",
+                "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"],
+                "description": "Stanford-affiliated Tri-Valley hospital with Level II NICU (32+ weeks), 24/7 OB anesthesiology, only outpatient lactation clinic in the Tri-Valley. The default labor & delivery destination for Dublin and Pleasanton family buyers on PPO plans."
+            },
+            {
+                "@type": "Hospital",
+                "name": "San Ramon Regional Medical Center",
+                "url": "https://www.sanramonmedctr.com/",
+                "address": {"@type": "PostalAddress", "streetAddress": "6001 Norris Canyon Rd", "addressLocality": "San Ramon", "addressRegion": "CA", "postalCode": "94583", "addressCountry": "US"},
+                "telephone": "+1-925-275-8258",
+                "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"],
+                "description": "Independent (Tenet) hospital with a Family Birthing Center and Level II Special Care Nursery; UCSF Benioff Children's Hospital Oakland pediatricians on-call 24/7. Closer than Stanford Tri-Valley for buyers in north Dublin / Dublin Ranch tracts."
+            },
+            {
+                "@type": "Hospital",
+                "name": "John Muir Medical Center Walnut Creek",
+                "url": "https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html",
+                "address": {"@type": "PostalAddress", "streetAddress": "1601 Ygnacio Valley Rd", "addressLocality": "Walnut Creek", "addressRegion": "CA", "postalCode": "94598", "addressCountry": "US"},
+                "medicalSpecialty": ["Trauma", "NICU", "Obstetrics"],
+                "description": "Regional Level III NICU (only one in Contra Costa County, Stanford Children's partnership) and Level II Trauma Center (only one in Contra Costa County since 1986). High-risk pregnancy and high-acuity newborn referral center for the Tri-Valley and broader East Bay."
+            }
         ],
         "address": {
             "@type": "PostalAddress",
@@ -656,7 +698,7 @@
 </section>
 
 <!-- Why Pleasanton -->
-<section class="wc-section">
+<section id="why-pleasanton" class="wc-section">
     <h2>Why Pleasanton</h2>
     <div class="divider"></div>
     <p>
@@ -723,20 +765,92 @@
     </div>
     <p style="margin-top: 24px;">
         Schools matter on this map. Pleasanton Unified School District operates two comprehensive
-        high schools that family buyers actively compare. Foothill High serves the south and east
-        side of the city (most of Ruby Hill, Vintage Hills, and the Sycamore Heights corridor), and
-        Amador Valley High serves the central and north side (the downtown core, Birdland, Val
-        Vista). Both rank consistently among the strongest public high schools in Alameda County,
-        the published measures sit very close together, and either boundary defends the Pleasanton
-        premium to neighboring Dublin and Livermore. The attendance-boundary question is more about
-        cultural fit and feeder middle school than about resale value. Exact assignments are by
-        attendance boundary and shift occasionally; we verify the current assignment with the
-        district office, not the listing description.
+        high schools that family buyers actively compare (Foothill and Amador Valley) and the
+        boundary between them is the central school-decision question for Pleasanton buyers. The
+        dedicated Schools section below walks through district structure, the Foothill vs Amador
+        Valley split as redrawn in 2024, and typical school assignment by sub-neighborhood.
     </p>
 </section>
 
+<!-- Schools (Pleasanton Unified School District) -->
+<section id="schools" class="wc-section">
+    <h2>Schools (Pleasanton Unified School District)</h2>
+    <div class="divider"></div>
+
+    <p>Pleasanton Unified School District (PUSD) serves about 13,300 students across 13 schools: nine TK-5 elementaries (Alisal, Donlon, Fairlands, Hearst, Lydiksen, Mohr, Valley View, Vintage Hills, Walnut Grove), three middle schools (Hart, Harvest Park, Pleasanton Middle), two comprehensive high schools (<a href="https://avhs.pleasantonusd.net/" target="_blank" rel="noopener noreferrer">Amador Valley</a> and <a href="https://fhs.pleasantonusd.net/" target="_blank" rel="noopener noreferrer">Foothill</a>), and one continuation high school (Village High). Niche grades the district <strong>A+ overall</strong> (A+ Academics, A+ College Prep, A+ Teachers), <strong>#17 of 466</strong> Best School Districts in California and <strong>#2 in Alameda County</strong>. Per the most recent state CAASPP results: 74% math proficient, 78% reading proficient. PublicSchoolReview ranks PUSD <strong>#49 of 1,908 California districts</strong> (top 5%); EdData and the California School Dashboard mirror the same data.</p>
+
+    <p>Two structural notes that matter for Pleasanton buyers:</p>
+
+    <p><strong>Pleasanton's high school split was redrawn in 2024.</strong> Under the current boundaries: <strong>Foothill High</strong> serves the elementaries Fairlands, Donlon, Lydiksen, and Hearst (south + east side of the city, including most of Ruby Hill, Vintage Hills, Sycamore Heights corridor). <strong>Amador Valley High</strong> serves the others, Alisal, Mohr, Valley View, Vintage Hills, Walnut Grove (central + north side, including downtown Pleasanton, Birdland, Val Vista). Middle-school feeders also shifted: Hart and Pleasanton Middle generally feed Amador Valley; Harvest Park feeds Foothill. Both high schools are top-tier; the boundary question is more about cultural fit and feeder middle school than about resale value.</p>
+
+    <p><strong>Foothill vs Amador Valley by the numbers</strong> (per U.S. News 2025-2026 Best High Schools): <strong>Amador Valley</strong> ranks #459 nationally, #59 California, 70% AP-taking. <strong>Foothill</strong> ranks #553 nationally, #75 California, 65% AP-taking, 71% minority enrollment, 9% economically disadvantaged. Both substantially above California medians; the gap between them is narrow enough that the cultural-fit dimension usually dominates the data-only ranking.</p>
+
+    <h3>Typical assignment by sub-neighborhood</h3>
+
+    <table class="schools-assignment">
+        <thead>
+            <tr><th>Sub-area</th><th>Elementary (TK-5)</th><th>Middle (6-8)</th><th>High (9-12)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Downtown Pleasanton (1920s-1960s architecture, north-central)</td><td>Alisal or Walnut Grove</td><td>Pleasanton Middle</td><td>Amador Valley High</td></tr>
+            <tr><td>Birdland (south-east master-planned)</td><td>Donlon or Fairlands</td><td>Hart or Harvest Park</td><td>Foothill High (Fairlands feeder) or Amador Valley (Donlon area)</td></tr>
+            <tr><td>Vintage Hills (east master-planned)</td><td>Vintage Hills Elementary</td><td>Pleasanton Middle or Hart</td><td>Amador Valley High</td></tr>
+            <tr><td>Sycamore Heights (east-side master-planned)</td><td>Fairlands or Donlon</td><td>Harvest Park</td><td>Foothill High</td></tr>
+            <tr><td>Ruby Hill (gated estate, far south-east)</td><td>Fairlands or Donlon</td><td>Harvest Park</td><td>Foothill High</td></tr>
+            <tr><td>Val Vista (central-north)</td><td>Hearst or Valley View</td><td>Pleasanton Middle</td><td>Amador Valley High</td></tr>
+        </tbody>
+    </table>
+
+    <p class="schools-caveat">These assignments are typical, not guaranteed. The 2024 boundary redraw is recent and some pocket-level edges may still adjust. Lily verifies the current assignment with the PUSD registrar before any offer, not the listing description.</p>
+
+    <h3>Highlight schools</h3>
+
+    <ul>
+        <li><strong>Amador Valley High School</strong> (9-12, 1155 Santa Rita Rd) &mdash; US News #459 National Rankings, #59 California. 70% AP-taking. The traditional Pleasanton flagship, established programs, deepest extracurricular catalog.</li>
+        <li><strong>Foothill High School</strong> (9-12) &mdash; US News #553 National Rankings, #75 California. 65% AP-taking, 71% minority enrollment. Slightly smaller than Amador Valley, strong STEM and college-prep profile.</li>
+        <li><strong>Hart Middle School</strong> &mdash; one of the three PUSD middle schools; cross-feeds depending on the 2024-redrawn boundary at your address.</li>
+        <li><strong>Harvest Park Middle School</strong> &mdash; the standard south-side feeder into Foothill High; serves Ruby Hill / Birdland / Sycamore Heights corridor.</li>
+        <li><strong>Lydiksen, Vintage Hills, Donlon, Fairlands, Walnut Grove Elementaries</strong> &mdash; all Niche grade A; the elementary slate that drives the Pleasanton-premium pricing relative to neighboring Dublin and Livermore.</li>
+    </ul>
+
+    <p class="schools-sources">Sources: <a href="https://www.pleasantonusd.net/" target="_blank" rel="noopener noreferrer">Pleasanton Unified School District</a>; <a href="https://dq.cde.ca.gov/" target="_blank" rel="noopener noreferrer">California Department of Education DataQuest</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/pleasanton-unified-school-district-110381" target="_blank" rel="noopener noreferrer">U.S. News Best High Schools 2025-2026</a>; <a href="https://www.niche.com/k12/d/pleasanton-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche K-12</a>; <a href="https://www.publicschoolreview.com/california/pleasanton-unified-school-district/611310-school-district" target="_blank" rel="noopener noreferrer">PublicSchoolReview</a>; <a href="https://www.independentnews.com/news/pleasanton_news/high-school-boundaries-redrawn/article_5208c984-c623-11ee-8c80-3b6c69b87758.html" target="_blank" rel="noopener noreferrer">Independent News: Pleasanton high school boundaries redrawn (2024)</a>.</p>
+</section>
+
+<!-- Hospitals and birthing centers (Tri-Valley pool) data-hospitals-last-refreshed="2026-05-28" -->
+<section id="hospitals" class="wc-section">
+    <h2>Hospitals and birthing centers</h2>
+    <div class="divider"></div>
+
+    <p>Pleasanton has the biggest hospital-convenience advantage of any Tri-Valley city: <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley</a> is in-city (at 5555 W. Las Positas Blvd), with full labor &amp; delivery and a Level II NICU about five minutes from most addresses. <a href="https://www.sanramonmedctr.com/" target="_blank" rel="noopener noreferrer">San Ramon Regional Medical Center</a> sits ~15-20 minutes north as the second option. Kaiser Permanente members have a key caveat covered below.</p>
+
+    <table class="hospitals-list">
+        <thead>
+            <tr><th>Hospital</th><th>Network</th><th>Drive time from Pleasanton</th><th>Key services</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Stanford Health Care Tri-Valley (Pleasanton campus)</td><td>Stanford Health Care (PPO)</td><td>in-city (5-10 min)</td><td>Labor &amp; delivery; <strong>Level II NICU</strong> (32+ weeks); 24/7 OB anesthesiology; only outpatient lactation clinic in Tri-Valley</td></tr>
+            <tr><td>San Ramon Regional Medical Center</td><td>Tenet (PPO, independent)</td><td>15-20 min</td><td>Family Birthing Center; <strong>Level II Special Care Nursery</strong>; UCSF Benioff Children's pediatricians on-call 24/7</td></tr>
+            <tr><td>Kaiser Permanente Pleasanton Medical Office</td><td>Kaiser (closed)</td><td>in-city (5 min)</td><td>Outpatient + specialty care only; <strong>no labor &amp; delivery on-site</strong></td></tr>
+            <tr><td>Kaiser Permanente Walnut Creek (for Kaiser-member L&amp;D)</td><td>Kaiser (closed)</td><td>30-40 min</td><td>Closest Kaiser labor &amp; delivery for Pleasanton Kaiser members</td></tr>
+            <tr><td>John Muir Medical Center Walnut Creek (Level III NICU referral)</td><td>John Muir (PPO)</td><td>35-45 min</td><td>Regional <strong>Level III NICU</strong> (only one in Contra Costa County, Stanford Children's partnership); Level II Trauma Center; high-risk pregnancy referral</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Birthing centers: what matters</h3>
+
+    <p><strong>Stanford Health Care Tri-Valley</strong> is the default Pleasanton family-buyer hospital. Five minutes from downtown, ten minutes from Ruby Hill, ten minutes from Birdland / Vintage Hills. Level II NICU handles babies as young as 32 weeks; for anything below 32 weeks or higher-acuity cases, transfer goes to John Muir Walnut Creek (Level III) or Stanford in Palo Alto. Private LDR suites, 24/7 OB anesthesiology, epidural and nitrous oxide both available, and the only outpatient lactation clinic in the Tri-Valley after discharge.</p>
+
+    <p><strong>San Ramon Regional Medical Center</strong> is the second Tri-Valley option (also Level II NICU) and the closer hospital for buyers in north Pleasanton. UCSF Benioff Children's Hospital Oakland pediatricians are on-call 24/7.</p>
+
+    <p><strong>Kaiser members in Pleasanton should plan for the Walnut Creek commute</strong>: Kaiser has a medical office in Pleasanton (7601 Stoneridge Dr South) for outpatient care, but Kaiser labor &amp; delivery for Tri-Valley members is at Kaiser Permanente Walnut Creek Medical Center (~30-40 minutes from Pleasanton). Factor this commute into prenatal-care scheduling.</p>
+
+    <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+
+    <p class="hospitals-sources">Sources: <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley</a> (incl. <a href="https://stanfordhealthcare.org/tri-valley/medical-clinics/maternity.html" target="_blank" rel="noopener noreferrer">maternity</a>); <a href="https://www.sanramonmedctr.com/services/obstetrics" target="_blank" rel="noopener noreferrer">San Ramon Regional Medical Center Obstetrics</a>; <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Medical Center Walnut Creek</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Permanente Walnut Creek maternity</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative (CPQCC) NICU Directory</a>.</p>
+</section>
+
 <!-- Documented track record -->
-<section class="track-record">
+<section id="track-record" class="track-record">
     <div class="track-record-inner">
         <h2>Track Record</h2>
         <div class="divider"></div>
@@ -778,7 +892,7 @@
 </section>
 
 <!-- Buying in Pleasanton -->
-<section class="wc-section">
+<section id="buying-in-pleasanton" class="wc-section">
     <h2>What buying in Pleasanton actually involves</h2>
     <div class="divider"></div>
     <p>
@@ -854,7 +968,7 @@
 </section>
 
 <!-- Selling in Pleasanton -->
-<section class="wc-section">
+<section id="selling-in-pleasanton" class="wc-section">
     <h2>What selling in Pleasanton involves</h2>
     <div class="divider"></div>
     <p>
@@ -883,7 +997,7 @@
 </section>
 
 <!-- Methodology in Pleasanton -->
-<section class="wc-section">
+<section id="methodology" class="wc-section">
     <h2>The Meticulous Protector, applied to Pleasanton</h2>
     <div class="divider"></div>
     <p>
@@ -923,7 +1037,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="wc-section faq-block">
+<section id="faq" class="wc-section faq-block">
     <h2>Pleasanton FAQ</h2>
     <div class="divider"></div>
 

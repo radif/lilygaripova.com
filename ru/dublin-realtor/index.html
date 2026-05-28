@@ -87,7 +87,49 @@
             {"@type": "Place", "name": "Schaefer Ranch, Dublin"},
             {"@type": "Place", "name": "Tassajara Hills, Dublin"},
             {"@type": "Place", "name": "Tri-Valley"},
-            {"@type": "Place", "name": "Alameda County"}
+            {"@type": "Place", "name": "Alameda County"},
+            {
+                "@type": "EducationalOrganization",
+                "name": "Dublin Unified School District",
+                "url": "https://www.dublinusd.org/",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "7471 Larkdale Avenue",
+                    "addressLocality": "Dublin",
+                    "addressRegion": "CA",
+                    "postalCode": "94568",
+                    "addressCountry": "US"
+                },
+                "telephone": "+1-925-828-2551",
+                "description": "Dublin Unified School District обслуживает около 12,800 учеников в 16 школах. По CAASPP результатам Калифорнии: 75% proficient по math, 78% по reading, graduation rate 97%. PublicSchoolReview state rank #43 из 1,932. Niche overall grade A+. Включает Dublin High School (US News #81 в Калифорнии) и Emerald High School (открыта 2023-24)."
+            },
+            {
+                "@type": "Hospital",
+                "name": "Stanford Health Care Tri-Valley",
+                "alternateName": "ValleyCare",
+                "url": "https://stanfordhealthcare.org/tri-valley/",
+                "address": {"@type": "PostalAddress", "streetAddress": "5555 West Las Positas Blvd", "addressLocality": "Pleasanton", "addressRegion": "CA", "postalCode": "94588", "addressCountry": "US"},
+                "telephone": "+1-925-847-3000",
+                "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"],
+                "description": "Stanford-affiliated Tri-Valley больница с Level II NICU (32+ недель), 24/7 OB anesthesiology, единственный outpatient lactation clinic в Tri-Valley. Default labor & delivery destination для семей-покупателей Dublin и Pleasanton на PPO планах."
+            },
+            {
+                "@type": "Hospital",
+                "name": "San Ramon Regional Medical Center",
+                "url": "https://www.sanramonmedctr.com/",
+                "address": {"@type": "PostalAddress", "streetAddress": "6001 Norris Canyon Rd", "addressLocality": "San Ramon", "addressRegion": "CA", "postalCode": "94583", "addressCountry": "US"},
+                "telephone": "+1-925-275-8258",
+                "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"],
+                "description": "Независимая (Tenet) больница с Family Birthing Center и Level II Special Care Nursery; педиатры UCSF Benioff Children's Hospital Oakland on-call 24/7. Ближе чем Stanford Tri-Valley для покупателей в северном Dublin / Dublin Ranch tracts."
+            },
+            {
+                "@type": "Hospital",
+                "name": "John Muir Medical Center Walnut Creek",
+                "url": "https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html",
+                "address": {"@type": "PostalAddress", "streetAddress": "1601 Ygnacio Valley Rd", "addressLocality": "Walnut Creek", "addressRegion": "CA", "postalCode": "94598", "addressCountry": "US"},
+                "medicalSpecialty": ["Trauma", "NICU", "Obstetrics"],
+                "description": "Региональный Level III NICU (единственный в округе Contra Costa, партнёрство Stanford Children's) и Level II Trauma Center (единственный в округе Contra Costa с 1986 года). High-risk pregnancy и high-acuity newborn referral center для Tri-Valley и broader East Bay."
+            }
         ]
     }
     </script>
@@ -170,10 +212,10 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Какие ценовые диапазоны в Dublin, California по микрорайонам в 2025-2026 годах?",
+                "name": "Какие ценовые диапазоны в Dublin, California по neighbourhoods в 2025-2026 годах?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Dublin работает четырьмя параллельными ценовыми тирами по микрорайонам. Кондо и таунхаусы (West Dublin, отдельные subdivisions East Dublin): обычно $700K-$1M, плюс HOA $300-$600 в месяц. Single-family дома в West Dublin (старый инвентарь 1960-1980-х): $1.2M-$1.8M, lot-sizes 5,000-8,000 sqft, школы Dublin Unified. East Dublin master-planned (Dublin Ranch, Positano, Schaefer Ranch, Tassajara Hills, постройка после 2000 года): $1.5M-$2.5M, HOA $150-$400 в месяц, плюс Mello-Roos special tax обычно $3,000-$6,000 в год сверх стандартного property tax. Hilltop estate в East Dublin: $2M-$3M+, большие lots, виды на долину. "
+                    "text": "Dublin работает четырьмя параллельными ценовыми тирами по neighbourhoods. Кондо и таунхаусы (West Dublin, отдельные subdivisions East Dublin): обычно $700K-$1M, плюс HOA $300-$600 в месяц. Single-family дома в West Dublin (старый инвентарь 1960-1980-х): $1.2M-$1.8M, lot-sizes 5,000-8,000 sqft, школы Dublin Unified. East Dublin master-planned (Dublin Ranch, Positano, Schaefer Ranch, Tassajara Hills, постройка после 2000 года): $1.5M-$2.5M, HOA $150-$400 в месяц, плюс Mello-Roos special tax обычно $3,000-$6,000 в год сверх стандартного property tax. Hilltop estate в East Dublin: $2M-$3M+, большие lots, виды на долину. "
                 }
             },
             {
@@ -189,7 +231,7 @@
                 "name": "BART или машина для commute из Dublin в San Francisco и Silicon Valley?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Dublin имеет две BART-станции: Dublin / Pleasanton (терминал) и West Dublin / Pleasanton, обе на Blue Line. До downtown San Francisco поездом примерно 55-65 минут с одной пересадкой или по прямой ветке. Многие профессионалы оставляют машину на парковке станции и берут BART, чтобы избежать пробки на 580 / 680 в peak hours. На машине в San Francisco через Bay Bridge: 45-90 минут в зависимости от времени суток, peak commute (7:30-9:00) часто 75+ минут. В Silicon Valley (Sunnyvale, Cupertino, Santa Clara, San Jose) через 680 на юг и 237 / 880: 35-60 минут в обычные часы, до 90 в peak. Reverse-commute из Dublin в Livermore (10-15 минут) или Pleasanton (5-10 минут) практически без трафика. Большая часть русскоязычных tech-работников Dublin оптимизируется под BART для SF и под машину для South Bay, и выбор микрорайона часто привязан к этому: West Dublin и районы около BART для SF commuters, East Dublin master-planned для семей, которым важнее space и школы."
+                    "text": "Dublin имеет две BART-станции: Dublin / Pleasanton (терминал) и West Dublin / Pleasanton, обе на Blue Line. До downtown San Francisco поездом примерно 55-65 минут с одной пересадкой или по прямой ветке. Многие профессионалы оставляют машину на парковке станции и берут BART, чтобы избежать пробки на 580 / 680 в peak hours. На машине в San Francisco через Bay Bridge: 45-90 минут в зависимости от времени суток, peak commute (7:30-9:00) часто 75+ минут. В Silicon Valley (Sunnyvale, Cupertino, Santa Clara, San Jose) через 680 на юг и 237 / 880: 35-60 минут в обычные часы, до 90 в peak. Reverse-commute из Dublin в Livermore (10-15 минут) или Pleasanton (5-10 минут) практически без трафика. Большая часть русскоязычных tech-работников Dublin оптимизируется под BART для SF и под машину для South Bay, и выбор neighbourhood часто привязан к этому: West Dublin и районы около BART для SF commuters, East Dublin master-planned для семей, которым важнее space и школы."
                 }
             },
             {
@@ -392,7 +434,7 @@
                 <li><strong>East Dublin</strong>: master-planned communities, построенные после 2000 года: Dublin Ranch, Positano, Schaefer Ranch, Tassajara Hills, и другие subdivisions. Single-family дома $1.5M-$2.5M (hilltop estate выше $2.5M), новые конструкции, lot-sizes более variable (от 4,000 sqft в плотных tracts до 10,000+ в hilltop). Почти все имеют активный Mello-Roos special tax ($3,000-$6,000 в год сверх стандартного property tax) и двухуровневую HOA структуру (master HOA $80-$200 плюс sub-HOA $150-$400 в месяц). Современная архитектура, open-floorplan, energy-efficient construction, привязка к новым школам округа.</li>
             </ul>
 
-            <h3>Главные микрорайоны</h3>
+            <h3>Главные neighbourhoods</h3>
             <ul>
                 <li><strong>Dublin Ranch</strong>: крупнейший East Dublin master-planned tract, диверсифицированный по price points от $1.4M townhomes до $2.5M+ SFH, включает gated communities, golf course и hilltop estate sections.</li>
                 <li><strong>Positano</strong>: новее East Dublin subdivision (постройка 2010-х), преимущественно SFH $1.6M-$2.3M, mediterranean-style архитектура, более молодая буферная застройка с активным Mello-Roos.</li>
@@ -402,11 +444,81 @@
                 <li><strong>Кондо и таунхаусы (West Dublin старый инвентарь, отдельные East Dublin subdivisions)</strong>: $700K-$1M, HOA $300-$600 в месяц, иногда плюс Mello-Roos в East Dublin tracts. Подходит для first-time buyers и одиноких профессионалов.</li>
             </ul>
 
-            <h3>Школы Dublin Unified и почему это меняет цену</h3>
-            <p>Dublin Unified School District обслуживает весь город (и West, и East Dublin), включая Dublin High School, Wells Middle, Fallon Middle, и серию elementary schools (Dublin Elementary, John Green Elementary, Amador Elementary, Dougherty Elementary и другие). Округ стабильно входит в верхние тиры Tri-Valley по test scores и college matriculation. Важный нюанс: внутри округа разные elementary schools имеют разный профиль по test scores и demographic mix, и assignment идёт строго по адресу. Тот же тип дома, тот же square footage, тот же микрорайон могут стоить на $100K-$200K по-разному в зависимости от того, в какую elementary school попадает адрес. Я проверяю school assignment по точному адресу до показа, потому что объявления в MLS не всегда корректно его указывают.</p>
-
             <h3>BART, 580 / 680 коридор, и tech commute</h3>
             <p>Dublin это один из немногих Tri-Valley городов с двумя BART-станциями: Dublin / Pleasanton (терминал Blue Line) и West Dublin / Pleasanton. До downtown San Francisco поездом 55-65 минут. На машине в Silicon Valley (Sunnyvale, Cupertino, Santa Clara, San Jose) через 680 и 237: 35-60 минут в обычные часы, до 90 в peak commute. Reverse-commute в Livermore (10-15 минут) и Pleasanton (5-10 минут) практически без трафика. Многие tech-семьи выбирают Dublin именно потому, что один родитель ездит на BART в SF, а второй на машине в South Bay, и Dublin даёт центральную позицию для обоих направлений.</p>
+        </section>
+
+        <section id="schools">
+            <h2>Школы (Dublin Unified School District)</h2>
+
+            <p>Dublin Unified School District (DUSD) обслуживает около 12,800 учеников в 16 школах: семь TK-5 elementary, одна K-8 (Cottonwood Creek), одна TK-8 открывается в 2026 (Shamrock Hills), две middle (Eleanor Murray Fallon, Wells), две comprehensive high (<a href="https://dhs.dublinusd.org/" target="_blank" rel="noopener noreferrer">Dublin High</a> и <a href="https://ehs.dublinusd.org/" target="_blank" rel="noopener noreferrer">Emerald High</a>), одна continuation (Valley High), DHS Middle College и York Alternative Learning Center. Niche оценивает округ на <strong>A+ overall</strong> (A+ Academics, A+ College Prep, A Teachers). По последним CAASPP результатам штата 75% учеников DUSD proficient по math, 78% по reading, graduation rate округа 97%. PublicSchoolReview ставит DUSD на <strong>#43 из 1,932 школьных округов Калифорнии</strong> (топ 5%); California School Dashboard и EdData отражают те же показатели.</p>
+
+            <p>Две структурные особенности, важные для покупателей в Dublin:</p>
+
+            <p><strong>East Dublin и West Dublin идут в разные middle и high schools.</strong> Граница проходит примерно по Dougherty Road / Iron Horse Trail. <strong>West Dublin</strong> elementary (Dublin, Frederiksen, Murray) feed в <strong>Wells Middle School</strong>. <strong>East Dublin</strong> elementary (Amador, Dougherty, Green, Kolb) feed в <strong>Fallon Middle School</strong>. Cottonwood Creek и новая Shamrock Hills (открывается 2026-27) это TK-8 школы, которые self-contained: одна школа от TK до 8-го класса, без отдельного middle school assignment.</p>
+
+            <p><strong>Dublin High vs Emerald High это центральный вопрос для покупателей в East Dublin.</strong> Dublin High (9-12, ~2,800 учеников, US News <strong>#81 в Калифорнии</strong> / #593 национально / graduation rate 98% / 64% сдают хотя бы один AP / 58% проходят) находится в центральном Dublin и обслуживает западную половину города плюс часть центрального East Dublin. Emerald High (тоже 9-12, открыта 2023-24, сейчас freshmen + sophomores, наращивает до ~2,200 учеников к 2027) обслуживает восточную половину, post-2000 master-planned tracts. По заказанному округом demographic study 2024/25 (SchoolWorks Inc.), <strong>61% учеников, проживающих в Emerald High attendance area, в настоящее время делают intra-district transfer в Dublin High</strong> (1,357 из около 2,260 East Dublin residents). Этот transfer rate сократится по мере наполнения Emerald к 2026-27. Покупатели в Dublin Ranch, Positano, Schaefer Ranch и Tassajara Hills должны проверять текущее Emerald-или-Dublin-High assignment для конкретного адреса напрямую с DUSD registrar, не по описанию листинга. Границы продолжают корректироваться до 2026-27, пока Emerald не достигнет full capacity.</p>
+
+            <h3>Типичное assignment по neighbourhoods</h3>
+
+            <table class="schools-assignment">
+                <thead>
+                    <tr><th>Neighbourhood</th><th>Elementary (TK-5)</th><th>Middle (6-8)</th><th>High (9-12)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>West Dublin (старый инвентарь 1960-1980-х, к западу от Dougherty Rd)</td><td>Dublin / Frederiksen / Murray</td><td>Wells Middle</td><td>Dublin High</td></tr>
+                    <tr><td>Dublin Ranch</td><td>Green или Kolb</td><td>Fallon Middle</td><td>Emerald High (часто intra-district transfer в Dublin High)</td></tr>
+                    <tr><td>Positano</td><td>Dougherty или Green</td><td>Fallon Middle</td><td>Emerald High</td></tr>
+                    <tr><td>Schaefer Ranch</td><td>Amador</td><td>Fallon Middle</td><td>Dublin High или Emerald (граница)</td></tr>
+                    <tr><td>Tassajara Hills / east master-planned</td><td>Amador или Cottonwood Creek TK-8</td><td>Fallon Middle, или Cottonwood Creek TK-8 self-contained</td><td>Emerald High</td></tr>
+                </tbody>
+            </table>
+
+            <p class="schools-caveat">Эти assignment типичные, не гарантированные. Границы корректируются по мере строительства новых tracts и наполнения Emerald High. Я проверяю текущее assignment с DUSD registrar до подачи оффера, не по описанию листинга.</p>
+
+            <h3>Ключевые школы</h3>
+
+            <ul>
+                <li><strong>Dublin High School</strong> (9-12, 8151 Village Pkwy, ~2,800 учеников) &mdash; US News #593 в National Rankings, #81 в Калифорнии, #17 в San Francisco Metro, #77 в STEM. CAASPP: 72% math, 85% reading, 62% science. 64% сдают хотя бы один AP, 58% проходят. Niche A+, graduation rate 98%. Традиционный flagship Dublin: самые установленные программы, самый глубокий AP catalog.</li>
+                <li><strong>Emerald High School</strong> (9-12, открыта 2023-24, сейчас freshmen + sophomores) &mdash; переехала на собственный кампус август 2024. Новое строительство, современные STEM и athletic facilities. Меньше и быстро растёт. Слишком новая для US News ranking; сравнение с Dublin High центральное решение для East Dublin family-buyer.</li>
+                <li><strong>Eleanor Murray Fallon Middle School</strong> (6-8, ~1,700 учеников) &mdash; Niche A+, CAASPP 77% math / 86% reading. Стандартный East Dublin master-planned feed; большое enrollment отражает концентрацию East Dublin family-buyer рынка.</li>
+                <li><strong>J.M. Amador Elementary</strong> (TK-5) &mdash; Niche A+, CAASPP 88% math / 90% reading. Самый высокий elementary score в округе; обслуживает самые восточные master-planned tracts.</li>
+                <li><strong>Cottonwood Creek TK-8</strong> &mdash; Niche A+, CAASPP 85% math / 91% reading. K-8 self-contained model, который предпочитают некоторые East Dublin покупатели (одна школа через 8-й класс, без middle school transition).</li>
+            </ul>
+
+            <p class="schools-sources">Источники: <a href="https://www.dublinusd.org/" target="_blank" rel="noopener noreferrer">Dublin Unified School District</a>; <a href="https://www.dublinusd.org/ourpages/auto/2023/7/13/57850022/2024-25%20Demographics%20%26%20Enrollment%20Report.pdf" target="_blank" rel="noopener noreferrer">SchoolWorks Inc. 2024/25 Demographics &amp; Enrollment Projections</a> (заказ DUSD, ноябрь 2024); <a href="https://dq.cde.ca.gov/" target="_blank" rel="noopener noreferrer">California Department of Education DataQuest</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/dublin-unified-school-district/dublin-high-school-1534" target="_blank" rel="noopener noreferrer">U.S. News Best High Schools 2025-2026</a>; <a href="https://www.niche.com/k12/d/dublin-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche K-12</a>.</p>
+        </section>
+
+        <!-- Hospitals and birthing centers (Tri-Valley pool) data-hospitals-last-refreshed="2026-05-28" -->
+        <section id="hospitals">
+            <h2>Больницы и birthing centers</h2>
+
+            <p>Dublin находится в Tri-Valley hospital pool. Ближайшая больница с labor &amp; delivery это <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley</a> в соседнем Pleasanton (~5-10 минут от большинства адресов Dublin), с <a href="https://www.sanramonmedctr.com/" target="_blank" rel="noopener noreferrer">San Ramon Regional Medical Center</a> как сопоставимым вторым вариантом к северу (~10-15 минут). У членов Kaiser Permanente есть ключевая особенность, описанная ниже.</p>
+
+            <table class="hospitals-list">
+                <thead>
+                    <tr><th>Больница</th><th>Network</th><th>Drive time из Dublin</th><th>Ключевые services</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Stanford Health Care Tri-Valley (кампус Pleasanton)</td><td>Stanford Health Care (PPO)</td><td>5-10 мин</td><td>Labor &amp; delivery; <strong>Level II NICU</strong> (32+ недель); 24/7 OB anesthesiology; единственный outpatient lactation clinic в Tri-Valley</td></tr>
+                    <tr><td>San Ramon Regional Medical Center</td><td>Tenet (PPO, independent)</td><td>10-15 мин</td><td>Family Birthing Center; <strong>Level II Special Care Nursery</strong>; педиатры UCSF Benioff Children's on-call 24/7</td></tr>
+                    <tr><td>Kaiser Permanente Dublin Medical Offices</td><td>Kaiser (closed)</td><td>в городе (0-5 мин)</td><td>Только outpatient + specialty care; <strong>no labor &amp; delivery on-site</strong></td></tr>
+                    <tr><td>Kaiser Permanente Walnut Creek (для Kaiser-member L&amp;D)</td><td>Kaiser (closed)</td><td>25-35 мин</td><td>Ближайший Kaiser labor &amp; delivery для членов Kaiser в Dublin</td></tr>
+                    <tr><td>John Muir Medical Center Walnut Creek (Level III NICU referral)</td><td>John Muir (PPO)</td><td>30-40 мин</td><td>Региональный <strong>Level III NICU</strong> (единственный в округе Contra Costa, партнёрство со Stanford Children's); Level II Trauma Center; high-risk pregnancy referral center</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Birthing centers: что важно</h3>
+
+            <p><strong>Stanford Health Care Tri-Valley (Pleasanton)</strong> это default для большинства семей-покупателей Dublin на PPO плане. Level II NICU обрабатывает детей от 32 недель; для ниже 32 недель или higher-acuity случаев transfer идёт в John Muir Walnut Creek (Level III) или Stanford в Palo Alto. Private LDR (labor + delivery + recovery) suites, 24/7 OB anesthesiology, epidural и nitrous oxide оба доступны, и единственный outpatient lactation clinic в Tri-Valley после discharge.</p>
+
+            <p><strong>San Ramon Regional Medical Center</strong> сильный второй вариант (тоже Level II NICU) и ближайшая больница для покупателей в северном Dublin / Dublin Ranch tracts ближе к границе с San Ramon. Педиатры UCSF Benioff Children's Hospital Oakland on-call 24/7.</p>
+
+            <p><strong>Члены Kaiser в Dublin должны планировать commute в Walnut Creek</strong>: у Kaiser есть medical offices в Dublin (3100 Dublin Blvd) и Pleasanton (7601 Stoneridge Dr South) для outpatient care, но Kaiser labor &amp; delivery для членов Tri-Valley это Kaiser Permanente Walnut Creek Medical Center (~25-35 минут от Dublin). Учитывайте этот commute в prenatal-care планировании.</p>
+
+            <p class="hospitals-caveat">Hospital network coverage зависит от вашего insurance plan. Я не консультирую по medical coverage решениям; для in-network подтверждения свяжитесь с вашим страховщиком напрямую. Hospital information выше актуальна на 2026-05-28 и должна быть re-verified с admissions office каждой больницы перед принятием major life decision.</p>
+
+            <p class="hospitals-sources">Источники: <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley</a> (вкл. <a href="https://stanfordhealthcare.org/tri-valley/medical-clinics/maternity.html" target="_blank" rel="noopener noreferrer">maternity</a>); <a href="https://www.sanramonmedctr.com/services/obstetrics" target="_blank" rel="noopener noreferrer">San Ramon Regional Medical Center Obstetrics</a> (вкл. <a href="https://www.sanramonmedctr.com/services/obstetrics/level-ii-intensive-care-nursery" target="_blank" rel="noopener noreferrer">Level II Special Care Nursery</a>); <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Medical Center Walnut Creek</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Permanente Walnut Creek maternity</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative (CPQCC) NICU Directory</a>.</p>
         </section>
 
         <section id="track-record">
@@ -448,7 +560,7 @@
             <h2>Что значит покупать в Dublin</h2>
             <p>Dublin в 2025-2026 годах это конкурентный рынок, но менее frenzied, чем Cupertino или Palo Alto. East Dublin master-planned listings с правильным school feed уходят за 10-14 дней с 3-5 офферами; West Dublin старый инвентарь берёт 2-4 оффера с менее агрессивной надбавкой. Что важно знать на входе:</p>
 
-            <h3>Типичные ценовые диапазоны по микрорайонам</h3>
+            <h3>Типичные ценовые диапазоны по neighbourhoods</h3>
             <ul>
                 <li><strong>Кондо и таунхаусы (West Dublin, отдельные East Dublin subdivisions)</strong>: $700K-$1M, HOA $300-$600/мес, иногда плюс Mello-Roos в East Dublin tracts.</li>
                 <li><strong>SFH West Dublin (постройка 1960-1980-х)</strong>: $1.2M-$1.8M, lot-sizes 5,000-8,000 sqft, нет Mello-Roos, обычно нет HOA.</li>
@@ -479,7 +591,7 @@
 
         <section id="selling-in-dublin">
             <h2>Что значит продавать в Dublin</h2>
-            <p>Как listing agent я применяю трёхфазную Strategic Listing Model: (1) data-driven ценообразование с comp-анализом конкретного pocket (Dublin compsы из Dublin Ranch не работают для West Dublin, и наоборот; East Dublin master-planned tracts даже между собой не взаимозаменяемы), картирование конкурирующих листингов на 90 дней назад и forward; (2) подготовка дома, включая pre-listing улучшения с положительным ROI (фокус на kitchen и primary bath, не на дорогих renovation), профессиональный staging под demographic микрорайона и фотография; (3) multi-platform маркетинг с активным bid management и таргетированной outreach на агентов, у которых уже есть подходящий buyer pool. В East Dublin master-planned я обычно делаю фокус на школьное assignment и Mello-Roos transparency (показать остаточный срок bond так, чтобы это не пугало покупателя); в West Dublin, на BART access, отсутствие Mello-Roos и потенциал renovation; в condos и townhomes, на HOA financials и reserve study с открытыми картами.</p>
+            <p>Как listing agent я применяю трёхфазную Strategic Listing Model: (1) data-driven ценообразование с comp-анализом конкретного pocket (Dublin compsы из Dublin Ranch не работают для West Dublin, и наоборот; East Dublin master-planned tracts даже между собой не взаимозаменяемы), картирование конкурирующих листингов на 90 дней назад и forward; (2) подготовка дома, включая pre-listing улучшения с положительным ROI (фокус на kitchen и primary bath, не на дорогих renovation), профессиональный staging под demographic neighbourhood и фотография; (3) multi-platform маркетинг с активным bid management и таргетированной outreach на агентов, у которых уже есть подходящий buyer pool. В East Dublin master-planned я обычно делаю фокус на школьное assignment и Mello-Roos transparency (показать остаточный срок bond так, чтобы это не пугало покупателя); в West Dublin, на BART access, отсутствие Mello-Roos и потенциал renovation; в condos и townhomes, на HOA financials и reserve study с открытыми картами.</p>
 
             <p>Бесплатная оценка дома Dublin доступна по адресу <a href="/ru/home-value/">lilygaripova.com/ru/home-value/</a> или по звонку 415-910-3958.</p>
         </section>
@@ -499,8 +611,8 @@
             <h2>Часто задаваемые вопросы про Dublin, California</h2>
 
             <details>
-                <summary>Какие ценовые диапазоны в Dublin, California по микрорайонам в 2025-2026 годах?</summary>
-                <p>Dublin работает четырьмя параллельными ценовыми тирами по микрорайонам. Кондо и таунхаусы (West Dublin, отдельные subdivisions East Dublin): обычно $700K-$1M, плюс HOA $300-$600 в месяц. Single-family дома в West Dublin (старый инвентарь 1960-1980-х): $1.2M-$1.8M, lot-sizes 5,000-8,000 sqft, школы Dublin Unified. East Dublin master-planned (Dublin Ranch, Positano, Schaefer Ranch, Tassajara Hills, постройка после 2000 года): $1.5M-$2.5M, HOA $150-$400 в месяц, плюс Mello-Roos special tax обычно $3,000-$6,000 в год сверх стандартного property tax. Hilltop estate в East Dublin: $2M-$3M+, большие lots, виды на долину. </p>
+                <summary>Какие ценовые диапазоны в Dublin, California по neighbourhoods в 2025-2026 годах?</summary>
+                <p>Dublin работает четырьмя параллельными ценовыми тирами по neighbourhoods. Кондо и таунхаусы (West Dublin, отдельные subdivisions East Dublin): обычно $700K-$1M, плюс HOA $300-$600 в месяц. Single-family дома в West Dublin (старый инвентарь 1960-1980-х): $1.2M-$1.8M, lot-sizes 5,000-8,000 sqft, школы Dublin Unified. East Dublin master-planned (Dublin Ranch, Positano, Schaefer Ranch, Tassajara Hills, постройка после 2000 года): $1.5M-$2.5M, HOA $150-$400 в месяц, плюс Mello-Roos special tax обычно $3,000-$6,000 в год сверх стандартного property tax. Hilltop estate в East Dublin: $2M-$3M+, большие lots, виды на долину. </p>
             </details>
 
             <details>
@@ -510,7 +622,7 @@
 
             <details>
                 <summary>BART или машина для commute из Dublin в San Francisco и Silicon Valley?</summary>
-                <p>Dublin имеет две BART-станции: Dublin / Pleasanton (терминал) и West Dublin / Pleasanton, обе на Blue Line. До downtown San Francisco поездом примерно 55-65 минут с одной пересадкой или по прямой ветке. Многие профессионалы оставляют машину на парковке станции и берут BART, чтобы избежать пробки на 580 / 680 в peak hours. На машине в San Francisco через Bay Bridge: 45-90 минут в зависимости от времени суток, peak commute (7:30-9:00) часто 75+ минут. В Silicon Valley (Sunnyvale, Cupertino, Santa Clara, San Jose) через 680 на юг и 237 / 880: 35-60 минут в обычные часы, до 90 в peak. Reverse-commute из Dublin в Livermore (10-15 минут) или Pleasanton (5-10 минут) практически без трафика. Большая часть русскоязычных tech-работников Dublin оптимизируется под BART для SF и под машину для South Bay, и выбор микрорайона часто привязан к этому: West Dublin и районы около BART для SF commuters, East Dublin master-planned для семей, которым важнее space и школы.</p>
+                <p>Dublin имеет две BART-станции: Dublin / Pleasanton (терминал) и West Dublin / Pleasanton, обе на Blue Line. До downtown San Francisco поездом примерно 55-65 минут с одной пересадкой или по прямой ветке. Многие профессионалы оставляют машину на парковке станции и берут BART, чтобы избежать пробки на 580 / 680 в peak hours. На машине в San Francisco через Bay Bridge: 45-90 минут в зависимости от времени суток, peak commute (7:30-9:00) часто 75+ минут. В Silicon Valley (Sunnyvale, Cupertino, Santa Clara, San Jose) через 680 на юг и 237 / 880: 35-60 минут в обычные часы, до 90 в peak. Reverse-commute из Dublin в Livermore (10-15 минут) или Pleasanton (5-10 минут) практически без трафика. Большая часть русскоязычных tech-работников Dublin оптимизируется под BART для SF и под машину для South Bay, и выбор neighbourhood часто привязан к этому: West Dublin и районы около BART для SF commuters, East Dublin master-planned для семей, которым важнее space и школы.</p>
             </details>
 
             <details>
