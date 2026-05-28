@@ -77,7 +77,9 @@
         "image": "https://lilygaripova.com/photos/Lily.jpg",
         "areaServed": [
             {"@type": "City", "name": "San Ramon", "containedInPlace": {"@type": "AdministrativeArea", "name": "Contra Costa County, California"}},
-            {"@type": "Place", "name": "Tri-Valley"}
+            {"@type": "Place", "name": "Tri-Valley"},
+            {"@type": "EducationalOrganization", "name": "San Ramon Valley Unified School District", "url": "https://www.srvusd.net/", "address": {"@type": "PostalAddress", "streetAddress": "699 Old Orchard Dr", "addressLocality": "Danville", "addressRegion": "CA", "postalCode": "94526", "addressCountry": "US"}, "telephone": "+1-925-552-5500", "description": "San Ramon Valley Unified School District serves 29,183 students across 37 schools. PublicSchoolReview state rank #53 of 1,907 California districts (top 5%). Includes Dougherty Valley High (U.S. News #27 California) and California High (#199)."},
+            {"@type": "Hospital", "name": "San Ramon Regional Medical Center", "url": "https://www.sanramonmedctr.com/", "address": {"@type": "PostalAddress", "streetAddress": "6001 Norris Canyon Rd", "addressLocality": "San Ramon", "addressRegion": "CA", "postalCode": "94583", "addressCountry": "US"}, "telephone": "+1-925-275-8258", "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"], "description": "Independent (Tenet) hospital with a Family Birthing Center and Level II Special Care Nursery; UCSF Benioff Children's Hospital Oakland pediatricians on-call 24/7."}
         ],
         "address": {"@type": "PostalAddress", "addressLocality": "San Ramon", "addressRegion": "CA", "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": 37.7799, "longitude": -121.978},
@@ -114,8 +116,8 @@
             },
             {
                 "@type": "Question",
-                "name": "Bishop Ranch — who's there and what's the commute?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Bishop Ranch is the largest business park in northern California — anchored by Chevron, AT&T, PG&E, GE, and a long tail of smaller offices. Many San Ramon family buyers are Bishop Ranch employees commuting on-foot or via shuttle. For reverse-commute to South Bay (Apple / Google / NVIDIA), it's I-680 south to I-580 west to I-880 south — 50-80 minutes off-peak."}
+                "name": "Bishop Ranch, who's there and what's the commute?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Bishop Ranch is the largest business park in northern California, anchored by Chevron, AT&T, PG&E, GE, and a long tail of smaller offices. Many San Ramon family buyers are Bishop Ranch employees commuting on-foot or via shuttle. For reverse-commute to South Bay (Apple / Google / NVIDIA), it's I-680 south to I-580 west to I-880 south, 50-80 minutes off-peak."}
             },
             {
                 "@type": "Question",
@@ -145,7 +147,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero — matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
+        /* City-page hero, matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
         .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
         .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
         .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
@@ -242,13 +244,77 @@
 
     <section id="why-san-ramon">
         <h2>Why San Ramon</h2>
-        <p>San Ramon sits at the north end of the Tri-Valley, between Dublin (south) and Danville (north). The school district is San Ramon Valley Unified — one of the top-ranked districts in California. Bishop Ranch is the major employer cluster (Chevron, AT&T, PG&E, GE). The city splits between older central San Ramon (1970s-1990s housing) and the master-planned east side (Windemere, Gale Ranch — post-2000, with active Mello-Roos).</p><p>Lily has 0 documented closings inside San Ramon city limits to date but works the entire Tri-Valley corridor actively: 2 Dublin closings, 1 Pleasanton closing, 1 Livermore closing, with the Tri-Valley triangle (Dublin / Pleasanton / San Ramon) covered in detail in the Dublin city-page FAQ. For San Ramon-specific representation, Lily applies the same Mello-Roos disclosure discipline and master-planned HOA-package analysis used on Dublin's East-side tracts.</p>
+        <p>San Ramon sits at the north end of the Tri-Valley, between Dublin (south) and Danville (north). The school district is San Ramon Valley Unified, one of the top-ranked districts in California. Bishop Ranch is the major employer cluster (Chevron, AT&T, PG&E, GE). The city splits between older central San Ramon (1970s-1990s housing) and the master-planned east side (Windemere, Gale Ranch, post-2000, with active Mello-Roos).</p><p>Lily has 0 documented closings inside San Ramon city limits to date but works the entire Tri-Valley corridor actively: 2 Dublin closings, 1 Pleasanton closing, 1 Livermore closing, with the Tri-Valley triangle (Dublin / Pleasanton / San Ramon) covered in detail in the Dublin city-page FAQ. For San Ramon-specific representation, Lily applies the same Mello-Roos disclosure discipline and master-planned HOA-package analysis used on Dublin's East-side tracts.</p>
     </section>
 
-    <!-- TODO (research debt per §10 of design template): add full Schools section with district + per-neighborhood feeder table + Niche grades + US News rankings. This minimum-viable page covers schools at a topic level in the FAQ; the dedicated Schools section is a next-pass per-district research task. -->
+    <!-- Schools (San Ramon Valley Unified School District) data-schools-last-refreshed="2026-05-28" -->
+    <section id="schools" class="wc-section">
+        <h2>Schools (San Ramon Valley Unified School District)</h2>
+        <div class="divider"></div>
+    
+        <p><a href="https://www.srvusd.net/" target="_blank" rel="noopener noreferrer">San Ramon Valley Unified School District</a> (SRVUSD) is one of the strongest large districts in California: 29,183 students across 37 schools, PublicSchoolReview state rank <strong>#53 of 1,907 California districts (top 5%)</strong>. The district covers San Ramon, Danville, Alamo, and Blackhawk, and the strength is uniformly distributed: every high school in the district ranks in the top 5% of California, and there is no weak-feeder pocket the way some larger Bay Area districts have. The Dougherty Valley / north-San-Ramon side and the Twin Creeks / central-San-Ramon side both feed strong high schools, so the central question is which specific attendance area you buy into, not whether SRVUSD itself is strong.</p>
+    
+        <p><strong>Dougherty Valley High is the in-San-Ramon flagship.</strong> Dougherty Valley High School (~3,000 students, U.S. News <strong>#27 California</strong>, top 200 nationally, 90%+ AP participation, 4.1 average GPA) anchors the eastern Dougherty Valley master-planned tracts. California High School (~3,100 students, U.S. News #199 California) anchors the central-San-Ramon and Bishop Ranch corridor. San Ramon Valley High and Monte Vista High are the Danville flagships and pull buyers north across the city line for the boundary, but for in-San-Ramon buyers Dougherty Valley and California High are the central question. Windemere Ranch Middle and Iron Horse Middle are the top feeders.</p>
+    
+        <h3>Typical assignment by sub-area</h3>
+    
+        <table class="schools-assignment">
+            <thead>
+                <tr><th>Sub-area</th><th>Elementary feeders</th><th>Middle</th><th>High</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Dougherty Valley (east, master-planned)</td><td>Coyote Creek / Hidden Hills / Quail Run</td><td>Windemere Ranch / Gale Ranch</td><td>Dougherty Valley High</td></tr>
+                <tr><td>Twin Creeks / Bishop Ranch corridor (central)</td><td>Country Club / Walt Disney</td><td>Iron Horse</td><td>California High</td></tr>
+                <tr><td>Old Ranch / south San Ramon</td><td>Bollinger Canyon / Neil Armstrong</td><td>Pine Valley</td><td>California High</td></tr>
+                <tr><td>North San Ramon / Alamo-adjacent</td><td>Rancho Romero / Alamo</td><td>Stone Valley</td><td>San Ramon Valley High (Danville)</td></tr>
+            </tbody>
+        </table>
+    
+        <p class="schools-caveat">SRVUSD attendance lines are stable but a few neighbourhoods on boundary edges have been adjusted recently. Lily verifies the current assignment with the SRVUSD registrar before any offer.</p>
+    
+        <h3>Highlight schools</h3>
+    
+        <ul>
+            <li><strong>Dougherty Valley High School</strong> (9-12, ~3,000 students), U.S. News #27 California, top 200 nationally, 90%+ AP participation. The Dougherty Valley flagship and the main price driver for east-San-Ramon master-planned tracts.</li>
+            <li><strong>California High School</strong> (9-12, ~3,100 students), U.S. News #199 California; central-San-Ramon flagship; strong music + AP catalog.</li>
+            <li><strong>Windemere Ranch Middle School</strong> (6-8), Niche A+; Dougherty Valley feeder; high CAASPP scores.</li>
+            <li><strong>Coyote Creek Elementary</strong> (K-5), one of the highest-scoring elementaries in California; the Dougherty Valley early-grades anchor.</li>
+        </ul>
+    
+        <p class="schools-sources">Sources: <a href="https://www.srvusd.net/" target="_blank" rel="noopener noreferrer">San Ramon Valley Unified School District</a>; <a href="https://www.publicschoolreview.com/california/san-ramon-valley-unified-school-district/635130-school-district" target="_blank" rel="noopener noreferrer">PublicSchoolReview SRVUSD</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/san-ramon-valley-unified-school-district-104159" target="_blank" rel="noopener noreferrer">U.S. News SRVUSD</a>; <a href="https://www.niche.com/k12/d/san-ramon-valley-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche SRVUSD</a>.</p>
+    </section>
 
-    <!-- TODO (research debt per §11 of design template): add full Hospitals section with per-hospital table + birthing-center sub-block + sources. This minimum-viable page omits the dedicated Hospitals section pending per-catchment research. -->
-
+    <!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+    <section id="hospitals" class="wc-section">
+        <h2>Hospitals and birthing centers</h2>
+        <div class="divider"></div>
+    
+        <p>San Ramon's in-city hospital is <a href="https://www.sanramonmedctr.com/" target="_blank" rel="noopener noreferrer">San Ramon Regional Medical Center</a> (6001 Norris Canyon Rd), an independent Tenet Healthcare PPO-accepting hospital with a full Family Birthing Center and Level II Special Care Nursery. Kaiser Permanente members from San Ramon deliver at Kaiser Walnut Creek (~25-35 min north). For Level III NICU referral (high-risk pregnancy, premature delivery below 32 weeks), John Muir Walnut Creek is the regional destination (~20-30 min).</p>
+    
+        <table class="hospitals-list">
+            <thead>
+                <tr><th>Hospital</th><th>Network</th><th>Drive time from San Ramon</th><th>Key services</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>San Ramon Regional Medical Center</td><td>Tenet (PPO, independent)</td><td>in-city (0-10 min)</td><td>Family Birthing Center; <strong>Level II Special Care Nursery</strong>; 24/7 neonatologist on-call; UCSF Benioff Children's Hospital pediatricians on-call 24/7</td></tr>
+                <tr><td>Stanford Health Care Tri-Valley (Pleasanton)</td><td>Stanford (PPO)</td><td>15-25 min</td><td>Alternative south-bay PPO option; Level II NICU (32+ weeks); 24/7 OB anesthesiology</td></tr>
+                <tr><td>Kaiser Permanente Walnut Creek Medical Center</td><td>Kaiser (closed)</td><td>25-35 min</td><td>Closest Kaiser L&amp;D for San Ramon Kaiser members</td></tr>
+                <tr><td>John Muir Medical Center Walnut Creek (Level III NICU referral)</td><td>John Muir (PPO)</td><td>20-30 min</td><td>Regional <strong>Level III NICU</strong> (only one in Contra Costa County, Stanford Children's partnership); Level II Trauma Center</td></tr>
+            </tbody>
+        </table>
+    
+        <h3>Birthing centers: what matters</h3>
+    
+        <p><strong>San Ramon Regional is the default for most San Ramon family buyers</strong> on a PPO plan: in-city, Level II NICU on-site (handles babies 32+ weeks), 24/7 neonatology and pediatric coverage. The hospital is part of the Tenet network and partners with UCSF Benioff Children's Hospital for pediatric specialty care.</p>
+    
+        <p><strong>Stanford Health Care Tri-Valley (Pleasanton) is the alternative</strong> for south-San-Ramon and Dougherty Valley buyers; comparable Level II NICU and slightly longer drive, but Stanford-affiliated and with the only outpatient lactation clinic in the Tri-Valley.</p>
+    
+        <p><strong>Kaiser members deliver at Kaiser Walnut Creek</strong> (~25-35 min). There is no Kaiser L&amp;D facility in San Ramon. Factor this commute into prenatal-care scheduling, particularly in late pregnancy.</p>
+    
+        <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+    
+        <p class="hospitals-sources">Sources: <a href="https://www.sanramonmedctr.com/services/obstetrics" target="_blank" rel="noopener noreferrer">San Ramon Regional Obstetrics</a>; <a href="https://stanfordhealthcare.org/tri-valley/medical-clinics/maternity.html" target="_blank" rel="noopener noreferrer">Stanford Tri-Valley maternity</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Walnut Creek maternity</a>; <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Walnut Creek</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative NICU Directory</a>.</p>
+    </section>
     <section id="track-record">
         <h2>Track Record</h2>
         <p>0 documented San Ramon closings (broader-area coverage via adjacent cities). Career-wide: 102 documented closings, $111M+ in total volume, with 89 of 102 on the buyer side, 14 closings in the last 12 months, career range $323K to $3.3M, 5.0-star Zillow average across 36 reviews. The full transaction record for every Bay Area city Lily has closed in is summarized at the <a href="/cities/">cities index</a>.</p>
@@ -266,7 +332,7 @@
 
     <section id="methodology">
         <h2>The Meticulous Protector, applied to San Ramon</h2>
-        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The San Ramon version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents — discipline does not change by city.</p>
+        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The San Ramon version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents, discipline does not change by city.</p>
     </section>
 
     <section id="faq" class="faq-section">
@@ -284,8 +350,8 @@
                 <p>Often yes. Windemere and Gale Ranch carry some of the highest Mello-Roos rates in the Tri-Valley (newer bonds, longer remaining terms). Combined monthly carrying cost (HOA plus 1/12 of annual Mello-Roos) often runs $500-$1,000 per month on top of mortgage and property tax. Verify the exact CFD line items before any offer.</p>
             </details>
             <details>
-                <summary>Bishop Ranch — who's there and what's the commute?</summary>
-                <p>Bishop Ranch is the largest business park in northern California — anchored by Chevron, AT&T, PG&E, GE, and a long tail of smaller offices. Many San Ramon family buyers are Bishop Ranch employees commuting on-foot or via shuttle. For reverse-commute to South Bay (Apple / Google / NVIDIA), it's I-680 south to I-580 west to I-880 south — 50-80 minutes off-peak.</p>
+                <summary>Bishop Ranch, who's there and what's the commute?</summary>
+                <p>Bishop Ranch is the largest business park in northern California, anchored by Chevron, AT&T, PG&E, GE, and a long tail of smaller offices. Many San Ramon family buyers are Bishop Ranch employees commuting on-foot or via shuttle. For reverse-commute to South Bay (Apple / Google / NVIDIA), it's I-680 south to I-580 west to I-880 south, 50-80 minutes off-peak.</p>
             </details>
             <details>
                 <summary>Does Lily Garipova speak Russian for San Ramon transactions?</summary>

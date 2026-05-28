@@ -77,7 +77,9 @@
         "image": "https://lilygaripova.com/photos/Lily.jpg",
         "areaServed": [
             {"@type": "City", "name": "Livermore", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alameda County, California"}},
-            {"@type": "Place", "name": "Tri-Valley"}
+            {"@type": "Place", "name": "Tri-Valley"},
+            {"@type": "EducationalOrganization", "name": "Livermore Valley Joint Unified School District", "url": "https://www.livermoreschools.org/", "address": {"@type": "PostalAddress", "streetAddress": "685 East Jack London Blvd", "addressLocality": "Livermore", "addressRegion": "CA", "postalCode": "94551", "addressCountry": "US"}, "telephone": "+1-925-606-3200", "description": "Livermore Valley Joint Unified School District serves about 12,925 students across 18 schools. Includes Granada High (U.S. News #336 California) and Livermore High (#586 California)."},
+            {"@type": "Hospital", "name": "Stanford Health Care Tri-Valley Livermore", "url": "https://stanfordhealthcare.org/tri-valley/", "address": {"@type": "PostalAddress", "streetAddress": "1133 East Stanley Blvd", "addressLocality": "Livermore", "addressRegion": "CA", "postalCode": "94550", "addressCountry": "US"}, "medicalSpecialty": ["EmergencyMedicine"], "description": "Stanford-affiliated outpatient and general acute-care campus. No on-site labor & delivery; the Tri-Valley Birth Center and Level II NICU are at the Stanford Tri-Valley Pleasanton campus (~10-15 min west)."}
         ],
         "address": {"@type": "PostalAddress", "addressLocality": "Livermore", "addressRegion": "CA", "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": 37.6819, "longitude": -121.768},
@@ -115,7 +117,7 @@
             {
                 "@type": "Question",
                 "name": "What's the Livermore wine country thing?",
-                "acceptedAnswer": {"@type": "Answer", "text": 'The Livermore Valley AVA (American Viticultural Area) is the second-largest winery region in the Bay Area after Napa and Sonoma — 50+ wineries within 15-25 minutes east of downtown Livermore along Tesla Road and Greenville Road. For lifestyle buyers, this is a meaningful Pleasanton-Dublin differentiator. Many east-Livermore properties have view + wine-country adjacency premiums.'}
+                "acceptedAnswer": {"@type": "Answer", "text": 'The Livermore Valley AVA (American Viticultural Area) is the second-largest winery region in the Bay Area after Napa and Sonoma, 50+ wineries within 15-25 minutes east of downtown Livermore along Tesla Road and Greenville Road. For lifestyle buyers, this is a meaningful Pleasanton-Dublin differentiator. Many east-Livermore properties have view + wine-country adjacency premiums.'}
             },
             {
                 "@type": "Question",
@@ -145,7 +147,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero — matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
+        /* City-page hero, matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
         .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
         .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
         .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
@@ -245,10 +247,76 @@
         <p>Livermore sits at the east end of the Tri-Valley, with the Livermore Valley AVA (wine country) immediately east of the city. The buyer pool splits between LLNL/Sandia tech-employer families, downsizers from more expensive Pleasanton / San Ramon looking for more space at lower price, and wine-country lifestyle buyers. Livermore Valley Joint Unified School District covers most of the city; Granada High and Livermore High are the two main public high schools.</p><p>Lily has 1 documented Livermore closing plus active Tri-Valley representation. The neighborhood split: downtown Livermore (walkable, mixed-use, $700K-$1.2M condos and townhomes), south Livermore (newer single-family + master-planned, $1M-$1.7M), north Livermore (older single-family, $800K-$1.2M), and the Sycamore Grove / Tesla Road corridor toward wine country (estates, $1.5M-$3M+). Livermore is consistently 15-25% lower price-per-square-foot than Pleasanton for comparable inventory.</p>
     </section>
 
-    <!-- TODO (research debt per §10 of design template): add full Schools section with district + per-neighborhood feeder table + Niche grades + US News rankings. This minimum-viable page covers schools at a topic level in the FAQ; the dedicated Schools section is a next-pass per-district research task. -->
+    <!-- Schools (Livermore Valley Joint Unified School District) data-schools-last-refreshed="2026-05-28" -->
+    <section id="schools" class="wc-section">
+        <h2>Schools (Livermore Valley Joint Unified School District)</h2>
+        <div class="divider"></div>
+    
+        <p><a href="https://www.livermoreschools.org/" target="_blank" rel="noopener noreferrer">Livermore Valley Joint Unified School District</a> (LVJUSD) serves about 12,925 students across 18 schools. The district covers Livermore proper and parts of unincorporated Alameda County to the south. Four high schools: Granada High (the largest and traditionally highest-scoring, ~2,234 students), Livermore High, Del Valle High (continuation), and Vineyard Alternative. LVJUSD sits in the middle tier of Bay Area districts: stronger than HUSD, weaker on the headline than the top-tier Tri-Valley districts (DUSD, PUSD, SRVUSD), with significant per-school variation that rewards careful feeder-pattern reading.</p>
+    
+        <p><strong>Granada High is the south-Livermore flagship.</strong> Granada High School (~2,234 students, U.S. News <strong>#336 California</strong>) anchors south-side and Springtown / Sunset tract families. Livermore High (#586 California) anchors central and north-side / downtown / wine-country-edge families. The two high schools are reasonably comparable for general college-prep, but families chasing a stronger high school feeder typically look at Granada. The Pleasanton boundary is the alternative buyers across the city line consider (Pleasanton USD's Amador and Foothill are both stronger statewide than Granada), at a 10 to 25% per-square-foot premium.</p>
+    
+        <h3>Typical assignment by sub-area</h3>
+    
+        <table class="schools-assignment">
+            <thead>
+                <tr><th>Sub-area</th><th>Elementary feeders</th><th>Middle</th><th>High</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Sunset / Springtown / south-side</td><td>Sunset / Lawrence / Croce</td><td>Mendenhall</td><td>Granada High</td></tr>
+                <tr><td>Downtown / central Livermore</td><td>Marylin Avenue / Joe Michell K-8</td><td>East Avenue</td><td>Livermore High</td></tr>
+                <tr><td>North-side / Holdener Park / east downtown</td><td>Junction K-8 / Smith</td><td>Christensen</td><td>Livermore High</td></tr>
+                <tr><td>South Livermore / wine country edge</td><td>Altamont Creek / Smith</td><td>Mendenhall</td><td>Granada High</td></tr>
+            </tbody>
+        </table>
+    
+        <p class="schools-caveat">LVJUSD attendance lines are address-specific; Lily verifies the current assignment with the LVJUSD registrar before any offer.</p>
+    
+        <h3>Highlight schools</h3>
+    
+        <ul>
+            <li><strong>Granada High School</strong> (9-12, ~2,234 students), U.S. News #336 California, the district's largest and highest-scoring comprehensive high school. The main south-Livermore family-buyer draw.</li>
+            <li><strong>Livermore High School</strong> (9-12), U.S. News #586 California; comprehensive program; the central / downtown / north-side flagship.</li>
+            <li><strong>Joe Michell K-8</strong>, one of the higher-scoring LVJUSD K-8 options; central Livermore.</li>
+            <li><strong>Altamont Creek Elementary</strong> (K-5), one of the strongest LVJUSD elementaries; south Livermore.</li>
+        </ul>
+    
+        <p class="schools-sources">Sources: <a href="https://www.livermoreschools.org/" target="_blank" rel="noopener noreferrer">Livermore Valley Joint USD</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/livermore-valley-joint-unified-101958" target="_blank" rel="noopener noreferrer">U.S. News LVJUSD</a>; <a href="https://dq.cde.ca.gov/" target="_blank" rel="noopener noreferrer">California Department of Education DataQuest</a>; <a href="https://www.niche.com/k12/d/livermore-valley-joint-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche LVJUSD</a>.</p>
+    </section>
 
-    <!-- TODO (research debt per §11 of design template): add full Hospitals section with per-hospital table + birthing-center sub-block + sources. This minimum-viable page omits the dedicated Hospitals section pending per-catchment research. -->
-
+    <!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+    <section id="hospitals" class="wc-section">
+        <h2>Hospitals and birthing centers</h2>
+        <div class="divider"></div>
+    
+        <p>Livermore sits in the same Tri-Valley hospital pool as Dublin and Pleasanton. The local Stanford campus is <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley Livermore</a>, an outpatient and general acute-care facility; the full Birth Center and Level II NICU for the Tri-Valley sit at the Stanford Health Care Tri-Valley <strong>Pleasanton campus</strong> (~10-15 minutes west), and Pleasanton is therefore the default in-network labor and delivery destination for Livermore PPO buyers. Kaiser Permanente Livermore is outpatient-only; Kaiser members deliver at Kaiser Walnut Creek (~35-45 min).</p>
+    
+        <table class="hospitals-list">
+            <thead>
+                <tr><th>Hospital</th><th>Network</th><th>Drive time from Livermore</th><th>Key services</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Stanford Health Care Tri-Valley Livermore campus</td><td>Stanford (PPO)</td><td>in-city (0-10 min)</td><td>General acute care + outpatient; <strong>no in-city labor &amp; delivery</strong></td></tr>
+                <tr><td>Stanford Health Care Tri-Valley (Pleasanton campus)</td><td>Stanford (PPO)</td><td>10-15 min</td><td>Full Birth Center; <strong>Level II NICU</strong> (32+ weeks); 24/7 OB anesthesiology; only outpatient lactation clinic in Tri-Valley</td></tr>
+                <tr><td>San Ramon Regional Medical Center</td><td>Tenet (PPO, independent)</td><td>20-30 min</td><td>Alternative PPO; Family Birthing Center; Level II Special Care Nursery</td></tr>
+                <tr><td>Kaiser Permanente Livermore Medical Offices</td><td>Kaiser (closed)</td><td>in-city (0-10 min)</td><td>Outpatient + specialty care only; <strong>no labor &amp; delivery on-site</strong></td></tr>
+                <tr><td>Kaiser Permanente Walnut Creek Medical Center</td><td>Kaiser (closed)</td><td>35-45 min</td><td>Closest Kaiser L&amp;D for Livermore Kaiser members</td></tr>
+                <tr><td>John Muir Medical Center Walnut Creek (Level III NICU referral)</td><td>John Muir (PPO)</td><td>35-50 min</td><td>Regional <strong>Level III NICU</strong> (only one in Contra Costa County); high-risk pregnancy referral center</td></tr>
+            </tbody>
+        </table>
+    
+        <h3>Birthing centers: what matters</h3>
+    
+        <p><strong>The Livermore campus of Stanford Tri-Valley does not have labor and delivery</strong>: Stanford's L&amp;D for the Tri-Valley is at the Pleasanton campus (5555 West Las Positas Blvd), 10 to 15 minutes west. Level II NICU there (handles 32+ weeks), 24/7 OB anesthesiology, and the only outpatient lactation clinic in the Tri-Valley after discharge. For the vast majority of Livermore PPO family buyers, Pleasanton is the default L&amp;D destination.</p>
+    
+        <p><strong>San Ramon Regional Medical Center</strong> is a comparable alternative (also Level II NICU) at roughly equivalent driving distance, and may be closer for some north-Livermore buyers depending on traffic.</p>
+    
+        <p><strong>Kaiser members in Livermore should plan for the Walnut Creek commute</strong>: Kaiser has medical offices in Livermore for outpatient care, but Kaiser L&amp;D for Tri-Valley members is at Kaiser Walnut Creek (~35-45 minutes from most Livermore addresses). Build this commute into prenatal-care scheduling.</p>
+    
+        <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+    
+        <p class="hospitals-sources">Sources: <a href="https://stanfordhealthcare.org/tri-valley/" target="_blank" rel="noopener noreferrer">Stanford Health Care Tri-Valley</a> (incl. <a href="https://stanfordhealthcare.org/tri-valley/medical-clinics/maternity.html" target="_blank" rel="noopener noreferrer">maternity</a>); <a href="https://www.sanramonmedctr.com/services/obstetrics" target="_blank" rel="noopener noreferrer">San Ramon Regional Obstetrics</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/walnut-creek" target="_blank" rel="noopener noreferrer">Kaiser Walnut Creek maternity</a>; <a href="https://www.johnmuirhealth.com/locations/john-muir-medical-center-walnut-creek.html" target="_blank" rel="noopener noreferrer">John Muir Walnut Creek</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative NICU Directory</a>.</p>
+    </section>
     <section id="track-record">
         <h2>Track Record</h2>
         <p>1 documented Livermore closing (broader-area coverage via adjacent cities). Career-wide: 102 documented closings, $111M+ in total volume, with 89 of 102 on the buyer side, 14 closings in the last 12 months, career range $323K to $3.3M, 5.0-star Zillow average across 36 reviews. The full transaction record for every Bay Area city Lily has closed in is summarized at the <a href="/cities/">cities index</a>.</p>
@@ -266,7 +334,7 @@
 
     <section id="methodology">
         <h2>The Meticulous Protector, applied to Livermore</h2>
-        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Livermore version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents — discipline does not change by city.</p>
+        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Livermore version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents, discipline does not change by city.</p>
     </section>
 
     <section id="faq" class="faq-section">
@@ -285,7 +353,7 @@
             </details>
             <details>
                 <summary>What's the Livermore wine country thing?</summary>
-                <p>The Livermore Valley AVA (American Viticultural Area) is the second-largest winery region in the Bay Area after Napa and Sonoma — 50+ wineries within 15-25 minutes east of downtown Livermore along Tesla Road and Greenville Road. For lifestyle buyers, this is a meaningful Pleasanton-Dublin differentiator. Many east-Livermore properties have view + wine-country adjacency premiums.</p>
+                <p>The Livermore Valley AVA (American Viticultural Area) is the second-largest winery region in the Bay Area after Napa and Sonoma, 50+ wineries within 15-25 minutes east of downtown Livermore along Tesla Road and Greenville Road. For lifestyle buyers, this is a meaningful Pleasanton-Dublin differentiator. Many east-Livermore properties have view + wine-country adjacency premiums.</p>
             </details>
             <details>
                 <summary>Does Lily Garipova speak Russian for Livermore transactions?</summary>

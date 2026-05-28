@@ -77,7 +77,9 @@
         "image": "https://lilygaripova.com/photos/Lily.jpg",
         "areaServed": [
             {"@type": "City", "name": "Union City", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alameda County, California"}},
-            {"@type": "Place", "name": "East Bay"}
+            {"@type": "Place", "name": "East Bay"},
+            {"@type": "EducationalOrganization", "name": "New Haven Unified School District", "url": "https://www.nhusd.k12.ca.us/", "address": {"@type": "PostalAddress", "streetAddress": "34200 Alvarado-Niles Rd", "addressLocality": "Union City", "addressRegion": "CA", "postalCode": "94587", "addressCountry": "US"}, "telephone": "+1-510-471-1100", "description": "New Haven Unified School District serves Union City and southern Hayward. James Logan High School (~3,151 students, U.S. News #619 California) is the single district comprehensive high school. Unique New Haven Aviation CTE pathway."},
+            {"@type": "Hospital", "name": "Washington Hospital Healthcare System", "url": "https://www.washingtonhealth.com/", "address": {"@type": "PostalAddress", "streetAddress": "2000 Mowry Ave", "addressLocality": "Fremont", "addressRegion": "CA", "postalCode": "94538", "addressCountry": "US"}, "telephone": "+1-510-797-1111", "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"], "description": "Independent PPO hospital ~10-15 minutes south of Union City with full L&D, on-site NICU, and UCSF Health neonatology 24/7. The default in-network L&D destination for Union City PPO buyers."}
         ],
         "address": {"@type": "PostalAddress", "addressLocality": "Union City", "addressRegion": "CA", "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": 37.5934, "longitude": -122.0438},
@@ -105,11 +107,11 @@
             {
                 "@type": "Question",
                 "name": 'How are Union City schools?',
-                "acceptedAnswer": {"@type": "Answer", "text": "New Haven Unified School District covers most of Union City. James Logan High School is the main public high school. Schools are mid-tier within Alameda County — below Castro Valley Unified and Fremont's Mission San Jose attendance area but above Hayward Unified on most published measures. Verify exact attendance by address; some addresses on the northern boundary fall into Hayward Unified."}
+                "acceptedAnswer": {"@type": "Answer", "text": "New Haven Unified School District covers most of Union City. James Logan High School is the main public high school. Schools are mid-tier within Alameda County, below Castro Valley Unified and Fremont's Mission San Jose attendance area but above Hayward Unified on most published measures. Verify exact attendance by address; some addresses on the northern boundary fall into Hayward Unified."}
             },
             {
                 "@type": "Question",
-                "name": "Union City BART — what's the commute story?",
+                "name": "Union City BART, what's the commute story?",
                 "acceptedAnswer": {"@type": "Answer", "text": 'Union City has one BART station on the Fremont-South line. BART to Embarcadero / Montgomery in SF runs ~45-55 minutes off-peak. Reverse commute to Fremont and Berryessa/North San Jose runs 10-25 minutes. Driving to Tesla Fremont via I-880 + 84 is 10-20 minutes off-peak. The single-station situation makes the walkshed around the station meaningfully more valuable than addresses further out.'}
             },
             {
@@ -145,7 +147,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero — matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
+        /* City-page hero, matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
         .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
         .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
         .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
@@ -242,13 +244,78 @@
 
     <section id="why-union-city">
         <h2>Why Union City</h2>
-        <p>Union City sits between Hayward (north) and Fremont (south) on the I-880 corridor, with the Union City BART station as its single transit anchor. New Haven Unified School District covers most of the city; James Logan High School is the main public high school (and one of the larger California public high schools by enrollment). The buyer pool is heavily multi-generational Filipino-American and Asian-American — Union City has one of the highest concentrations of Asian-American population in the Bay Area.</p><p>Lily has 5 documented Union City closings on roughly $4.9M of volume. The neighborhood split: Mission Hills / Decoto Road corridor (mixed older single-family + newer master-planned, $900K-$1.3M); central Union City / near BART ($800K-$1.1M); eastern hillside (newer construction, $1.1M-$1.6M). Union City is consistently priced between Hayward (lower) and Fremont (higher) for comparable inventory.</p>
+        <p>Union City sits between Hayward (north) and Fremont (south) on the I-880 corridor, with the Union City BART station as its single transit anchor. New Haven Unified School District covers most of the city; James Logan High School is the main public high school (and one of the larger California public high schools by enrollment). The buyer pool is heavily multi-generational Filipino-American and Asian-American, Union City has one of the highest concentrations of Asian-American population in the Bay Area.</p><p>Lily has 5 documented Union City closings on roughly $4.9M of volume. The neighborhood split: Mission Hills / Decoto Road corridor (mixed older single-family + newer master-planned, $900K-$1.3M); central Union City / near BART ($800K-$1.1M); eastern hillside (newer construction, $1.1M-$1.6M). Union City is consistently priced between Hayward (lower) and Fremont (higher) for comparable inventory.</p>
     </section>
 
-    <!-- TODO (research debt per §10 of design template): add full Schools section with district + per-neighborhood feeder table + Niche grades + US News rankings. This minimum-viable page covers schools at a topic level in the FAQ; the dedicated Schools section is a next-pass per-district research task. -->
+    <!-- Schools (New Haven Unified School District) data-schools-last-refreshed="2026-05-28" -->
+    <section id="schools" class="wc-section">
+        <h2>Schools (New Haven Unified School District)</h2>
+        <div class="divider"></div>
+    
+        <p><a href="https://www.nhusd.k12.ca.us/" target="_blank" rel="noopener noreferrer">New Haven Unified School District</a> (NHUSD) is the unified K-12 district that covers Union City and the southern Hayward area near Tennyson. Demographics skew strongly Asian + Hispanic (48% Asian, 35% Hispanic), with strong family stability and a long tradition of multilingual academic programs. The district is mid-tier on California-wide rankings (state rank ~#596 of unified districts), but the in-Union-City consistency is its main feature: most of the city feeds the same single high school (James Logan), so the school question reduces to elementary and middle assignment.</p>
+    
+        <p><strong>James Logan High School is the single comprehensive NHUSD high school</strong> for Union City (~3,151 students, U.S. News #619 California, top 25% per SchoolDigger). The size means a deep AP catalog, strong athletics, and a wide range of CTE pathways, including the unique New Haven Aviation pathway (one of the few US public high school aviation programs). Logan is in the southern half of the city; central and Decoto-area buyers should know which middle school feeder (Alvarado, Cesar Chavez, Itliong-Vera Cruz) services their address.</p>
+    
+        <h3>Typical assignment by sub-area</h3>
+    
+        <table class="schools-assignment">
+            <thead>
+                <tr><th>Sub-area</th><th>Elementary feeders</th><th>Middle</th><th>High</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Decoto / Old Alvarado (historic central)</td><td>Pioneer / Cabello</td><td>Cesar Chavez Middle</td><td>James Logan High</td></tr>
+                <tr><td>Alvarado area (south-central)</td><td>Alvarado / Hillview Crest</td><td>Alvarado Middle</td><td>James Logan High</td></tr>
+                <tr><td>Mission Hills / east hillside</td><td>Searles / Tom Kitayama / Eastin</td><td>Itliong-Vera Cruz Middle</td><td>James Logan High</td></tr>
+                <tr><td>South Union City near Logan</td><td>Searles / Hillview Crest</td><td>Alvarado Middle</td><td>James Logan High</td></tr>
+            </tbody>
+        </table>
+    
+        <p class="schools-caveat">NHUSD attendance lines are stable; Lily verifies the current assignment with the NHUSD registrar before any offer.</p>
+    
+        <h3>Highlight schools</h3>
+    
+        <ul>
+            <li><strong>James Logan High School</strong> (9-12, ~3,151 students), U.S. News #619 California, top 25% per SchoolDigger. The single Union City comprehensive high school; large enrollment supports a deep AP catalog and the unique New Haven Aviation CTE pathway.</li>
+            <li><strong>Itliong-Vera Cruz Middle School</strong> (6-8), named for the Filipino American labor leaders; the east-side feeder.</li>
+            <li><strong>Tom Kitayama Elementary</strong> (K-5), one of the strongest NHUSD elementaries; east-side / Mission Hills attendance.</li>
+            <li><strong>Eastin Elementary</strong> (K-5), consistently above-district-median; east-side / Mission Hills attendance.</li>
+        </ul>
+    
+        <p class="schools-sources">Sources: <a href="https://www.nhusd.k12.ca.us/" target="_blank" rel="noopener noreferrer">New Haven Unified School District</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/new-haven-unified-school-district-100683" target="_blank" rel="noopener noreferrer">U.S. News NHUSD</a>; <a href="https://dq.cde.ca.gov/" target="_blank" rel="noopener noreferrer">California Department of Education DataQuest</a>; <a href="https://www.niche.com/k12/d/new-haven-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche NHUSD</a>.</p>
+    </section>
 
-    <!-- TODO (research debt per §11 of design template): add full Hospitals section with per-hospital table + birthing-center sub-block + sources. This minimum-viable page omits the dedicated Hospitals section pending per-catchment research. -->
-
+    <!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+    <section id="hospitals" class="wc-section">
+        <h2>Hospitals and birthing centers</h2>
+        <div class="divider"></div>
+    
+        <p>Union City has no in-city hospital with labor and delivery. The two main destinations are <a href="https://www.washingtonhealth.com/" target="_blank" rel="noopener noreferrer">Washington Hospital Healthcare System</a> in Fremont (~10-15 minutes south, PPO) and <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/san-leandro" target="_blank" rel="noopener noreferrer">Kaiser Permanente San Leandro Medical Center</a> (~15-20 min north, Kaiser members). The previously-listed St. Rose Hospital in Hayward had a Family Birthing Center within ~10 minutes; that birthing center is <strong>currently suspended for 12 to 18 months</strong> per Alameda Health System.</p>
+    
+        <table class="hospitals-list">
+            <thead>
+                <tr><th>Hospital</th><th>Network</th><th>Drive time from Union City</th><th>Key services</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Washington Hospital Healthcare System (Fremont)</td><td>Independent (PPO)</td><td>10-15 min</td><td>Full labor &amp; delivery birthing center; on-site NICU; UCSF Health neonatology 24/7; Baby-Friendly + CMS Birthing Friendly designation</td></tr>
+                <tr><td>Kaiser Permanente San Leandro Medical Center</td><td>Kaiser (closed)</td><td>15-20 min</td><td>Closest Kaiser L&amp;D for Union City Kaiser members</td></tr>
+                <tr><td>Kaiser Permanente Hayward Medical Center</td><td>Kaiser (closed)</td><td>10-15 min</td><td>Alternative Kaiser L&amp;D for Union City Kaiser members; often closer than San Leandro</td></tr>
+                <tr><td>Sutter Eden Medical Center (Castro Valley)</td><td>Sutter (PPO)</td><td>15-25 min</td><td>Family-centered birth center; alternative PPO option for Union City buyers</td></tr>
+                <tr><td>UCSF Benioff Children's Hospital Oakland (high-acuity NICU referral)</td><td>UCSF (PPO)</td><td>25-35 min</td><td><strong>Level IV NICU</strong>; only pediatric Level I trauma center for Alameda + Contra Costa County</td></tr>
+            </tbody>
+        </table>
+    
+        <h3>Birthing centers: what matters</h3>
+    
+        <p><strong>Washington Hospital Fremont is the default in-network L&amp;D for most Union City PPO family buyers</strong>: ~10-15 minutes south, full L&amp;D with on-site NICU, UCSF Health neonatology on-floor 24/7, and both Baby-Friendly and CMS Birthing Friendly designations.</p>
+    
+        <p><strong>Kaiser members in Union City</strong> typically deliver at Kaiser Hayward or Kaiser San Leandro depending on traffic and which is closer to the specific Union City address. Both are full Kaiser L&amp;D facilities.</p>
+    
+        <p>The temporary closure of <strong>St. Rose Hospital Family Birthing Center</strong> in Hayward removed what had been the closest PPO birthing center for some northern Union City addresses; that closure runs through approximately 2025-2026 per Alameda Health System.</p>
+    
+        <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+    
+        <p class="hospitals-sources">Sources: <a href="https://www.washingtonhealth.com/services/childbirth-family-services/birthing-center/" target="_blank" rel="noopener noreferrer">Washington Hospital Birthing Center</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/san-leandro" target="_blank" rel="noopener noreferrer">Kaiser San Leandro maternity</a>; <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/hayward" target="_blank" rel="noopener noreferrer">Kaiser Hayward maternity</a>; <a href="https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center" target="_blank" rel="noopener noreferrer">Sutter Eden Birth Center</a>; <a href="https://tricityvoice.com/haywards-only-birthing-center-closes/" target="_blank" rel="noopener noreferrer">Tri City Voice on St. Rose closure</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative NICU Directory</a>.</p>
+    </section>
     <section id="track-record">
         <h2>Track Record</h2>
         <p>5 documented Union City closings, $4.9M local volume. Career-wide: 102 documented closings, $111M+ in total volume, with 89 of 102 on the buyer side, 14 closings in the last 12 months, career range $323K to $3.3M, 5.0-star Zillow average across 36 reviews. The full transaction record for every Bay Area city Lily has closed in is summarized at the <a href="/cities/">cities index</a>.</p>
@@ -266,7 +333,7 @@
 
     <section id="methodology">
         <h2>The Meticulous Protector, applied to Union City</h2>
-        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Union City version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents — discipline does not change by city.</p>
+        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Union City version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents, discipline does not change by city.</p>
     </section>
 
     <section id="faq" class="faq-section">
@@ -277,10 +344,10 @@
             </details>
             <details>
                 <summary>How are Union City schools?</summary>
-                <p>New Haven Unified School District covers most of Union City. James Logan High School is the main public high school. Schools are mid-tier within Alameda County — below <a href="/castro-valley-realtor/">Castro Valley</a> Unified and <a href="/fremont-realtor/">Fremont</a>'s Mission <a href="/san-jose-realtor/">San Jose</a> attendance area but above <a href="/hayward-realtor/">Hayward</a> Unified on most published measures. Verify exact attendance by address; some addresses on the northern boundary fall into Hayward Unified.</p>
+                <p>New Haven Unified School District covers most of Union City. James Logan High School is the main public high school. Schools are mid-tier within Alameda County, below <a href="/castro-valley-realtor/">Castro Valley</a> Unified and <a href="/fremont-realtor/">Fremont</a>'s Mission <a href="/san-jose-realtor/">San Jose</a> attendance area but above <a href="/hayward-realtor/">Hayward</a> Unified on most published measures. Verify exact attendance by address; some addresses on the northern boundary fall into Hayward Unified.</p>
             </details>
             <details>
-                <summary>Union City BART — what's the commute story?</summary>
+                <summary>Union City BART, what's the commute story?</summary>
                 <p>Union City has one BART station on the Fremont-South line. BART to Embarcadero / Montgomery in SF runs ~45-55 minutes off-peak. Reverse commute to <a href="/fremont-realtor/">Fremont</a> and Berryessa/North <a href="/san-jose-realtor/">San Jose</a> runs 10-25 minutes. Driving to Tesla Fremont via I-880 + 84 is 10-20 minutes off-peak. The single-station situation makes the walkshed around the station meaningfully more valuable than addresses further out.</p>
             </details>
             <details>

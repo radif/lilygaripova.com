@@ -77,7 +77,10 @@
         "image": "https://lilygaripova.com/photos/Lily.jpg",
         "areaServed": [
             {"@type": "City", "name": "Sunnyvale", "containedInPlace": {"@type": "AdministrativeArea", "name": "Santa Clara County, California"}},
-            {"@type": "Place", "name": "Silicon Valley"}
+            {"@type": "Place", "name": "Silicon Valley"},
+            {"@type": "EducationalOrganization", "name": "Fremont Union High School District", "url": "https://www.fuhsd.org/", "address": {"@type": "PostalAddress", "streetAddress": "589 W Fremont Ave", "addressLocality": "Sunnyvale", "addressRegion": "CA", "postalCode": "94087", "addressCountry": "US"}, "telephone": "+1-408-522-2200", "description": "Fremont Union High School District (9-12) serves 9,000+ students across 5 high schools including Cupertino High (U.S. News #29 California), Homestead High (#65), Fremont High, Monta Vista High and Lynbrook High. Covers Sunnyvale and Cupertino."},
+            {"@type": "Hospital", "name": "El Camino Health (Mountain View)", "url": "https://www.elcaminohealth.org/", "address": {"@type": "PostalAddress", "streetAddress": "2500 Grant Rd", "addressLocality": "Mountain View", "addressRegion": "CA", "postalCode": "94040", "addressCountry": "US"}, "telephone": "+1-650-940-7000", "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"], "description": "Independent PPO hospital with private birthing suites and a Level III NICU in collaboration with Stanford Medicine; handles babies as young as 23 weeks gestation. The default in-network L&D destination for Sunnyvale PPO buyers."},
+            {"@type": "Hospital", "name": "Lucile Packard Children's Hospital Stanford", "url": "https://www.stanfordchildrens.org/", "address": {"@type": "PostalAddress", "streetAddress": "725 Welch Rd", "addressLocality": "Palo Alto", "addressRegion": "CA", "postalCode": "94304", "addressCountry": "US"}, "medicalSpecialty": ["NICU", "Pediatrics", "Obstetrics"], "description": "Stanford academic medical center with Level IV NICU (highest available); high-risk pregnancy referral destination for the South Bay."}
         ],
         "address": {"@type": "PostalAddress", "addressLocality": "Sunnyvale", "addressRegion": "CA", "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": 37.3688, "longitude": -122.0363},
@@ -104,13 +107,13 @@
             },
             {
                 "@type": "Question",
-                "name": 'School district situation in Sunnyvale — what should I know?',
+                "name": 'School district situation in Sunnyvale, what should I know?',
                 "acceptedAnswer": {"@type": "Answer", "text": "Sunnyvale's K-8 district is Sunnyvale School District for most addresses; some southern addresses are in Cupertino Union School District (the top-tier K-8 district that feeds Homestead High). High school is Fremont Union HSD (Homestead High, Fremont High) for most addresses; a sliver on the east side is Santa Clara Unified. The Cupertino Union K-8 boundary is the single biggest price-determinant within the city; verify exact attendance by address."}
             },
             {
                 "@type": "Question",
                 "name": 'Sunnyvale vs Mountain View vs Cupertino?',
-                "acceptedAnswer": {"@type": "Answer", "text": "Cupertino is the most expensive of the three (Apple HQ + the strongest Cupertino Union school attendance). Mountain View is closer to Google's main campuses and downtown character. Sunnyvale is the largest of the three by population, has the widest inventory variety, and the most-spread price range — pockets in the Cupertino-feed area approach Cupertino prices, while north Sunnyvale near NASA Ames runs ~30% lower for comparable inventory."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Cupertino is the most expensive of the three (Apple HQ + the strongest Cupertino Union school attendance). Mountain View is closer to Google's main campuses and downtown character. Sunnyvale is the largest of the three by population, has the widest inventory variety, and the most-spread price range, pockets in the Cupertino-feed area approach Cupertino prices, while north Sunnyvale near NASA Ames runs ~30% lower for comparable inventory."}
             },
             {
                 "@type": "Question",
@@ -145,7 +148,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero — matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
+        /* City-page hero, matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
         .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
         .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
         .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
@@ -242,13 +245,86 @@
 
     <section id="why-sunnyvale">
         <h2>Why Sunnyvale</h2>
-        <p>Sunnyvale sits at the heart of Silicon Valley — between Mountain View (west), Cupertino (south), and Santa Clara (east). The school district situation is unusual: most of Sunnyvale's elementary students attend Sunnyvale School District (K-8) but the high schools come from one of two districts depending on address — Fremont Union HSD (Cupertino + west Sunnyvale, including Homestead High and Fremont High) or Sunnyvale's small slice of Santa Clara Unified for the east side. The Cupertino Union side carries the well-known California school premium.</p><p>Lily has 2 documented Sunnyvale closings including the recent $3.3M Cheshire Way closing (May 2026). The neighborhood split: north Sunnyvale (closer to NASA Ames / Moffett Field, mid-tier schools, $1.4M-$2M); south Sunnyvale (closer to Cupertino, top-tier schools, $1.8M-$3M+); downtown / Murphy Street area (walkable, mixed-use, $900K-$1.5M condos and smaller SFH). Cherry Chase + the cluster of streets near Cupertino Union's top elementaries carry $500K-$1M premiums over comparable Sunnyvale housing stock outside that boundary.</p>
+        <p>Sunnyvale sits at the heart of Silicon Valley, between Mountain View (west), Cupertino (south), and Santa Clara (east). The school district situation is unusual: most of Sunnyvale's elementary students attend Sunnyvale School District (K-8) but the high schools come from one of two districts depending on address, Fremont Union HSD (Cupertino + west Sunnyvale, including Homestead High and Fremont High) or Sunnyvale's small slice of Santa Clara Unified for the east side. The Cupertino Union side carries the well-known California school premium.</p><p>Lily has 2 documented Sunnyvale closings including the recent $3.3M Cheshire Way closing (May 2026). The neighborhood split: north Sunnyvale (closer to NASA Ames / Moffett Field, mid-tier schools, $1.4M-$2M); south Sunnyvale (closer to Cupertino, top-tier schools, $1.8M-$3M+); downtown / Murphy Street area (walkable, mixed-use, $900K-$1.5M condos and smaller SFH). Cherry Chase + the cluster of streets near Cupertino Union's top elementaries carry $500K-$1M premiums over comparable Sunnyvale housing stock outside that boundary.</p>
     </section>
 
-    <!-- TODO (research debt per §10 of design template): add full Schools section with district + per-neighborhood feeder table + Niche grades + US News rankings. This minimum-viable page covers schools at a topic level in the FAQ; the dedicated Schools section is a next-pass per-district research task. -->
+    <!-- Schools (Sunnyvale: Sunnyvale SD + Fremont Union HSD + Cupertino Union pockets) data-schools-last-refreshed="2026-05-28" -->
+    <section id="schools" class="wc-section">
+        <h2>Schools (Sunnyvale + Fremont Union HSD)</h2>
+        <div class="divider"></div>
+    
+        <p>Sunnyvale's school assignment is the textbook Santa Clara County two-district pattern: <strong>three K-8 districts plus one high school district</strong>, with the K-8 boundary determining everything below 9th grade and the Fremont Union HSD boundary determining high school.</p>
+    
+        <ul>
+            <li><strong><a href="https://www.sesd.org/" target="_blank" rel="noopener noreferrer">Sunnyvale School District</a></strong> (K-8) covers most central and west Sunnyvale addresses.</li>
+            <li><strong><a href="https://www.cusdk8.org/" target="_blank" rel="noopener noreferrer">Cupertino Union School District</a></strong> (K-8) covers south Sunnyvale tracts near the Cupertino border. CUSD is one of the strongest K-8 districts in California; the Sunnyvale addresses inside its boundary carry a noticeable price premium.</li>
+            <li><strong>Santa Clara Unified</strong> covers east-side Sunnyvale tracts near the Santa Clara border (K-12 single-district).</li>
+            <li><strong><a href="https://www.fuhsd.org/" target="_blank" rel="noopener noreferrer">Fremont Union High School District</a></strong> (FUHSD, 9-12, 9,000+ students) runs every comprehensive high school for Sunnyvale and Cupertino: Cupertino High (U.S. News <strong>#29 California</strong>), Homestead High (#65), Fremont High, Monta Vista High and Lynbrook High (both in Cupertino city but FUHSD assignment lines reach into Sunnyvale).</li>
+        </ul>
+    
+        <p><strong>The high school you are zoned for is the dominant school-related driver of Sunnyvale property prices.</strong> Cupertino High and Homestead High families pay more per square foot than Fremont High families for comparable single-family stock; the FUHSD boundary lines do not match the city limits, so the same Sunnyvale ZIP can include three different high school assignments depending on the exact address. Verifying the FUHSD high school for the specific street before offering is the most consequential school-related action a Sunnyvale buyer can take.</p>
+    
+        <h3>Typical assignment by sub-area</h3>
+    
+        <table class="schools-assignment">
+            <thead>
+                <tr><th>Sub-area</th><th>K-8 district</th><th>High (FUHSD)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Central Sunnyvale (Sunnyvale SD core)</td><td>Sunnyvale SD</td><td>Fremont High</td></tr>
+                <tr><td>West Sunnyvale near Cupertino border</td><td>Cupertino Union</td><td>Homestead High or Cupertino High</td></tr>
+                <tr><td>South Sunnyvale near Cupertino city limit</td><td>Cupertino Union</td><td>Cupertino High or Monta Vista High</td></tr>
+                <tr><td>East Sunnyvale near Santa Clara border</td><td>Santa Clara Unified</td><td>Wilcox High (Santa Clara Unified, not FUHSD)</td></tr>
+                <tr><td>North Sunnyvale (Lakewood / Lakehaven)</td><td>Sunnyvale SD</td><td>Fremont High or Homestead High</td></tr>
+            </tbody>
+        </table>
+    
+        <p class="schools-caveat">FUHSD boundary lines are address-specific and do not match city limits. Lily verifies the current K-8 + high school assignment with both the K-8 district registrar and the FUHSD registrar before any offer.</p>
+    
+        <h3>Highlight schools</h3>
+    
+        <ul>
+            <li><strong>Cupertino High School</strong> (FUHSD, 9-12), U.S. News #29 California, top 200 nationally. The most desired FUHSD high school for south-Sunnyvale family buyers.</li>
+            <li><strong>Homestead High School</strong> (FUHSD, 9-12), U.S. News #65 California; the secondary-flagship; deep college-prep catalog.</li>
+            <li><strong>Cupertino Union School District</strong> (K-8), top-tier in California; the south-Sunnyvale K-8 pocket premium.</li>
+            <li><strong>Fremont High School</strong> (FUHSD, 9-12), U.S. News #472 California; the central-Sunnyvale comprehensive high school; recent investment in facilities and program upgrades.</li>
+        </ul>
+    
+        <p class="schools-sources">Sources: <a href="https://www.sesd.org/" target="_blank" rel="noopener noreferrer">Sunnyvale School District</a>; <a href="https://www.cusdk8.org/" target="_blank" rel="noopener noreferrer">Cupertino Union School District</a>; <a href="https://www.fuhsd.org/" target="_blank" rel="noopener noreferrer">Fremont Union HSD</a>; <a href="https://www.usnews.com/education/best-high-schools/california/districts/fremont-union-high-101792" target="_blank" rel="noopener noreferrer">U.S. News FUHSD</a>; <a href="https://www.niche.com/k12/d/fremont-union-high-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche FUHSD</a>.</p>
+    </section>
 
-    <!-- TODO (research debt per §11 of design template): add full Hospitals section with per-hospital table + birthing-center sub-block + sources. This minimum-viable page omits the dedicated Hospitals section pending per-catchment research. -->
-
+    <!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+    <section id="hospitals" class="wc-section">
+        <h2>Hospitals and birthing centers</h2>
+        <div class="divider"></div>
+    
+        <p>Sunnyvale has no in-city hospital with full labor and delivery. The two main options are <a href="https://www.elcaminohealth.org/" target="_blank" rel="noopener noreferrer">El Camino Health Mountain View</a> (PPO) and <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/santa-clara" target="_blank" rel="noopener noreferrer">Kaiser Permanente Santa Clara Medical Center</a> (Kaiser closed). Both are within 10 to 20 minutes of most Sunnyvale addresses.</p>
+    
+        <table class="hospitals-list">
+            <thead>
+                <tr><th>Hospital</th><th>Network</th><th>Drive time from Sunnyvale</th><th>Key services</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>El Camino Health (Mountain View)</td><td>El Camino Health (PPO)</td><td>5-15 min</td><td>Private birthing suites; <strong>Level III NICU</strong> (Stanford Medicine collaboration, handles 23+ weeks gestation); wireless patient monitoring; full OB/GYN program</td></tr>
+                <tr><td>Kaiser Permanente Santa Clara Medical Center</td><td>Kaiser (closed)</td><td>10-15 min</td><td>Full Kaiser labor &amp; delivery for Kaiser members; on-site Kaiser NICU</td></tr>
+                <tr><td>Kaiser Permanente Sunnyvale Medical Offices</td><td>Kaiser (closed)</td><td>in-city (0-10 min)</td><td>Outpatient + specialty care only; <strong>no labor &amp; delivery on-site</strong></td></tr>
+                <tr><td>Stanford Hospital + Lucile Packard Children's Hospital (Palo Alto)</td><td>Stanford (PPO)</td><td>15-25 min</td><td>Full Stanford academic medical center; <strong>Level IV NICU</strong> (highest available); high-risk pregnancy referral destination for the South Bay</td></tr>
+                <tr><td>Good Samaritan Hospital (San Jose)</td><td>HCA (PPO)</td><td>15-25 min</td><td>Alternative PPO; <strong>Level III NICU</strong>; 3,000+ deliveries per year</td></tr>
+            </tbody>
+        </table>
+    
+        <h3>Birthing centers: what matters</h3>
+    
+        <p><strong>El Camino Health Mountain View is the default in-network L&amp;D for most Sunnyvale PPO family buyers.</strong> Level III NICU in collaboration with Stanford Medicine handles babies as young as 23 weeks gestation, which means most pregnancies (including significant prematurity) can be managed in-hospital without transfer. Private birthing suites with wireless patient monitoring.</p>
+    
+        <p><strong>Kaiser Santa Clara is the in-network destination for Kaiser members</strong>, and Kaiser Sunnyvale Medical Offices handle outpatient care so prenatal visits stay in-city.</p>
+    
+        <p><strong>Stanford Hospital + Lucile Packard Children's Hospital is the South Bay's referral destination for the most fragile newborns and the most complex high-risk pregnancies</strong>; Level IV NICU is the highest level designation available and is the destination of last resort when other Bay Area NICUs cannot handle the acuity.</p>
+    
+        <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+    
+        <p class="hospitals-sources">Sources: <a href="https://www.elcaminohealth.org/services/mother-baby-health" target="_blank" rel="noopener noreferrer">El Camino Health Mother-Baby</a> (incl. <a href="https://www.elcaminohealth.org/services/mother-baby-health/neonatal-intensive-care-unit-nicu" target="_blank" rel="noopener noreferrer">Level III NICU</a>); <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/santa-clara" target="_blank" rel="noopener noreferrer">Kaiser Santa Clara maternity</a>; <a href="https://www.stanfordchildrens.org/" target="_blank" rel="noopener noreferrer">Lucile Packard Children's Hospital Stanford</a>; <a href="https://www.goodsamsanjose.com/specialties/nicu" target="_blank" rel="noopener noreferrer">Good Samaritan Hospital San Jose NICU</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative NICU Directory</a>.</p>
+    </section>
     <section id="track-record">
         <h2>Track Record</h2>
         <p>2 documented Sunnyvale closings, $3.6M local volume. Career-wide: 102 documented closings, $111M+ in total volume, with 89 of 102 on the buyer side, 14 closings in the last 12 months, career range $323K to $3.3M, 5.0-star Zillow average across 36 reviews. The full transaction record for every Bay Area city Lily has closed in is summarized at the <a href="/cities/">cities index</a>.</p>
@@ -266,7 +342,7 @@
 
     <section id="methodology">
         <h2>The Meticulous Protector, applied to Sunnyvale</h2>
-        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Sunnyvale version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents — discipline does not change by city.</p>
+        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Sunnyvale version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents, discipline does not change by city.</p>
     </section>
 
     <section id="faq" class="faq-section">
@@ -276,12 +352,12 @@
                 <p>Single-family in south Sunnyvale (Cupertino Union schools, top-tier attendance) typically runs $1.8M-$3M+. Cherry Chase and the Homestead-High-feed pockets push higher. North Sunnyvale (mid-tier schools) runs $1.4M-$2M. Downtown / Murphy Street condos and smaller SFH run $900K-$1.5M. The May 2026 Cheshire Way closing at $3.3M is representative of the south-Sunnyvale single-family tier.</p>
             </details>
             <details>
-                <summary>School district situation in Sunnyvale — what should I know?</summary>
+                <summary>School district situation in Sunnyvale, what should I know?</summary>
                 <p>Sunnyvale's K-8 district is Sunnyvale School District for most addresses; some southern addresses are in Cupertino Union School District (the top-tier K-8 district that feeds Homestead High). High school is <a href="/fremont-realtor/">Fremont</a> Union HSD (Homestead High, Fremont High) for most addresses; a sliver on the east side is Santa Clara Unified. The Cupertino Union K-8 boundary is the single biggest price-determinant within the city; verify exact attendance by address.</p>
             </details>
             <details>
                 <summary>Sunnyvale vs Mountain View vs Cupertino?</summary>
-                <p>Cupertino is the most expensive of the three (Apple HQ + the strongest Cupertino Union school attendance). Mountain View is closer to Google's main campuses and downtown character. Sunnyvale is the largest of the three by population, has the widest inventory variety, and the most-spread price range — pockets in the Cupertino-feed area approach Cupertino prices, while north Sunnyvale near NASA Ames runs ~30% lower for comparable inventory.</p>
+                <p>Cupertino is the most expensive of the three (Apple HQ + the strongest Cupertino Union school attendance). Mountain View is closer to Google's main campuses and downtown character. Sunnyvale is the largest of the three by population, has the widest inventory variety, and the most-spread price range, pockets in the Cupertino-feed area approach Cupertino prices, while north Sunnyvale near NASA Ames runs ~30% lower for comparable inventory.</p>
             </details>
             <details>
                 <summary>What's the commute math from Sunnyvale to the major tech employers?</summary>

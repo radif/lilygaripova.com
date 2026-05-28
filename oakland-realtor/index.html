@@ -77,7 +77,10 @@
         "image": "https://lilygaripova.com/photos/Lily.jpg",
         "areaServed": [
             {"@type": "City", "name": "Oakland", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alameda County, California"}},
-            {"@type": "Place", "name": "East Bay"}
+            {"@type": "Place", "name": "East Bay"},
+            {"@type": "EducationalOrganization", "name": "Oakland Unified School District", "url": "https://www.ousd.org/", "address": {"@type": "PostalAddress", "streetAddress": "1000 Broadway", "addressLocality": "Oakland", "addressRegion": "CA", "postalCode": "94607", "addressCountry": "US"}, "telephone": "+1-510-879-8200", "description": "Oakland Unified School District (82 schools, 33,916 students, PublicSchoolReview state rank #1171) covers most of Oakland. The enclaved Piedmont Unified School District (7 schools, 2,308 students, state rank #15, top 1% of California) serves the separate city of Piedmont within Oakland's geographic boundary. OUSD includes Skyline High (17 AP classes) and Oakland Technical (15 AP courses)."},
+            {"@type": "Hospital", "name": "UCSF Benioff Children's Hospital Oakland", "url": "https://www.ucsfbenioffchildrens.org/locations/oakland-main-hospital", "address": {"@type": "PostalAddress", "streetAddress": "747 52nd St", "addressLocality": "Oakland", "addressRegion": "CA", "postalCode": "94609", "addressCountry": "US"}, "medicalSpecialty": ["Pediatrics", "Trauma", "NICU"], "description": "Pediatric Level I Trauma Center (only one in Alameda + Contra Costa County) with Level IV NICU (highest available). State-designated Pediatric Critical Care Center. The regional referral destination for the most fragile newborns from the entire East Bay."},
+            {"@type": "Hospital", "name": "Kaiser Permanente Oakland Medical Center", "url": "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/oakland", "address": {"@type": "PostalAddress", "streetAddress": "3600 Broadway", "addressLocality": "Oakland", "addressRegion": "CA", "postalCode": "94611", "addressCountry": "US"}, "medicalSpecialty": ["Obstetrics", "Maternity", "NICU"], "description": "Full Kaiser Permanente labor & delivery facility with on-site Kaiser NICU. Recently rebuilt with large private birthing rooms."}
         ],
         "address": {"@type": "PostalAddress", "addressLocality": "Oakland", "addressRegion": "CA", "addressCountry": "US"},
         "geo": {"@type": "GeoCoordinates", "latitude": 37.8044, "longitude": -122.2712},
@@ -100,7 +103,7 @@
             {
                 "@type": "Question",
                 "name": 'What are Oakland price ranges in 2026?',
-                "acceptedAnswer": {"@type": "Answer", "text": 'Rockridge + Elmwood-adjacent + Temescal + Piedmont Avenue (north Oakland premium neighborhoods, top Oakland Unified attendance) typically run $1.3M-$2M+. Montclair / Piedmont Pines / Crocker Highlands hill neighborhoods (premium + view inventory) run $1.5M-$3M+. Glenview / Trestle Glen / Crocker mid-tier run $1.1M-$1.7M. West Oakland / North Oakland flats run $700K-$1.2M. East Oakland varies widely by exact location — verify before any offer. Condos in downtown Oakland / Jack London Square run $400K-$800K.'}
+                "acceptedAnswer": {"@type": "Answer", "text": 'Rockridge + Elmwood-adjacent + Temescal + Piedmont Avenue (north Oakland premium neighborhoods, top Oakland Unified attendance) typically run $1.3M-$2M+. Montclair / Piedmont Pines / Crocker Highlands hill neighborhoods (premium + view inventory) run $1.5M-$3M+. Glenview / Trestle Glen / Crocker mid-tier run $1.1M-$1.7M. West Oakland / North Oakland flats run $700K-$1.2M. East Oakland varies widely by exact location, verify before any offer. Condos in downtown Oakland / Jack London Square run $400K-$800K.'}
             },
             {
                 "@type": "Question",
@@ -115,7 +118,7 @@
             {
                 "@type": "Question",
                 "name": 'Which Oakland neighborhoods have the strongest school attendance?',
-                "acceptedAnswer": {"@type": "Answer", "text": "Crocker Highlands, Glenview, Trestle Glen, Piedmont Pines (Oakland — not the separate City of Piedmont), Lincoln Heights, and several northern North Oakland pockets near the Berkeley border. Verify exact attendance by address. The separate City of Piedmont (Piedmont Unified School District) is enclaved within Oakland's geographic boundary but is a different city with a different school district — Piedmont is one of the strongest public-school districts in California, with prices to match ($2M-$5M+)."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Crocker Highlands, Glenview, Trestle Glen, Piedmont Pines (Oakland, not the separate City of Piedmont), Lincoln Heights, and several northern North Oakland pockets near the Berkeley border. Verify exact attendance by address. The separate City of Piedmont (Piedmont Unified School District) is enclaved within Oakland's geographic boundary but is a different city with a different school district, Piedmont is one of the strongest public-school districts in California, with prices to match ($2M-$5M+)."}
             },
             {
                 "@type": "Question",
@@ -145,7 +148,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero — matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
+        /* City-page hero, matches the Dublin/Pleasanton/Walnut Creek canonical pattern */
         .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
         .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
         .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
@@ -245,10 +248,80 @@
         <p>Oakland is the third-largest city in the Bay Area and the most neighborhood-dependent real-estate market. Rockridge, Temescal, Piedmont Avenue, Glenview, and Crocker Highlands carry the strongest premiums + best school attendance areas (Oakland Unified varies dramatically by school). North Oakland and West Oakland have seen meaningful appreciation in the last decade tied to BART access (MacArthur, Rockridge, West Oakland stations). The split between &quot;the hills&quot; (Montclair, Piedmont Pines, Crocker) and &quot;the flats&quot; is the most pronounced school-district + price-per-square-foot split of any Bay Area city.</p><p>Lily has 1 documented Oakland closing plus the broader East Bay coverage (4 Hayward + 4 Castro Valley + 5 Union City + 13 Fremont closings adjacent). Oakland's school district challenge means verifying exact attendance area + walking the neighborhood at multiple times of day is essential before any offer. The neighborhood character variation across Oakland is the largest in the Bay Area; representing a buyer in Rockridge is a different transaction from representing a buyer in East Oakland.</p>
     </section>
 
-    <!-- TODO (research debt per §10 of design template): add full Schools section with district + per-neighborhood feeder table + Niche grades + US News rankings. This minimum-viable page covers schools at a topic level in the FAQ; the dedicated Schools section is a next-pass per-district research task. -->
+    <!-- Schools (Oakland Unified + Piedmont USD enclaved) data-schools-last-refreshed="2026-05-28" -->
+    <section id="schools" class="wc-section">
+        <h2>Schools (Oakland Unified + Piedmont USD)</h2>
+        <div class="divider"></div>
+    
+        <p>Oakland's school landscape is the most internally varied in the East Bay. Two districts serve homes within the geographic boundary of Oakland: <a href="https://www.ousd.org/" target="_blank" rel="noopener noreferrer">Oakland Unified School District</a> (OUSD, 82 schools, 33,916 students, PublicSchoolReview state rank #1171 of 1,908) and the enclaved <a href="https://www.piedmont.k12.ca.us/" target="_blank" rel="noopener noreferrer">Piedmont Unified School District</a> (PUSD, 7 schools, 2,308 students, PublicSchoolReview state rank <strong>#15 of 1,908, top 1% of California districts</strong>). Piedmont is a separate incorporated city geographically enclosed within Oakland, and the PUSD attendance area is one of the strongest school premiums anywhere in the East Bay; Piedmont single-family prices reflect the school premium.</p>
+    
+        <p><strong>Within OUSD itself, attendance area drives an enormous range</strong>: the Crocker Highlands / Hillcrest / Glenview / Lincoln neighbourhood elementaries score well above the district median, and the Oakland Technical (most populous OUSD high school, 15 AP courses) and Skyline (1,432 students in the hills, 17 AP classes per recent Oaklandside reporting) high school attendance areas are the OUSD-side draws for buyers. Skyline hills, Crocker Highlands, Trestle Glen, Rockridge / Rose Garden, Montclair, and Upper Rockridge are the OUSD micro-pockets where families pay a premium for school assignment without crossing into Piedmont.</p>
+    
+        <h3>Typical assignment by sub-area</h3>
+    
+        <table class="schools-assignment">
+            <thead>
+                <tr><th>Sub-area</th><th>District</th><th>Elementary feeders</th><th>High</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Piedmont (separate city, enclaved)</td><td>Piedmont USD</td><td>Beach / Havens / Wildwood</td><td>Piedmont High (PUSD)</td></tr>
+                <tr><td>Crocker Highlands / Trestle Glen</td><td>OUSD</td><td>Crocker Highlands Elementary</td><td>Oakland Technical High</td></tr>
+                <tr><td>Glenview / Lincoln Highlands</td><td>OUSD</td><td>Glenview / Lincoln Elementary</td><td>Skyline High</td></tr>
+                <tr><td>Montclair / Upper Rockridge</td><td>OUSD</td><td>Montclair / Thornhill / Joaquin Miller</td><td>Skyline High</td></tr>
+                <tr><td>Rockridge / Rose Garden</td><td>OUSD</td><td>Chabot / Peralta</td><td>Oakland Technical High</td></tr>
+                <tr><td>Temescal / Adams Point</td><td>OUSD</td><td>Sankofa / Emerson</td><td>Oakland Technical or Skyline</td></tr>
+                <tr><td>East Oakland (flatlands)</td><td>OUSD</td><td>Multiple lower-scoring elementaries</td><td>Castlemont / Fremont High (OUSD)</td></tr>
+            </tbody>
+        </table>
+    
+        <p class="schools-caveat">Oakland school assignment must be verified by exact address. The OUSD options enrollment system also allows for some intra-district transfer, which materially affects what is realistically available even before attendance-area assumptions. Lily verifies the current OUSD (or PUSD) assignment with the registrar before any offer.</p>
+    
+        <h3>Highlight schools</h3>
+    
+        <ul>
+            <li><strong>Piedmont High School</strong> (PUSD, 9-12), one of the strongest California public high schools; PUSD ranks top 1% of California districts. The school premium drives Piedmont's home prices.</li>
+            <li><strong>Skyline High School</strong> (OUSD, 9-12, ~1,432 students), 17 AP classes per recent reporting; the OUSD hills flagship; serves Montclair / Joaquin Miller / Glenview attendance areas.</li>
+            <li><strong>Oakland Technical High School</strong> (OUSD, 9-12), OUSD's most populous; 15 AP courses including environmental science and statistics; long-established college-prep tradition for Rockridge / Crocker Highlands attendance.</li>
+            <li><strong>Crocker Highlands Elementary</strong> (OUSD, K-5), one of the highest-scoring OUSD elementaries; Crocker Highlands attendance.</li>
+            <li><strong>Hillcrest Elementary</strong> (OUSD, K-5), another strongly above-district-median OUSD elementary in the hills.</li>
+        </ul>
+    
+        <p class="schools-sources">Sources: <a href="https://www.ousd.org/" target="_blank" rel="noopener noreferrer">Oakland Unified School District</a>; <a href="https://www.piedmont.k12.ca.us/" target="_blank" rel="noopener noreferrer">Piedmont Unified School District</a>; <a href="https://www.publicschoolreview.com/california/oakland-unified-school-district/628050-school-district" target="_blank" rel="noopener noreferrer">PublicSchoolReview OUSD</a>; <a href="https://www.publicschoolreview.com/california/piedmont-city-unified-school-district/630330-school-district" target="_blank" rel="noopener noreferrer">PublicSchoolReview PUSD</a>; <a href="https://www.niche.com/k12/d/oakland-unified-school-district-ca/" target="_blank" rel="noopener noreferrer">Niche OUSD</a>; <a href="https://oaklandside.org/2026/04/02/oakland-unified-advanced-placement-classes-racial-disparity/" target="_blank" rel="noopener noreferrer">Oaklandside on AP catalog distribution at OUSD</a>.</p>
+    </section>
 
-    <!-- TODO (research debt per §11 of design template): add full Hospitals section with per-hospital table + birthing-center sub-block + sources. This minimum-viable page omits the dedicated Hospitals section pending per-catchment research. -->
-
+    <!-- Hospitals and birthing centers data-hospitals-last-refreshed="2026-05-28" -->
+    <section id="hospitals" class="wc-section">
+        <h2>Hospitals and birthing centers</h2>
+        <div class="divider"></div>
+    
+        <p>Oakland has the strongest hospital infrastructure in the East Bay: a major Kaiser facility (Kaiser Oakland), Sutter's Alta Bates Summit Medical Center, Alameda Health System's Wilma Chan Highland Hospital Campus (the county trauma center), and the regional pediatric academic medical center <a href="https://www.ucsfbenioffchildrens.org/locations/oakland-main-hospital" target="_blank" rel="noopener noreferrer">UCSF Benioff Children's Hospital Oakland</a>. UCSF Benioff Oakland operates the <strong>only pediatric Level I trauma center in Alameda and Contra Costa County</strong> and is the regional Level IV NICU referral destination.</p>
+    
+        <table class="hospitals-list">
+            <thead>
+                <tr><th>Hospital</th><th>Network</th><th>Drive time within Oakland</th><th>Key services</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Kaiser Permanente Oakland Medical Center</td><td>Kaiser (closed)</td><td>in-city (5-15 min)</td><td>Full Kaiser L&amp;D; new birthing facility with large private rooms; on-site Kaiser NICU</td></tr>
+                <tr><td>Alta Bates Summit Medical Center (Sutter; Summit Campus Oakland + Alta Bates Berkeley)</td><td>Sutter (PPO)</td><td>in-city / 5-15 min</td><td>Alta Bates Berkeley campus is the regional Sutter Birth Center; full L&amp;D + NICU</td></tr>
+                <tr><td>Wilma Chan Highland Hospital Campus (Alameda Health System)</td><td>Alameda Health System (county; accepts most plans + Medi-Cal)</td><td>in-city (5-15 min)</td><td><strong>Adult Level I Trauma Center</strong> (only one in Alameda County); midwifery-based L&amp;D; all private rooms</td></tr>
+                <tr><td>UCSF Benioff Children's Hospital Oakland</td><td>UCSF (PPO)</td><td>in-city (5-15 min)</td><td><strong>Pediatric Level I Trauma Center</strong> (only one in Alameda + Contra Costa County); <strong>Level IV NICU</strong> (highest available); state-designated Pediatric Critical Care Center</td></tr>
+            </tbody>
+        </table>
+    
+        <h3>Birthing centers: what matters</h3>
+    
+        <p><strong>Kaiser Oakland is the default in-network L&amp;D for Kaiser members in Oakland</strong>: the new facility opened in recent years with large private birthing rooms, pull-out beds for partners, and a full Kaiser L&amp;D + NICU on-site. No commute outside the city.</p>
+    
+        <p><strong>For PPO-plan families, Alta Bates Berkeley (Sutter Alta Bates Summit) is the regional Sutter Birth Center</strong>; the Summit Campus in Oakland handles acute care and ED. Alta Bates Berkeley has full L&amp;D with NICU and is a frequent PPO choice for Oakland family buyers.</p>
+    
+        <p><strong>Highland Hospital</strong> (renamed Wilma Chan Highland Hospital Campus in 2022) is the Alameda Health System county hospital and the only adult Level I Trauma Center in Alameda County. The L&amp;D unit uses a midwifery-based model of care with all private rooms.</p>
+    
+        <p><strong>UCSF Benioff Children's Hospital Oakland is the regional pediatric and high-acuity newborn destination</strong>: the only state-designated Pediatric Critical Care Center for Alameda + Contra Costa County, Level IV NICU (highest available), Pediatric Level I trauma. Babies born at any of the other Oakland-area hospitals with serious complications are typically transferred here.</p>
+    
+        <p class="hospitals-caveat">Hospital network coverage depends on your insurance plan. Lily does not advise on medical coverage decisions; for in-network confirmation contact your insurer directly. Hospital information above is current as of 2026-05-28 and should be re-verified with each hospital's admissions office before relying on it for a major life decision.</p>
+    
+        <p class="hospitals-sources">Sources: <a href="https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/oakland" target="_blank" rel="noopener noreferrer">Kaiser Oakland maternity</a>; <a href="https://www.altabatessummit.org/" target="_blank" rel="noopener noreferrer">Sutter Alta Bates Summit</a>; <a href="https://alamedahealthsystem.org/locations/wilma-chan-highland-hospital/" target="_blank" rel="noopener noreferrer">Wilma Chan Highland Hospital</a>; <a href="https://www.ucsfbenioffchildrens.org/locations/oakland-main-hospital" target="_blank" rel="noopener noreferrer">UCSF Benioff Children's Hospital Oakland</a>; <a href="https://nicu-directory.cpqcc.org/" target="_blank" rel="noopener noreferrer">California Perinatal Quality Care Collaborative NICU Directory</a>.</p>
+    </section>
     <section id="track-record">
         <h2>Track Record</h2>
         <p>1 documented Oakland closing (broader-area coverage via adjacent cities). Career-wide: 102 documented closings, $111M+ in total volume, with 89 of 102 on the buyer side, 14 closings in the last 12 months, career range $323K to $3.3M, 5.0-star Zillow average across 36 reviews. The full transaction record for every Bay Area city Lily has closed in is summarized at the <a href="/cities/">cities index</a>.</p>
@@ -266,14 +339,14 @@
 
     <section id="methodology">
         <h2>The Meticulous Protector, applied to Oakland</h2>
-        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Oakland version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents — discipline does not change by city.</p>
+        <p>The methodology that has earned Lily 36+ five-star Zillow reviews and the highest repeat-and-referral rate of her career: read every disclosure line, verify every claim, model every carrying cost, walk every property in person before recommending an offer, document the ethical "no" when the math says no. The Oakland version of that methodology is the same as the Dublin version, the Pleasanton version, the Walnut Creek version, and every other city Lily represents, discipline does not change by city.</p>
     </section>
 
     <section id="faq" class="faq-section">
         <h2>Oakland FAQ</h2>
             <details>
                 <summary>What are Oakland price ranges in 2026?</summary>
-                <p>Rockridge + Elmwood-adjacent + Temescal + Piedmont Avenue (north Oakland premium neighborhoods, top Oakland Unified attendance) typically run $1.3M-$2M+. Montclair / Piedmont Pines / Crocker Highlands hill neighborhoods (premium + view inventory) run $1.5M-$3M+. Glenview / Trestle Glen / Crocker mid-tier run $1.1M-$1.7M. West Oakland / North Oakland flats run $700K-$1.2M. East Oakland varies widely by exact location — verify before any offer. Condos in downtown Oakland / Jack London Square run $400K-$800K.</p>
+                <p>Rockridge + Elmwood-adjacent + Temescal + Piedmont Avenue (north Oakland premium neighborhoods, top Oakland Unified attendance) typically run $1.3M-$2M+. Montclair / Piedmont Pines / Crocker Highlands hill neighborhoods (premium + view inventory) run $1.5M-$3M+. Glenview / Trestle Glen / Crocker mid-tier run $1.1M-$1.7M. West Oakland / North Oakland flats run $700K-$1.2M. East Oakland varies widely by exact location, verify before any offer. Condos in downtown Oakland / Jack London Square run $400K-$800K.</p>
             </details>
             <details>
                 <summary>How do Oakland schools work?</summary>
@@ -285,7 +358,7 @@
             </details>
             <details>
                 <summary>Which Oakland neighborhoods have the strongest school attendance?</summary>
-                <p>Crocker Highlands, Glenview, Trestle Glen, Piedmont Pines (Oakland — not the separate City of Piedmont), Lincoln Heights, and several northern North Oakland pockets near the Berkeley border. Verify exact attendance by address. The separate City of Piedmont (Piedmont Unified School District) is enclaved within Oakland's geographic boundary but is a different city with a different school district — Piedmont is one of the strongest public-school districts in California, with prices to match ($2M-$5M+).</p>
+                <p>Crocker Highlands, Glenview, Trestle Glen, Piedmont Pines (Oakland, not the separate City of Piedmont), Lincoln Heights, and several northern North Oakland pockets near the Berkeley border. Verify exact attendance by address. The separate City of Piedmont (Piedmont Unified School District) is enclaved within Oakland's geographic boundary but is a different city with a different school district, Piedmont is one of the strongest public-school districts in California, with prices to match ($2M-$5M+).</p>
             </details>
             <details>
                 <summary>Does Lily Garipova speak Russian for Oakland transactions?</summary>
