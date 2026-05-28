@@ -263,7 +263,10 @@
         .transaction-card:hover { border-color: var(--color-accent, #7c7a61); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
         .transaction-card .tx-image { position: relative; aspect-ratio: 4 / 3; background: var(--color-cream, #f6f4ef); overflow: hidden; }
         .transaction-card .tx-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .transaction-card .tx-image .no-photo { display: flex; align-items: center; justify-content: center; height: 100%; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gray, #888); text-align: center; padding: 12px; }
+        .transaction-card .tx-image .no-photo { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent, #7c7a61); text-align: center; padding: 18px; background: linear-gradient(135deg, var(--color-cream, #f6f4ef) 0%, var(--color-accent-light, #ebe7e0) 100%); }
+        .transaction-card .tx-image .no-photo svg { width: 48px; height: 48px; opacity: 0.5; margin-bottom: 12px; }
+        .transaction-card .tx-image .no-photo .np-city { font-weight: 600; font-size: 14px; letter-spacing: 0.18em; }
+        .transaction-card .tx-image .no-photo .np-label { font-size: 10px; letter-spacing: 0.22em; opacity: 0.7; margin-top: 6px; }
         .transaction-card .tx-badge { position: absolute; top: 10px; left: 10px; background: rgba(26,26,26,0.85); color: #fff; padding: 4px 10px; font-family: var(--font-heading); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; }
         .transaction-card .tx-details { padding: 14px 16px; }
         .transaction-card .tx-price { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.03em; margin: 0 0 4px 0; color: var(--color-dark, #1a1a1a); }
@@ -310,7 +313,7 @@
                 </ul>
             </li>
             <li><a href="/ru/#contact">КОНТАКТЫ</a></li>
-            <li><a href="/regions/south-bay-realtor/" lang="en" hreflang="en" title="English version">EN</a></li>
+            <li><a href="/regions/south-bay/" lang="en" hreflang="en" title="English version">EN</a></li>
         </ul>
     </div>
     <ul class="nav-mobile">
@@ -322,7 +325,7 @@
         <li><a href="/ru/off-market/">OFF-MARKET</a></li>
         <li><a href="/ru/flip-opportunities/">FLIP-ОБЪЕКТЫ</a></li>
         <li><a href="/ru/#contact">КОНТАКТЫ</a></li>
-        <li><a href="/regions/south-bay-realtor/" lang="en" hreflang="en">English</a></li>
+        <li><a href="/regions/south-bay/" lang="en" hreflang="en">English</a></li>
     </ul>
 </nav>
 
@@ -419,7 +422,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5699-Saxony-Ct-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/saxony-ct-san-jose.jpg" alt="5699 Saxony Ct, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -430,7 +433,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5499-Mary-Jo-Way-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/mary-jo-way-san-jose.jpg" alt="5499 Mary Jo Way, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -441,7 +444,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/21525-Aldercroft-Hts-Los-Gatos-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Los Gatos</div>
+                    <img src="../../../assets/transactions/aldercroft-hts-los-gatos.jpg" alt="21525 Aldercroft Hts, Los Gatos" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -452,7 +455,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6629-Wildwood-Ct-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/wildwood-ct-san-jose.jpg" alt="6629 Wildwood Ct, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -463,7 +466,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2070-Rosswood-Dr-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/rosswood-dr-san-jose.jpg" alt="2070 Rosswood Dr, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -474,7 +477,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/170-Chynoweth-Ave-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/chynoweth-ave-san-jose.jpg" alt="170 Chynoweth Ave, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -485,7 +488,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/941-Rose-Ct-Santa-Clara-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Santa Clara</div>
+                    <img src="../../../assets/transactions/rose-ct-santa-clara.jpg" alt="941 Rose Ct, Santa Clara" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -496,7 +499,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/16122-Loretta-Ln-Los-Gatos-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Los Gatos</div>
+                    <img src="../../../assets/transactions/loretta-ln-los-gatos.jpg" alt="16122 Loretta Ln, Los Gatos" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -507,7 +510,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/3108-Edenbank-Dr-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/edenbank-dr-san-jose.jpg" alt="3108 Edenbank Dr, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -518,7 +521,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6130-Springer-Way-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/springer-way-san-jose.jpg" alt="6130 Springer Way, San Jose" loading="lazy">
                     <span class="tx-badge">Продавец</span>
                 </div>
                 <div class="tx-details">
@@ -529,7 +532,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/120-Carlton-Ave-Unit-33-Los-Gatos-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Los Gatos</div>
+                    <img src="../../../assets/transactions/carlton-ave-unit-33-los-gatos.jpg" alt="120 Carlton Ave Unit 33, Los Gatos" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -540,7 +543,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5319-Silver-Point-Way-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/silver-point-way-san-jose.jpg" alt="5319 Silver Point Way, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -551,7 +554,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/234-Jason-Way-Mountain-View-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Mountain View</div>
+                    <img src="../../../assets/transactions/jason-way-mountain-view.jpg" alt="234 Jason Way, Mountain View" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -562,7 +565,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/705-W-Fremont-Ave-APT-2-Sunnyvale-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Sunnyvale</div>
+                    <img src="../../../assets/transactions/w-fremont-ave-apt-2-sunnyvale.jpg" alt="705 W Fremont Ave APT 2, Sunnyvale" loading="lazy">
                     <span class="tx-badge">Продавец</span>
                 </div>
                 <div class="tx-details">
@@ -573,7 +576,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5778-Waltrip-Ln-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/waltrip-ln-san-jose.jpg" alt="5778 Waltrip Ln, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -584,7 +587,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1181-Yarwood-Ct-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/yarwood-ct-san-jose.jpg" alt="1181 Yarwood Ct, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -595,7 +598,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1249-Lightland-Rd-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/lightland-rd-san-jose.jpg" alt="1249 Lightland Rd, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -606,7 +609,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/38-N-Almaden-Blvd-Unit-1801-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/n-almaden-blvd-unit-1801-san-jose.jpg" alt="38 N Almaden Blvd Unit 1801, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -617,7 +620,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/241-Vineyard-Dr-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/vineyard-dr-san-jose.jpg" alt="241 Vineyard Dr, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -628,7 +631,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1676-Guadalupe-Ave-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/guadalupe-ave-san-jose.jpg" alt="1676 Guadalupe Ave, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -639,7 +642,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1642-Stanwich-Rd-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/stanwich-rd-san-jose.jpg" alt="1642 Stanwich Rd, San Jose" loading="lazy">
                     <span class="tx-badge">Продавец</span>
                 </div>
                 <div class="tx-details">
@@ -650,7 +653,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/20800-4th-St-APT-9-Saratoga-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Saratoga</div>
+                    <div class="no-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1v-9.5z"/></svg><span class="np-city">Saratoga</span><span class="np-label">Закрытая сделка</span></div>
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -661,7 +664,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5688-Makati-Cir-APT-E-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/makati-cir-san-jose.jpg" alt="5688 Makati Cir APT E, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -672,7 +675,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/5688-Makati-Cir-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/makati-cir-san-jose.jpg" alt="5688 Makati Cir, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -683,7 +686,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6212-Ginashell-Cir-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/ginashell-cir-san-jose.jpg" alt="6212 Ginashell Cir, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -694,7 +697,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1242-Coyote-Creek-Pl-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/coyote-creek-pl-san-jose.jpg" alt="1242 Coyote Creek Pl, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -705,7 +708,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/80-N-8th-St-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <div class="no-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1v-9.5z"/></svg><span class="np-city">San Jose</span><span class="np-label">Закрытая сделка</span></div>
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -716,7 +719,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/866-Apricot-Ave-APT-D-Campbell-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в Campbell</div>
+                    <div class="no-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1v-9.5z"/></svg><span class="np-city">Campbell</span><span class="np-label">Закрытая сделка</span></div>
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -727,7 +730,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6130-Springer-Way-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/springer-way-san-jose.jpg" alt="6130 Springer Way, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -738,7 +741,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6148-Dunn-Ave-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <div class="no-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1v-9.5z"/></svg><span class="np-city">San Jose</span><span class="np-label">Закрытая сделка</span></div>
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -749,7 +752,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/88-N-Jackson-Ave-Unit-407-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <img src="../../../assets/transactions/n-almaden-blvd-unit-1801-san-jose.jpg" alt="88 N Jackson Ave Unit 407, San Jose" loading="lazy">
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -760,7 +763,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/1483-Ramsgate-Way-San-Jose-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Закрытие в San Jose</div>
+                    <div class="no-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1v-9.5z"/></svg><span class="np-city">San Jose</span><span class="np-label">Закрытая сделка</span></div>
                     <span class="tx-badge">Покупатель</span>
                 </div>
                 <div class="tx-details">
@@ -783,12 +786,12 @@
 <section class="related-regions">
     <h2>Другие регионы Bay Area, которые ведёт Лилия</h2>
     <div class="related-regions-grid">
-            <a class="related-region-card" href="/ru/regions/east-bay-realtor/">East Bay</a>
-            <a class="related-region-card" href="/ru/regions/tri-valley-realtor/">Tri-Valley</a>
-            <a class="related-region-card" href="/ru/regions/contra-costa-realtor/">Contra Costa</a>
-            <a class="related-region-card" href="/ru/regions/peninsula-realtor/">Peninsula</a>
-            <a class="related-region-card" href="/ru/regions/san-francisco-realtor/">San Francisco</a>
-            <a class="related-region-card" href="/ru/regions/north-bay-realtor/">North Bay</a>
+            <a class="related-region-card" href="/ru/regions/east-bay/">East Bay</a>
+            <a class="related-region-card" href="/ru/regions/tri-valley/">Tri-Valley</a>
+            <a class="related-region-card" href="/ru/regions/contra-costa/">Contra Costa</a>
+            <a class="related-region-card" href="/ru/regions/peninsula/">Peninsula</a>
+            <a class="related-region-card" href="/ru/regions/san-francisco/">San Francisco</a>
+            <a class="related-region-card" href="/ru/regions/north-bay/">North Bay</a>
     </div>
     <p class="cities-index-link"><a href="/ru/cities/">Все города и регионы Bay Area &rarr;</a></p>
 </section>
@@ -815,7 +818,7 @@
                 <a href="/ru/home-value/">Оценка дома</a>
                 <a href="/ru/off-market/">Off-Market</a>
                 <a href="/ru/#contact">Контакты</a>
-                <a href="/regions/south-bay-realtor/" lang="en" hreflang="en">English</a>
+                <a href="/regions/south-bay/" lang="en" hreflang="en">English</a>
             </div>
         </div>
         <div class="footer-bottom">

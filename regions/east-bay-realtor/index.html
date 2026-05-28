@@ -265,7 +265,10 @@
         .transaction-card:hover { border-color: var(--color-accent, #7c7a61); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
         .transaction-card .tx-image { position: relative; aspect-ratio: 4 / 3; background: var(--color-cream, #f6f4ef); overflow: hidden; }
         .transaction-card .tx-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .transaction-card .tx-image .no-photo { display: flex; align-items: center; justify-content: center; height: 100%; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-gray, #888); text-align: center; padding: 12px; }
+        .transaction-card .tx-image .no-photo { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent, #7c7a61); text-align: center; padding: 18px; background: linear-gradient(135deg, var(--color-cream, #f6f4ef) 0%, var(--color-accent-light, #ebe7e0) 100%); }
+        .transaction-card .tx-image .no-photo svg { width: 48px; height: 48px; opacity: 0.5; margin-bottom: 12px; }
+        .transaction-card .tx-image .no-photo .np-city { font-weight: 600; font-size: 14px; letter-spacing: 0.18em; }
+        .transaction-card .tx-image .no-photo .np-label { font-size: 10px; letter-spacing: 0.22em; opacity: 0.7; margin-top: 6px; }
         .transaction-card .tx-badge { position: absolute; top: 10px; left: 10px; background: rgba(26,26,26,0.85); color: #fff; padding: 4px 10px; font-family: var(--font-heading); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; }
         .transaction-card .tx-details { padding: 14px 16px; }
         .transaction-card .tx-price { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.03em; margin: 0 0 4px 0; color: var(--color-dark, #1a1a1a); }
@@ -442,7 +445,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/18561-Lamson-Rd-Castro-Valley-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Castro Valley closing</div>
+                    <img src="../../assets/transactions/lamson-rd-castro-valley.jpg" alt="18561 Lamson Rd, Castro Valley" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -453,7 +456,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/17781-Mayflower-Dr-Castro-Valley-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Castro Valley closing</div>
+                    <img src="../../assets/transactions/mayflower-dr-castro-valley.jpg" alt="17781 Mayflower Dr, Castro Valley" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -475,7 +478,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/42225-Forsythia-Dr-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/forsythia-dr-fremont.jpg" alt="42225 Forsythia Dr, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -486,7 +489,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2339-Kinetic-Cmn-Unit-112-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/kinetic-cmn-unit-112-fremont.jpg" alt="2339 Kinetic Cmn Unit 112, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -497,7 +500,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2535-Begonia-St-Union-City-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Union City closing</div>
+                    <img src="../../assets/transactions/begonia-st-union-city.jpg" alt="2535 Begonia St, Union City" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -508,7 +511,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2260-Romey-Ln-Hayward-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Hayward closing</div>
+                    <img src="../../assets/transactions/romey-ln-hayward.jpg" alt="2260 Romey Ln, Hayward" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -519,7 +522,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/39152-Guardino-Dr-APT-304-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/guardino-dr-apt-304-fremont.jpg" alt="39152 Guardino Dr APT 304, Fremont" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -530,7 +533,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/16982-Grovenor-Dr-Castro-Valley-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Castro Valley closing</div>
+                    <img src="../../assets/transactions/grovenor-dr-castro-valley.jpg" alt="16982 Grovenor Dr, Castro Valley" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -541,7 +544,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/7400-Mountain-Blvd-22-Oakland-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Oakland closing</div>
+                    <img src="../../assets/transactions/mountain-blvd-22-oakland.jpg" alt="7400 Mountain Blvd #22, Oakland" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -552,7 +555,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/4547-La-Salle-Ave-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/la-salle-ave-fremont.jpg" alt="4547 La Salle Ave, Fremont" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -563,7 +566,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/35920-Perkins-St-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/perkins-st-fremont.jpg" alt="35920 Perkins St, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -574,7 +577,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/39146-Cindy-St-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/cindy-st-fremont.jpg" alt="39146 Cindy St, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer and Seller</span>
                 </div>
                 <div class="tx-details">
@@ -585,7 +588,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/3867-Burton-Cmn-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/burton-cmn-fremont.jpg" alt="3867 Burton Cmn, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -596,7 +599,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/4316-Carol-Ave-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/carol-ave-fremont.jpg" alt="4316 Carol Ave, Fremont" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -607,7 +610,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/6676-Mayhews-Landing-Rd-Newark-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Newark closing</div>
+                    <img src="../../assets/transactions/mayhews-landing-rd-newark.jpg" alt="6676 Mayhews Landing Rd, Newark" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -618,7 +621,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/36118-Malta-Pl-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/malta-pl-fremont.jpg" alt="36118 Malta Pl, Fremont" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -629,7 +632,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/34925-Osprey-Dr-Union-City-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Union City closing</div>
+                    <img src="../../assets/transactions/osprey-dr-union-city.jpg" alt="34925 Osprey Dr, Union City" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -640,7 +643,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2101-Shoreline-Dr-APT-237-Alameda-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Alameda closing</div>
+                    <img src="../../assets/transactions/shoreline-dr-apt-237-alameda.jpg" alt="2101 Shoreline Dr APT 237, Alameda" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -651,7 +654,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/4762-Griffith-Ave-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/griffith-ave-fremont.jpg" alt="4762 Griffith Ave, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -662,7 +665,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/4475-Amador-Rd-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/amador-rd-fremont.jpg" alt="4475 Amador Rd, Fremont" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -673,7 +676,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/310-Fairway-St-Hayward-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Hayward closing</div>
+                    <img src="../../assets/transactions/fairway-st-hayward.jpg" alt="310 Fairway St, Hayward" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -684,7 +687,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2578-Windsor-Ct-Union-City-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Union City closing</div>
+                    <img src="../../assets/transactions/windsor-ct-union-city.jpg" alt="2578 Windsor Ct, Union City" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -695,7 +698,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/4729-Portola-Dr-Fremont-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Fremont closing</div>
+                    <img src="../../assets/transactions/portola-dr-fremont.jpg" alt="4729 Portola Dr, Fremont" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -706,7 +709,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2015-Jubilee-Hayward-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Hayward closing</div>
+                    <img src="../../assets/transactions/jubilee-hayward.jpg" alt="2015 Jubilee, Hayward" loading="lazy">
                     <span class="tx-badge">Buyer</span>
                 </div>
                 <div class="tx-details">
@@ -717,7 +720,7 @@
             </a>
             <a class="transaction-card" href="https://www.zillow.com/homes/2745-Meadowlark-Dr-Union-City-CA_rb/" target="_blank" rel="noopener noreferrer">
                 <div class="tx-image">
-                    <div class="no-photo">Union City closing</div>
+                    <img src="../../assets/transactions/meadowlark-dr-union-city.jpg" alt="2745 Meadowlark Dr, Union City" loading="lazy">
                     <span class="tx-badge">Seller</span>
                 </div>
                 <div class="tx-details">
@@ -740,12 +743,12 @@
 <section class="related-regions">
     <h2>Other Bay Area regions Lily covers</h2>
     <div class="related-regions-grid">
-            <a class="related-region-card" href="/regions/tri-valley-realtor/">Tri-Valley</a>
-            <a class="related-region-card" href="/regions/contra-costa-realtor/">Contra Costa</a>
-            <a class="related-region-card" href="/regions/south-bay-realtor/">South Bay</a>
-            <a class="related-region-card" href="/regions/peninsula-realtor/">Peninsula</a>
-            <a class="related-region-card" href="/regions/san-francisco-realtor/">San Francisco</a>
-            <a class="related-region-card" href="/regions/north-bay-realtor/">North Bay</a>
+            <a class="related-region-card" href="/regions/tri-valley/">Tri-Valley</a>
+            <a class="related-region-card" href="/regions/contra-costa/">Contra Costa</a>
+            <a class="related-region-card" href="/regions/south-bay/">South Bay</a>
+            <a class="related-region-card" href="/regions/peninsula/">Peninsula</a>
+            <a class="related-region-card" href="/regions/san-francisco/">San Francisco</a>
+            <a class="related-region-card" href="/regions/north-bay/">North Bay</a>
     </div>
     <p class="cities-index-link"><a href="/cities/">All cities and regions in the Bay Area &rarr;</a></p>
 </section>
