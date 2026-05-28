@@ -895,6 +895,114 @@ ul {
 }
 
 /* ===================================
+   City-page cross-linking: .related-cities block at the bottom of every
+   city page (above the contact CTA). Uniform on all city pages so the topical
+   cluster signals to Google and AI engines consistently. Mirror in footer:
+   .footer-cities lists every city across the entire site footer.
+   =================================== */
+.related-cities {
+    max-width: 1100px;
+    margin: 56px auto 0;
+    padding: 40px 24px 48px;
+    background: var(--color-cream, #f6f4ef);
+    border-top: 2px solid var(--color-accent-light, #ebe7e0);
+}
+.related-cities h2 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 12px 0;
+    color: var(--color-dark, #1a1a1a);
+}
+.related-cities > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 24px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--color-dark, #1a1a1a);
+    opacity: 0.92;
+}
+.related-cities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.related-city-card {
+    display: block;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid var(--color-accent-light, #ebe7e0);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-dark, #1a1a1a);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+.related-city-card:hover {
+    border-color: var(--color-accent, #7c7a61);
+    background: var(--color-accent-light, #ebe7e0);
+    color: var(--color-dark, #1a1a1a);
+}
+.cities-index-link {
+    text-align: center;
+    margin-top: 24px;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+.cities-index-link a {
+    color: var(--color-accent, #7c7a61);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent, #7c7a61);
+    padding-bottom: 2px;
+}
+.cities-index-link a:hover {
+    color: var(--color-dark, #1a1a1a);
+    border-bottom-color: var(--color-dark, #1a1a1a);
+}
+
+/* Main-page footer city directory — full list of all city pages */
+.footer-cities {
+    grid-column: 1 / -1;
+    padding-top: 24px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+.footer-cities .label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent-light, #ebe7e0);
+    opacity: 0.7;
+    margin-right: 8px;
+}
+.footer-cities a {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 4px 2px;
+    font-size: 13px;
+    color: var(--color-accent-light, #ebe7e0);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(235, 231, 224, 0.3);
+}
+.footer-cities a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* ===================================
    City-page Schools section (.schools-assignment table + supporting paragraphs).
    Used on /<city>-realtor/ and /ru/<city>-realtor/ pages for the per-sub-neighborhood
    school assignment table. Standalone class, not coupled to the city-hero or wc-section
