@@ -953,7 +953,8 @@ ul {
 }
 .cities-index-link {
     text-align: center;
-    margin-top: 24px;
+    margin-top: 44px;
+    padding-top: 24px;
     font-family: var(--font-heading);
     font-size: 13px;
     letter-spacing: 0.18em;
