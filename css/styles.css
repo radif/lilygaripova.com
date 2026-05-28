@@ -1163,6 +1163,84 @@ ul {
     }
 }
 
+/* Crime, hazards, and ratings section (per §13 of the city-page design
+   template, added 2026-05-28). Shares the cream/border styling with
+   Schools + Hospitals tables for visual consistency. The Rating column
+   uses a small badge style so the at-a-glance grade is the dominant
+   element. */
+.hazards-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 12px;
+    font-size: 14.5px;
+    line-height: 1.45;
+}
+.hazards-list th,
+.hazards-list td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-accent-light, #ebe7e0);
+    vertical-align: top;
+}
+.hazards-list thead th {
+    background-color: var(--color-accent-light, #ebe7e0);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-dark, #1a1a1a);
+}
+.hazards-list tbody tr:nth-child(odd) {
+    background-color: rgba(124, 122, 97, 0.04);
+}
+.hazards-list tbody td:first-child {
+    font-weight: 600;
+    color: var(--color-dark, #1a1a1a);
+    white-space: nowrap;
+}
+.hazards-list .rating-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    background-color: rgba(124, 122, 97, 0.12);
+    color: var(--color-dark, #1a1a1a);
+}
+.hazards-list .rating-low { background-color: rgba(120, 180, 100, 0.18); color: #3d6b30; }
+.hazards-list .rating-moderate { background-color: rgba(220, 180, 60, 0.18); color: #826200; }
+.hazards-list .rating-high { background-color: rgba(220, 110, 70, 0.18); color: #8a3010; }
+.hazards-list .rating-very-high { background-color: rgba(200, 60, 60, 0.22); color: #802020; }
+.hazards-caveat {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--color-gray, #888);
+    margin: 8px 0 20px;
+}
+.hazards-sources {
+    font-size: 13px;
+    color: var(--color-gray, #888);
+    line-height: 1.55;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-accent-light, #ebe7e0);
+}
+.hazards-sources a {
+    color: var(--color-accent, #7c7a61);
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    .hazards-list {
+        font-size: 13px;
+    }
+    .hazards-list th,
+    .hazards-list td {
+        padding: 8px 8px;
+    }
+}
+
 /* Recognition cards rendered as a sub-block of the dark Testimonials
    section on RU home (.testimonials-recognition). Heading inherits the
    light-on-dark testimonials style; cards keep their cream/white surface
