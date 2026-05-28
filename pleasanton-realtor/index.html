@@ -315,7 +315,6 @@
             line-height: 1.65;
             color: var(--color-white);
             opacity: 0.92;
-            color: var(--color-dark);
         }
         .wc-hero .cta-row {
             margin-top: 30px;
@@ -331,14 +330,25 @@
             font-size: 13px;
             letter-spacing: 0.18em;
             text-transform: uppercase;
-            border: 1px solid var(--color-dark);
+            border: 1px solid var(--color-white);
+            text-decoration: none;
+            transition: all 0.2s;
         }
         .wc-hero .cta-row .cta-primary {
-            background-color: var(--color-dark);
-            color: var(--color-white);
+            background-color: var(--color-white);
+            color: var(--color-dark);
+        }
+        .wc-hero .cta-row .cta-primary:hover {
+            background-color: #b8d278;
+            border-color: #b8d278;
+            color: var(--color-dark);
         }
         .wc-hero .cta-row .cta-secondary {
             background-color: transparent;
+            color: var(--color-white);
+        }
+        .wc-hero .cta-row .cta-secondary:hover {
+            background-color: var(--color-white);
             color: var(--color-dark);
         }
         @media (max-width: 700px) {
@@ -585,7 +595,7 @@
 <nav class="navbar">
     <div class="nav-container">
         <a href="/" class="nav-logo">
-            <img src="/photos/logo.png" alt="Lily Garipova Real Estate">
+            <img src="../photos/logo.png" alt="Lily Garipova Real Estate">
         </a>
         <button class="nav-toggle" aria-label="Menu">
             <span></span>
@@ -998,5 +1008,6 @@
     <div class="copyright">© 2026 Lily Garipova Real Estate · Cal DRE #02010731 · All rights reserved.</div>
 </footer>
 
+    <script src="../js/main.js"></script>
 </body>
 </html>
