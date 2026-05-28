@@ -33,6 +33,26 @@
   </url>
 
   <url>
+    <loc>https://lilygaripova.com/cities/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/cities/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/cities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/cities/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/cities/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/cities/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/cities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/cities/"/>
+  </url>
+
+  <url>
     <loc>https://lilygaripova.com/ru/faq/</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
