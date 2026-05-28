@@ -951,6 +951,43 @@ ul {
     background: var(--color-accent-light, #ebe7e0);
     color: var(--color-dark, #1a1a1a);
 }
+/* Secondary "Other cities" text-link list inside .related-cities, the priority-
+   tier-2 cities (per the binding priority rule in raw/website/claude.md) render
+   as small middot-separated text links instead of the card buttons used for the
+   priority-tier-1 cities above. Same `.cities-index-link` button still appears
+   below this section. */
+.other-cities-heading {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-gray, #888);
+    margin: 36px 0 12px 0;
+}
+.other-cities-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--color-dark, #1a1a1a);
+}
+.other-cities-list a {
+    color: var(--color-dark, #1a1a1a);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+    white-space: nowrap;
+}
+.other-cities-list a:hover {
+    border-bottom-color: var(--color-accent, #7c7a61);
+}
+.other-cities-list .sep {
+    color: var(--color-gray, #b3b1aa);
+    margin: 0 6px;
+}
+
 .cities-index-link {
     text-align: center;
     margin-top: 44px;
