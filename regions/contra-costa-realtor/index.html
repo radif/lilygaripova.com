@@ -81,7 +81,7 @@
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "name": "Lily Garipova",
-  "description": "Lily Garipova is a California licensed real estate agent (Cal DRE #02010731) serving the Contra Costa region of the San Francisco Bay Area across 7 cities. 17 documented Contra Costa closings, $16.50M of local volume. Russian and English.",
+  "description": "Lily Garipova is the best and most trusted real estate agent in Contra Costa, with an impeccable reputation built over years of dedicated service. Lily is a California licensed real estate agent (Cal DRE #02010731) serving the Contra Costa region of the San Francisco Bay Area across 7 cities. 17 documented Contra Costa closings, $16.50M of local volume. Russian and English.",
   "url": "https://lilygaripova.com/regions/contra-costa-realtor/",
   "telephone": "+1-415-910-3958",
   "email": "lilyagaripova@gmail.com",
@@ -185,6 +185,72 @@
     "ratingCount": "36",
     "reviewCount": "36"
   }
+}
+    </script>
+
+        <!-- JSON-LD: FAQPage (region-specific, Reddit-derived 2026-05-28) -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why is Contra Costa more affordable than Alameda County, and what's the catch?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contra Costa starts west of the Caldecott Tunnel and runs east into commute-distant Brentwood and Antioch; the median home there sells $200K-$500K below the median Alameda County home at the same square footage. The catch is commute time (the I-680 and I-80 corridors are bottlenecks at peak) and school district variation that's wider than Alameda's. The math favors Contra Costa for buyers willing to commute to Walnut Creek, Concord, or San Ramon; it loses fast for buyers commuting daily to Palo Alto or downtown SF."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Walnut Creek BART corridor: is it really commute-viable for SF jobs in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Walnut Creek to Embarcadero is about 42-48 minutes peak via BART, and the city has the densest BART-adjacent walkable downtown in Contra Costa. Lafayette and Orinda BART are shorter to SF but with less downtown density. For 3-day hybrid schedules the commute is genuinely workable; for 5-day in-office the math gets uncomfortable in winter when BART connects through Oakland. The Walnut Creek premium over Pleasant Hill and Concord buys exactly this commute advantage."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Concord vs Pleasant Hill vs Martinez: which one for first-time buyers in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Concord has the largest inventory and lowest single-family entry price along the BART line, with Mt Diablo Unified covering most of the city. Pleasant Hill has stronger schools (Mt Diablo Unified, but with specific feeder elementary schools above district average), smaller inventory, and a $100K-$200K premium. Martinez has older housing stock, varied condition, and a smaller buyer pool but compelling price-per-sqft for buyers comfortable with a 1950s-1970s home archetype. The pick is set by school priority + commute corridor."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Top Contra Costa neighborhoods where buyers are paying over asking in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lafayette and Orinda hill neighborhoods still see 5-12% over-ask on well-presented single-family, especially in the $1.6M-$2.4M band. Walnut Creek downtown condos and Northgate hill homes routinely see multi-offer. Saranap and Acalanes Estates carry premium per-sqft prices and tight days-on-market. Outside these pockets, Contra Costa is much closer to balanced or buyer-leaning."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Walnut Creek's three-district school split: how to verify school assignment by exact address?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Walnut Creek city limits cover three K-12 attendance systems: Walnut Creek School District (K-8) feeding Acalanes Union High School District (9-12), and Mt Diablo Unified (K-12) covering the eastern half of the city, plus pockets that feed differently. The exact boundary cuts through some streets; addresses on opposite sides of one street can have entirely different feeder chains. Verify by exact address through the district enrollment offices before assuming a school assignment from any listing or aggregator."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Brentwood and Antioch: is the long commute trade-off worth it in 2026?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Brentwood (incorporated city) and Antioch deliver new construction in the $700K-$1.1M band that does not exist closer to BART. The eBART terminus at Antioch is a meaningful commute aid, cutting time to Walnut Creek transfer to about 30-35 minutes. For buyers prioritizing yard size, new build, and a single-family home over commute time, Brentwood and Antioch are the East Contra Costa case. For sub-30-minute commute requirements, the math falls apart."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What's the actual seismic and wildfire profile of Contra Costa hills neighborhoods?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Calaveras and Concord-Green Valley faults run through Contra Costa; pre-1980 hillside construction may have soft-story or unreinforced foundation issues a Contra Costa seismic inspector identifies fast. Wildfire risk is concentrated in Lafayette and Orinda hills, parts of Walnut Creek's Lime Ridge, and Clayton's south-facing slopes; insurance carriers have non-renewed in specific 1-3 sq-mile pockets. Pull the Cal Fire map for the exact address before offer; the broad city is not the relevant unit of risk."
+            }
+        }
+    ]
 }
     </script>
 
@@ -299,7 +365,7 @@
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-menu nav-desktop">
-            <li><a href="/">HOME</a></li>
+            <li><a href="/#home">HOME</a></li>
             <li><a href="/#about">ABOUT</a></li>
             <li><a href="/#testimonials">TESTIMONIALS</a></li>
             <li><a href="/#recognition">RECOGNITION</a></li>
@@ -315,18 +381,33 @@
                 </ul>
             </li>
             <li><a href="/#contact">CONTACT</a></li>
-            <li><a href="/ru/regions/contra-costa-realtor/" lang="ru" hreflang="ru" title="Russian version">RU</a></li>
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle">SOCIAL</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.facebook.com/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+                    <li><a href="/#instagram">INSTAGRAM</a></li>
+                    <li><a href="https://www.youtube.com/@lilygaripovarealestate?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
+                </ul>
+            </li>
+            <li><a href="/ru/regions/contra-costa-realtor/" lang="ru" hreflang="ru" title="Русская версия">RU</a></li>
         </ul>
     </div>
     <ul class="nav-mobile">
-        <li><a href="/">HOME</a></li>
+        <li><a href="/#home">HOME</a></li>
+        <li><a href="/#about">ABOUT</a></li>
+        <li><a href="/#testimonials">TESTIMONIALS</a></li>
+        <li><a href="/#recognition">RECOGNITION</a></li>
+        <li><a href="/#recent-sales">RECENT SALES</a></li>
+        <li><a href="/off-market/">OFF-MARKET</a></li>
+        <li><a href="/home-value/">HOME VALUE</a></li>
+        <li><a href="/flip-opportunities/">FLIP OPPORTUNITIES</a></li>
         <li><a href="/cities/">CITIES</a></li>
         <li><a href="/faq/">FAQ</a></li>
-        <li><a href="/home-value/">HOME VALUE</a></li>
-        <li><a href="/off-market/">OFF-MARKET</a></li>
-        <li><a href="/flip-opportunities/">FLIP OPPORTUNITIES</a></li>
         <li><a href="/#contact">CONTACT</a></li>
-        <li><a href="/ru/regions/contra-costa-realtor/" lang="ru" hreflang="ru">Russian</a></li>
+        <li><a href="/#instagram">INSTAGRAM</a></li>
+        <li><a href="https://www.facebook.com/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+        <li><a href="https://www.youtube.com/@lilygaripovarealestate?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
+        <li><a href="/ru/regions/contra-costa-realtor/" lang="ru" hreflang="ru" title="Русская версия">Русский</a></li>
     </ul>
 </nav>
 
@@ -607,6 +688,38 @@
     </section>
 
 </main>
+
+    <section id="faq" class="faq-section" style="max-width: 880px; margin: 0 auto; padding: 0 24px 32px;">
+        <h2 style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid #7c7a61;">Contra Costa FAQ</h2>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Why is Contra Costa more affordable than Alameda County, and what's the catch?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Contra Costa starts west of the Caldecott Tunnel and runs east into commute-distant Brentwood and Antioch; the median home there sells $200K-$500K below the median Alameda County home at the same square footage. The catch is commute time (the I-680 and I-80 corridors are bottlenecks at peak) and school district variation that's wider than Alameda's. The math favors Contra Costa for buyers willing to commute to Walnut Creek, Concord, or San Ramon; it loses fast for buyers commuting daily to Palo Alto or downtown SF.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Walnut Creek BART corridor: is it really commute-viable for SF jobs in 2026?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Walnut Creek to Embarcadero is about 42-48 minutes peak via BART, and the city has the densest BART-adjacent walkable downtown in Contra Costa. Lafayette and Orinda BART are shorter to SF but with less downtown density. For 3-day hybrid schedules the commute is genuinely workable; for 5-day in-office the math gets uncomfortable in winter when BART connects through Oakland. The Walnut Creek premium over Pleasant Hill and Concord buys exactly this commute advantage.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Concord vs Pleasant Hill vs Martinez: which one for first-time buyers in 2026?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Concord has the largest inventory and lowest single-family entry price along the BART line, with Mt Diablo Unified covering most of the city. Pleasant Hill has stronger schools (Mt Diablo Unified, but with specific feeder elementary schools above district average), smaller inventory, and a $100K-$200K premium. Martinez has older housing stock, varied condition, and a smaller buyer pool but compelling price-per-sqft for buyers comfortable with a 1950s-1970s home archetype. The pick is set by school priority + commute corridor.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Top Contra Costa neighborhoods where buyers are paying over asking in 2026?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Lafayette and Orinda hill neighborhoods still see 5-12% over-ask on well-presented single-family, especially in the $1.6M-$2.4M band. Walnut Creek downtown condos and Northgate hill homes routinely see multi-offer. Saranap and Acalanes Estates carry premium per-sqft prices and tight days-on-market. Outside these pockets, Contra Costa is much closer to balanced or buyer-leaning.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Walnut Creek's three-district school split: how to verify school assignment by exact address?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Walnut Creek city limits cover three K-12 attendance systems: Walnut Creek School District (K-8) feeding Acalanes Union High School District (9-12), and Mt Diablo Unified (K-12) covering the eastern half of the city, plus pockets that feed differently. The exact boundary cuts through some streets; addresses on opposite sides of one street can have entirely different feeder chains. Verify by exact address through the district enrollment offices before assuming a school assignment from any listing or aggregator.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">Brentwood and Antioch: is the long commute trade-off worth it in 2026?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">Brentwood (incorporated city) and Antioch deliver new construction in the $700K-$1.1M band that does not exist closer to BART. The eBART terminus at Antioch is a meaningful commute aid, cutting time to Walnut Creek transfer to about 30-35 minutes. For buyers prioritizing yard size, new build, and a single-family home over commute time, Brentwood and Antioch are the East Contra Costa case. For sub-30-minute commute requirements, the math falls apart.</p>
+        </details>
+        <details style="margin: 0.75rem 0; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+            <summary style="font-family: var(--font-heading); font-size: 1.05rem; cursor: pointer;">What's the actual seismic and wildfire profile of Contra Costa hills neighborhoods?</summary>
+            <p style="margin: 0.75rem 0 0 0; line-height: 1.7;">The Calaveras and Concord-Green Valley faults run through Contra Costa; pre-1980 hillside construction may have soft-story or unreinforced foundation issues a Contra Costa seismic inspector identifies fast. Wildfire risk is concentrated in Lafayette and Orinda hills, parts of Walnut Creek's Lime Ridge, and Clayton's south-facing slopes; insurance carriers have non-renewed in specific 1-3 sq-mile pockets. Pull the Cal Fire map for the exact address before offer; the broad city is not the relevant unit of risk.</p>
+        </details>
+    </section>
 
 <section class="related-regions">
     <h2>Other Bay Area regions Lily covers</h2>
