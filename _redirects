@@ -1,3 +1,6 @@
+# Block public access to the build-time nav partials (sources for `just build-nav`).
+/_partials/*  /  404
+
 # City-page URL renames per 2026-05-27 competitor SEO study (slug + '-realtor' suffix)
 /walnut-creek/             /walnut-creek-realtor/             301
 /walnut-creek             /walnut-creek-realtor/             301
