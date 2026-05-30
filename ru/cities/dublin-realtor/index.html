@@ -406,68 +406,341 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Questrial&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* City-page hero, visually parity with EN /<city>-realtor/.
-           Dark background, uppercase H1, green credentials line, lede paragraph,
-           Call + Free-consultation CTA buttons. Kept inline per city page; if
-           the pattern repeats unchanged across all 6+ city pages, lift to
-           styles.css later. */
-        .city-hero { padding: 120px 24px 56px; text-align: center; background: #4a4747; color: #fff; }
-        .city-hero .eyebrow { font-family: var(--font-body); font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #fff; opacity: 0.85; margin-bottom: 16px; }
-        .city-hero h1 { font-family: var(--font-heading); font-size: 44px; letter-spacing: 0.05em; line-height: 1.15; text-transform: uppercase; color: #fff; max-width: 1080px; margin: 0 auto 18px; }
-        .city-hero .credentials { font-family: var(--font-heading); font-size: 14px; letter-spacing: 0.1em; color: #b8d278; text-transform: uppercase; margin-bottom: 24px; }
-        .city-hero .lede { max-width: 760px; margin: 0 auto; font-size: 18px; line-height: 1.65; color: #fff; opacity: 0.92; }
-        .city-hero .cta-row { margin-top: 30px; display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-        .city-hero .cta-row a { display: inline-block; padding: 14px 26px; font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; border: 1px solid #fff; text-decoration: none; transition: all 0.2s; }
-        .city-hero .cta-row .cta-primary { background-color: #fff; color: #1a1a1a; }
-        .city-hero .cta-row .cta-primary:hover { background-color: #b8d278; border-color: #b8d278; color: #1a1a1a; }
-        .city-hero .cta-row .cta-secondary { background-color: transparent; color: #fff; }
-        .city-hero .cta-row .cta-secondary:hover { background-color: #fff; color: #1a1a1a; }
-        @media (max-width: 700px) {
-            .city-hero h1 { font-size: 30px; }
-            .city-hero .lede { font-size: 16px; }
+        /* Page-specific layout, inherits color tokens from /css/styles.css */
+        body { background-color: var(--color-accent-light); color: var(--color-dark); }
+
+        .top-bar {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            letter-spacing: 0.05em;
         }
-
-        .city-body { padding: 3rem 1.5rem 1rem; max-width: 880px; margin: 0 auto; line-height: 1.7; }
-        .city-body section { margin-bottom: 2.8rem; }
-        .city-body h2 { font-family: 'Tenor Sans', serif; font-size: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid #7c7a61; color: #1a1a1a; }
-        .city-body h3 { font-family: 'Tenor Sans', serif; font-size: 1.1rem; letter-spacing: 0.04em; margin: 1.5rem 0 0.6rem 0; color: #1a1a1a; }
-        .city-body p { margin: 0 0 1rem 0; color: #1a1a1a; opacity: 0.92; }
-        .city-body ul { margin: 0 0 1rem 1.4rem; padding: 0; }
-        .city-body li { margin-bottom: 0.5rem; line-height: 1.65; }
-        .city-body strong { color: #1a1a1a; font-weight: 600; }
-
-        .track-record { background: #fff; padding: 2rem 1.75rem; border-left: 3px solid #b8d278; margin: 1.5rem 0 2rem 0; }
-        .track-record .summary-line { font-size: 1.05rem; margin-bottom: 1.2rem; font-weight: 600; color: #1a1a1a; }
-        .track-record ul.deals { list-style: none; margin: 0; padding: 0; }
-        .track-record ul.deals li { padding: 0.9rem 0; border-top: 1px solid rgba(0, 0, 0, 0.08); display: grid; grid-template-columns: 1fr; gap: 0.25rem; }
-        .track-record ul.deals li:first-child { border-top: none; padding-top: 0; }
-        .track-record .deal-date { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
-        .track-record .deal-address { font-family: 'Tenor Sans', serif; font-size: 1.05rem; letter-spacing: 0.03em; color: #1a1a1a; }
-        .track-record .deal-meta { font-size: 0.95rem; opacity: 0.85; }
-        .track-record .deal-meta .deal-price { color: #7c7a61; font-weight: 600; margin-right: 0.5rem; }
-
-        .faq-section details { border-top: 1px solid rgba(0, 0, 0, 0.12); padding: 1rem 0; }
-        .faq-section details:last-child { border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-        .faq-section summary { cursor: pointer; font-weight: 600; font-size: 1.02rem; list-style: none; padding: 0.4rem 0; line-height: 1.4; }
-        .faq-section summary::-webkit-details-marker { display: none; }
-        .faq-section summary::before { content: "+"; display: inline-block; width: 1.2rem; font-weight: 400; opacity: 0.6; }
-        .faq-section details[open] summary::before { content: "−"; }
-        .faq-section details p { margin: 0.6rem 0 0 1.2rem; line-height: 1.65; opacity: 0.92; }
-
-        .cta-block { background: #1a1a1a; color: #fff; padding: 3rem 1.5rem; text-align: center; margin-top: 3rem; }
-        .cta-block h2 { font-family: 'Tenor Sans', serif; font-size: 1.6rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 0.8rem 0; color: #fff; border: none; padding: 0; }
-        .cta-block p { max-width: 580px; margin: 0 auto 1.5rem auto; opacity: 0.92; line-height: 1.6; color: #fff; }
-        .cta-block .cta-buttons a { display: inline-block; background: #b8d278; color: #1a1a1a; padding: 0.9rem 1.8rem; font-family: 'Tenor Sans', serif; font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; margin: 0.4rem 0.3rem; transition: background 0.2s; }
-        .cta-block .cta-buttons a:hover { background: #fff; }
-        .cta-block .credentials { margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.75; letter-spacing: 0.05em; }
-
+        .top-bar a { color: var(--color-white); }
+        .top-bar a:hover { color: #b8d278; }
+        .top-bar .contact-row { display: flex; gap: 24px; align-items: center; }
+        .top-bar .brand { font-family: var(--font-heading); letter-spacing: 0.15em; }
+        .top-bar .lang-link { color: #b8d278; font-size: 13px; }
         @media (max-width: 600px) {
-            .city-hero { padding: 5.5rem 1rem 2rem; }
-            .city-hero h1 { font-size: 1.7rem; }
-            .city-body { padding: 2rem 1rem 0.5rem; }
-            .city-body h2 { font-size: 1.25rem; }
-            .track-record { padding: 1.5rem 1.25rem; }
+            .top-bar { flex-direction: column; gap: 8px; padding: 10px 16px; font-size: 13px; }
+            .top-bar .contact-row { gap: 16px; flex-wrap: wrap; justify-content: center; }
         }
+
+        .wc-hero {
+            padding: 120px 24px 56px;
+            background-color: #4a4747;
+            color: var(--color-white);
+            text-align: center;
+        }
+        .wc-hero .eyebrow {
+            font-family: var(--font-body);
+            font-size: 13px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            opacity: 0.85;
+            margin-bottom: 16px;
+        }
+        .wc-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 44px;
+            letter-spacing: 0.05em;
+            line-height: 1.15;
+            text-transform: uppercase;
+            color: var(--color-white);
+            max-width: 1080px;
+            margin: 0 auto 18px;
+        }
+        .wc-hero .credentials {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            color: #b8d278;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .wc-hero .lede {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--color-white);
+            opacity: 0.92;
+        }
+        .wc-hero .cta-row {
+            margin-top: 30px;
+            display: inline-flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .wc-hero .cta-row a {
+            display: inline-block;
+            padding: 14px 26px;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            border: 1px solid var(--color-white);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .wc-hero .cta-row .cta-primary {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+        }
+        .wc-hero .cta-row .cta-primary:hover {
+            background-color: #b8d278;
+            border-color: #b8d278;
+            color: var(--color-dark);
+        }
+        .wc-hero .cta-row .cta-secondary {
+            background-color: transparent;
+            color: var(--color-white);
+        }
+        .wc-hero .cta-row .cta-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-dark);
+        }
+        @media (max-width: 700px) {
+            .wc-hero h1 { font-size: 30px; }
+            .wc-hero .lede { font-size: 16px; }
+        }
+
+        .wc-section {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        .wc-section h2 {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+        .wc-section .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: 0 0 24px 0;
+        }
+        .wc-section p {
+            margin-bottom: 18px;
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--color-dark);
+        }
+        .wc-section ul {
+            margin: 0 0 18px 1.4em;
+            list-style: disc;
+        }
+        .wc-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        .wc-section .callout {
+            background-color: var(--color-white);
+            border-left: 3px solid #b8d278;
+            padding: 22px 26px;
+            margin: 22px 0;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .track-record {
+            background-color: var(--color-white);
+            padding: 56px 24px;
+        }
+        .track-record-inner {
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        .track-record h2 {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+        .track-record .divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: 0 0 28px 0;
+        }
+        .track-record .stat-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 26px 0;
+            margin-bottom: 28px;
+            border-top: 1px solid #e8e3d8;
+            border-bottom: 1px solid #e8e3d8;
+        }
+        .track-record .stat .num {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 30px;
+            color: var(--color-dark);
+            letter-spacing: 0.04em;
+            margin-bottom: 4px;
+        }
+        .track-record .stat .label {
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-gray);
+        }
+        @media (max-width: 700px) {
+            .track-record .stat-row { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .track-record .stat .num { font-size: 24px; }
+        }
+
+        .closings-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--color-white);
+            font-size: 15px;
+        }
+        .closings-table th,
+        .closings-table td {
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 1px solid #e8e3d8;
+        }
+        .closings-table th {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            background-color: #f7f4ec;
+        }
+        .closings-table td.price {
+            font-family: var(--font-heading);
+            color: var(--color-dark);
+        }
+        .closings-table td.role {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-gray);
+        }
+        @media (max-width: 600px) {
+            .closings-table th, .closings-table td { padding: 10px 10px; font-size: 13px; }
+        }
+
+        .neighborhood-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 12px;
+        }
+        .neighborhood-card {
+            background-color: var(--color-white);
+            padding: 22px 24px;
+            border-top: 3px solid #b8d278;
+        }
+        .neighborhood-card h3 {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+        .neighborhood-card p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            margin-bottom: 0;
+            color: var(--color-dark);
+        }
+        @media (max-width: 700px) {
+            .neighborhood-grid { grid-template-columns: 1fr; }
+        }
+
+        .faq-block details {
+            background-color: var(--color-white);
+            border: 1px solid #e8e3d8;
+            padding: 18px 22px;
+            margin-bottom: 12px;
+        }
+        .faq-block details > summary {
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: var(--color-dark);
+            list-style: none;
+            line-height: 1.4;
+        }
+        .faq-block details > summary::-webkit-details-marker { display: none; }
+        .faq-block details > summary::before {
+            content: "+";
+            display: inline-block;
+            width: 1.2rem;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+        .faq-block details[open] > summary::before { content: "\2212"; }
+        .faq-block details p {
+            margin: 12px 0 0 1.2rem;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--color-dark);
+        }
+
+        .contact-cta {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 56px 24px;
+            text-align: center;
+        }
+        .contact-cta h2 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            color: var(--color-white);
+        }
+        .contact-cta p {
+            max-width: 640px;
+            margin: 0 auto 22px;
+            font-size: 16px;
+            line-height: 1.65;
+            opacity: 0.9;
+        }
+        .contact-cta .contact-row {
+            display: inline-flex;
+            gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 8px;
+            font-family: var(--font-heading);
+            font-size: 15px;
+            letter-spacing: 0.1em;
+        }
+        .contact-cta a { color: var(--color-white); border-bottom: 1px solid #b8d278; padding-bottom: 2px; }
+        .contact-cta a:hover { color: #b8d278; }
+
+        footer {
+            background-color: #0f0f0f;
+            color: var(--color-white);
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+        }
+        footer a:hover { color: #b8d278; }
+        footer .footer-row { margin-bottom: 8px; }
+        footer .copyright { color: var(--color-gray); font-size: 12px; margin-top: 12px; }
     </style>
 </head>
 <body>
