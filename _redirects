@@ -1,19 +1,22 @@
 # Block public access to the build-time nav partials (sources for `just build-nav`).
 /_partials/*  /  404
 
-# City-page URL renames per 2026-05-27 competitor SEO study (slug + '-realtor' suffix)
-/walnut-creek/             /walnut-creek-realtor/             301
-/walnut-creek             /walnut-creek-realtor/             301
-/ru/walnut-creek/          /ru/walnut-creek-realtor/          301
-/ru/walnut-creek          /ru/walnut-creek-realtor/          301
-/dublin/             /dublin-realtor/             301
-/dublin             /dublin-realtor/             301
-/ru/dublin/          /ru/dublin-realtor/          301
-/ru/dublin          /ru/dublin-realtor/          301
-/pleasanton/             /pleasanton-realtor/             301
-/pleasanton             /pleasanton-realtor/             301
-/ru/pleasanton/          /ru/pleasanton-realtor/          301
-/ru/pleasanton          /ru/pleasanton-realtor/          301
+# Legacy top-level city URLs (the first 3 published cities) -> canonical /cities/ page.
+# Pointed DIRECTLY at the final /cities/ destination to avoid a chained 301 hop
+# (was /<city>/ -> /<city>-realtor/ -> /cities/<city>-realtor/; collapsed 2026-06-04 after
+# GSC showed /walnut-creek/ earning impressions via the redirect chain).
+/walnut-creek/             /cities/walnut-creek-realtor/      301
+/walnut-creek              /cities/walnut-creek-realtor/      301
+/ru/walnut-creek/          /ru/cities/walnut-creek-realtor/   301
+/ru/walnut-creek           /ru/cities/walnut-creek-realtor/   301
+/dublin/                   /cities/dublin-realtor/            301
+/dublin                    /cities/dublin-realtor/            301
+/ru/dublin/                /ru/cities/dublin-realtor/         301
+/ru/dublin                 /ru/cities/dublin-realtor/         301
+/pleasanton/               /cities/pleasanton-realtor/        301
+/pleasanton                /cities/pleasanton-realtor/        301
+/ru/pleasanton/            /ru/cities/pleasanton-realtor/     301
+/ru/pleasanton             /ru/cities/pleasanton-realtor/     301
 
 # City pages moved into /cities/ subfolder (2026-05-28)
 /alameda-realtor/    /cities/alameda-realtor/    301
