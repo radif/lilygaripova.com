@@ -1621,6 +1621,22 @@ ul {
     .footer-logo img {
         transform-origin: center center;
     }
+
+    /* Data tables (schools/hospitals/hazards) are wider than small screens:
+       let each table scroll inside itself instead of stretching the page. */
+    .schools-assignment,
+    .hazards-list,
+    .hospitals-list {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Instagram embeds are hardcoded width=400; cap to the viewport. */
+    .award-post-wrapper,
+    iframe[src*="instagram.com"] {
+        max-width: 100%;
+    }
 }
 
 /* Mobile */
@@ -1688,6 +1704,9 @@ ul {
     .hero-tagline-top {
         flex-direction: column;
         gap: 5px;
+        /* 24px + 0.25em tracking makes НЕДВИЖИМОСТЬ ~307px, wider than a
+           phone hero box; step down so the longest RU word fits. */
+        font-size: 19px;
     }
 
     .hero-tagline-top span {
@@ -1703,7 +1722,17 @@ ul {
     }
 
     .hero-box {
-        padding: 40px 30px;
+        padding: 40px 24px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* .hero is a flex container; without min-width:0 the content box
+       refuses to shrink below max-content and stretches the page. */
+    .hero-content {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .home-value-input-group {
