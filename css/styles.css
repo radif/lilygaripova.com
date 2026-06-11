@@ -725,7 +725,7 @@ ul {
 .testimonials {
     position: relative;
     padding: 120px 0;
-    background-image: url('../images/testimonials-bg.jpg');
+    background-image: url('../photos/background.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1609,6 +1609,11 @@ ul {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+    }
+
+    /* background-attachment: fixed is broken in iOS Safari */
+    .testimonials {
+        background-attachment: scroll;
     }
 
     /* When the footer stacks and centers, the logo's 2x scale must grow from
