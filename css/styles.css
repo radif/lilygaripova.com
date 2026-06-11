@@ -1610,6 +1610,12 @@ ul {
         gap: 30px;
         text-align: center;
     }
+
+    /* When the footer stacks and centers, the logo's 2x scale must grow from
+       its center, not its left edge, or the visual lands right of center. */
+    .footer-logo img {
+        transform-origin: center center;
+    }
 }
 
 /* Mobile */
