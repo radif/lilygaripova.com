@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.addEventListener('click', function() {
         navMobile.classList.toggle('active');
         navToggle.classList.toggle('active');
+        document.body.classList.toggle('menu-open', navMobile.classList.contains('active'));
     });
 
     // Close mobile menu when clicking a link
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             navMobile.classList.remove('active');
             navToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
         });
     });
 

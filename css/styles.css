@@ -207,6 +207,12 @@ ul {
     display: none;
 }
 
+/* Lock the page while the mobile menu overlay is open (class set by main.js);
+   without it iOS Safari scrolls and rubber-bands the page behind the menu. */
+body.menu-open {
+    overflow: hidden;
+}
+
 .nav-menu a {
     font-family: var(--font-heading);
     font-size: 13px;
@@ -1671,7 +1677,10 @@ ul {
         display: flex;
     }
 
-    .nav-toggle.active span {
+    /* .navbar prefix matches the specificity of `.navbar.scrolled .nav-toggle
+       span`, which otherwise wins and paints the open-menu hamburger dark on
+       the dark overlay (invisible after 50px of scroll). */
+    .navbar .nav-toggle.active span {
         background-color: var(--color-white);
     }
 
