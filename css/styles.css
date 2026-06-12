@@ -4,6 +4,22 @@
    =================================== */
 
 /* CSS Variables */
+/* Tenor Sans renders the digit 7 with a crossbar stroke (user dislikes it,
+   2026-06-12). This face covers ONLY U+0037 and serves Questrial's plain 7
+   (Google latin subset, ~4KB); listed before Tenor Sans in --font-heading so
+   every heading/stat 7 loses the crossbar while everything else stays Tenor.
+   If the Google URL ever rots, re-derive it: curl the css2?family=Questrial
+   stylesheet with a Chrome UA and take the woff2 from the block labeled
+   "latin" (the per-script subsets WITHOUT digits load but never render). */
+@font-face {
+    font-family: 'Tenor Sans Seven Fix';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/questrial/v19/QdVUSTchPBm7nuUeVf70viFluW44JQ.woff2) format('woff2');
+    unicode-range: U+0037;
+}
+
 :root {
     --color-black: #000000;
     --color-white: #ffffff;
@@ -18,7 +34,7 @@
        Manrope ships Cyrillic glyphs + real 400/600/700 weights, so mixed-language
        text and bolded body text render uniformly on RU pages. The browser uses the
        Latin font first; missing glyphs (Cyrillic, real bold) fall through to Manrope. */
-    --font-heading: 'Tenor Sans', 'Manrope', sans-serif;
+    --font-heading: 'Tenor Sans Seven Fix', 'Tenor Sans', 'Manrope', sans-serif;
     --font-body: 'Questrial', 'Manrope', sans-serif;
 
     --transition-fast: 0.2s ease;
