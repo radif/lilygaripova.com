@@ -1,0 +1,19 @@
+# Netlify response headers (see https://docs.netlify.com/routing/headers/)
+# Conservative hardening only: no CSP because the pages rely on inline
+# scripts/styles and third-party embeds (Instagram, YouTube, Calendly).
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Long-cache static assets (filenames change rarely; HTML stays default)
+/photos/*
+  Cache-Control: public, max-age=604800
+/assets/transactions/*
+  Cache-Control: public, max-age=604800
+/css/*
+  Cache-Control: public, max-age=86400
+/js/*
+  Cache-Control: public, max-age=86400

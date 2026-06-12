@@ -1766,6 +1766,7 @@ label,
     .hero {
         height: auto;
         min-height: 100vh;
+        min-height: 100svh; /* stable unit: no jump when the iOS URL bar collapses */
         padding-bottom: 40px;
     }
 

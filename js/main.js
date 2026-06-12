@@ -16,10 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mobile navigation toggle
+    navToggle.setAttribute('aria-expanded', 'false');
     navToggle.addEventListener('click', function() {
         navMobile.classList.toggle('active');
         navToggle.classList.toggle('active');
-        document.body.classList.toggle('menu-open', navMobile.classList.contains('active'));
+        var open = navMobile.classList.contains('active');
+        document.body.classList.toggle('menu-open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
     // Close mobile menu when clicking a link
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navMobile.classList.remove('active');
             navToggle.classList.remove('active');
             document.body.classList.remove('menu-open');
+            navToggle.setAttribute('aria-expanded', 'false');
         });
     });
 
