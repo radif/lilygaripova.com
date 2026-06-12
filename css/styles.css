@@ -213,6 +213,20 @@ body.menu-open {
     overflow: hidden;
 }
 
+/* Double-tapping interactive elements (hamburger, links, buttons, inputs)
+   should act, not zoom: manipulation disables double-tap-to-zoom on these
+   while leaving pinch-zoom fully intact. Body text keeps double-tap zoom. */
+a,
+button,
+input,
+select,
+textarea,
+label,
+.nav-toggle,
+.dot {
+    touch-action: manipulation;
+}
+
 .nav-menu a {
     font-family: var(--font-heading);
     font-size: 13px;
