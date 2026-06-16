@@ -1275,6 +1275,14 @@ label,
     .hazards-list td {
         padding: 8px 8px;
     }
+    /* Let the first column wrap on mobile. The desktop `white-space: nowrap`
+       keeps short rating-table labels tidy on one line, but the long
+       Factor labels on the region Environment/Infrastructure table
+       ("Noise (freeway, rail, flight paths)") would force the table wider
+       than the screen, cropping the Detail column with no horizontal scroll. */
+    .hazards-list tbody td:first-child {
+        white-space: normal;
+    }
 }
 
 /* Recognition cards rendered as a sub-block of the dark Testimonials
