@@ -73,6 +73,27 @@
   </url>
 
   <url>
+    <loc>https://lilygaripova.com/mello-roos/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/mello-roos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/mello-roos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/mello-roos/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/mello-roos/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/mello-roos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/mello-roos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/mello-roos/"/>
+  </url>
+
+
+  <url>
     <loc>https://lilygaripova.com/ru/home-value/</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
