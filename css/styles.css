@@ -1693,13 +1693,20 @@ label,
         left: 0;
         right: 0;
         height: 100vh;
+        height: 100dvh; /* dynamic viewport: accounts for mobile browser chrome */
         background-color: var(--color-dark);
         flex-direction: column;
-        justify-content: center;
+        /* flex-start (not center) so a tall menu never clips its first items;
+           the menu scrolls when the list exceeds the screen. Centering a column
+           taller than its container hides the overflow with no way to reach it. */
+        justify-content: flex-start;
         align-items: center;
-        gap: 25px;
+        gap: 18px;
+        padding: 76px 0 40px; /* clear the top bar; bottom breathing room */
         list-style: none;
         margin: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* momentum scroll on iOS */
         z-index: 5;
     }
 
