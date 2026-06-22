@@ -73,6 +73,46 @@
   </url>
 
   <url>
+    <loc>https://lilygaripova.com/listings/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/listings/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/listings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/listings/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/listings/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/listings/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/listings/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/listings/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/luxury-real-estate-bay-area/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/luxury-real-estate-bay-area/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/luxury-real-estate-bay-area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/luxury-real-estate-bay-area/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/luxury-real-estate-bay-area/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/luxury-real-estate-bay-area/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/luxury-real-estate-bay-area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/luxury-real-estate-bay-area/"/>
+  </url>
+
+  <url>
     <loc>https://lilygaripova.com/mello-roos/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
