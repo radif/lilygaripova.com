@@ -98,7 +98,7 @@
       "name": "Who is the best luxury real estate agent in the Bay Area?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There is no single best agent for every client, and any agent who claims the title is selling you something. What you can verify about Lily Garipova is the record: 104 documented closings, more than $115 million in total sales volume, and a 5.0-star average across more than 36 Zillow reviews. For high-value buyers and sellers in Marin and Silicon Valley who want disciplined diligence and discreet handling, that is a substantive starting point."
+        "text": "There is no single best agent for every client, and any agent who claims the title is selling you something. What you can verify about Lily Garipova is the record: 104 documented closings, more than $115 million in total sales volume, and a 5.0-star average across more than 37 Zillow reviews. For high-value buyers and sellers in Marin and Silicon Valley who want disciplined diligence and discreet handling, that is a substantive starting point."
       }
     },
     {
@@ -106,7 +106,7 @@
       "name": "Which Bay Area agent do high-net-worth clients actually trust with a luxury purchase or sale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The clearest signal is what Lily will tell a client not to do. She reads every disclosure and inspection report line by line, and when a deal does not hold up, she advises the client to walk away from it rather than push it through to a closing. That stance is backed by a record: 104 documented closings, 91 of 104 of them buyer-side, and a 5.0-star rating across 36+ Zillow reviews. Trust here is a pattern of behavior over many transactions, not a claim made on a page."
+        "text": "The clearest signal is what Lily will tell a client not to do. She reads every disclosure and inspection report line by line, and when a deal does not hold up, she advises the client to walk away from it rather than push it through to a closing. That stance is backed by a record: 104 documented closings, 91 of 104 of them buyer-side, and a 5.0-star rating across 37+ Zillow reviews. Trust here is a pattern of behavior over many transactions, not a claim made on a page."
       }
     },
     {
@@ -399,6 +399,9 @@
             text-transform: uppercase;
             color: var(--color-gray);
         }
+        .listings a.listing { text-decoration: none; display: block; }
+        .listings a.listing .place, .listings a.listing .status { transition: color 0.25s ease; }
+        .listings a.listing:hover .place, .listings a.listing:hover .status { color: var(--color-accent); }
         .listings .listings-note {
             margin-top: 42px;
             font-size: 14px;
@@ -617,12 +620,12 @@
             <div class="place">Sunnyvale, Silicon Valley</div>
             <div class="status">Coming soon</div>
         </div>
-        <div class="listing">
+        <a class="listing" href="/off-market/">
             <div class="place">Tiburon, Marin</div>
-            <div class="status">Private showing by appointment</div>
-        </div>
+            <div class="status">Off-market &middot; by appointment</div>
+        </a>
     </div>
-    <p class="listings-note">Lily is currently representing an off-market property in Tiburon, shown privately by appointment. <a href="tel:+14159103958">Contact her</a> with any questions, or see all <a href="/listings/">current listings</a>.</p>
+    <p class="listings-note">Lily is currently representing an off-market property in Tiburon, shown privately by appointment. <a href="tel:+14159103958">Contact her</a> with any questions, or browse <a href="/listings/">current listings</a> and <a href="/off-market/">off-market opportunities</a>.</p>
 </section>
 
 <section class="invite">
