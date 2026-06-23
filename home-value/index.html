@@ -381,6 +381,45 @@
             .bullet-list li { padding: 24px 20px; }
         }
 
+        /* Educational + FAQ sections */
+        #value-factors, #value-algorithms, #faq {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 56px 24px 0;
+        }
+        #faq { padding-bottom: 48px; }
+        #value-factors h2, #value-algorithms h2, #faq h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--color-dark);
+        }
+        #value-factors p, #value-algorithms p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--color-dark);
+        }
+        #faq details { border-top: 1px solid rgba(0,0,0,0.12); padding: 1.1rem 0; }
+        #faq details:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
+        #faq details > summary {
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 17px;
+            letter-spacing: 0.02em;
+            list-style: none;
+            padding: 0.4rem 0;
+            line-height: 1.4;
+            color: var(--color-dark);
+        }
+        #faq details > summary::-webkit-details-marker { display: none; }
+        #faq details > summary::before { content: "+"; display: inline-block; width: 1.4rem; font-weight: 400; opacity: 0.55; }
+        #faq details[open] > summary::before { content: "\2212"; }
+        #faq details > p { margin: 0.6rem 0 0 1.4rem; line-height: 1.7; color: var(--color-dark); opacity: 0.9; }
+        @media (max-width: 800px) {
+            #value-factors, #value-algorithms, #faq { padding-left: 20px; padding-right: 20px; }
+        }
+
         /* Trust strip */
         .trust-strip {
             background-color: var(--color-white);
@@ -693,22 +732,22 @@
 
     <section id="faq">
         <h2>CMA questions, answered</h2>
-    <div class="qa">
-    <h3>How accurate is a CMA compared to a Zestimate?</h3>
+    <details>
+    <summary>How accurate is a CMA compared to a Zestimate?</summary>
     <p>A CMA is built from sold homes within 0.5 mi of your address, verified against county records, and adjusted by a person who knows how homes on your block actually sell. A Zestimate is an algorithm working from public-record averages, with no way to see condition, view, or an error in the data. Neither is a guarantee, which is why I deliver the CMA as a low, likely, and high range rather than a single number.</p>
-</div>
-<div class="qa">
-    <h3>What does a free CMA include?</h3>
+</details>
+<details>
+    <summary>What does a free CMA include?</summary>
     <p>Three things. Comparable sales within 0.5 mi of your address, filtered for similar square footage, bed and bath count, lot size, and condition, with days on market and final-versus-asking ratios. A realistic low, likely, and high value range built from those sales. And an honest read on timing: whether to list now or wait, and which improvements would lift your number the most.</p>
-</div>
-<div class="qa">
-    <h3>Does requesting a CMA obligate me to list my home?</h3>
+</details>
+<details>
+    <summary>Does requesting a CMA obligate me to list my home?</summary>
     <p>No. The CMA is free and carries no obligation to list, with me or with anyone. Many owners request one simply to understand their equity or to plan a few years ahead. Your information stays with me: no mass mailings, no spam, no sharing with third parties.</p>
-</div>
-<div class="qa">
-    <h3>How long does a CMA take?</h3>
+</details>
+<details>
+    <summary>How long does a CMA take?</summary>
     <p>I deliver it within 1 to 2 business days of your request. I prepare each one personally rather than running it through software, which is what that day or two buys you. If you are working against a deadline, mention it in the request and I will tell you honestly whether I can meet it.</p>
-</div>
+</details>
     </section>
 
 <!-- Trust strip -->

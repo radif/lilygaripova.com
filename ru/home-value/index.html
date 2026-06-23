@@ -367,6 +367,45 @@
             .bullet-list li { padding: 24px 20px; }
         }
 
+        /* Educational + FAQ sections */
+        #price-factors, #online-estimates, #faq {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 56px 24px 0;
+        }
+        #faq { padding-bottom: 48px; }
+        #price-factors h2, #online-estimates h2, #faq h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--color-dark);
+        }
+        #price-factors p, #online-estimates p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--color-dark);
+        }
+        #faq details { border-top: 1px solid rgba(0,0,0,0.12); padding: 1.1rem 0; }
+        #faq details:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
+        #faq details > summary {
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 17px;
+            letter-spacing: 0.02em;
+            list-style: none;
+            padding: 0.4rem 0;
+            line-height: 1.4;
+            color: var(--color-dark);
+        }
+        #faq details > summary::-webkit-details-marker { display: none; }
+        #faq details > summary::before { content: "+"; display: inline-block; width: 1.4rem; font-weight: 400; opacity: 0.55; }
+        #faq details[open] > summary::before { content: "\2212"; }
+        #faq details > p { margin: 0.6rem 0 0 1.4rem; line-height: 1.7; color: var(--color-dark); opacity: 0.9; }
+        @media (max-width: 800px) {
+            #price-factors, #online-estimates, #faq { padding-left: 20px; padding-right: 20px; }
+        }
+
         .trust-strip {
             background-color: var(--color-white);
             padding: 48px 24px;
@@ -654,22 +693,22 @@
 
     <section id="faq">
     <h2>Частые вопросы о CMA</h2>
-    <div class="qa">
-        <h3>Насколько точен CMA по сравнению с Zestimate?</h3>
+    <details>
+        <summary>Насколько точен CMA по сравнению с Zestimate?</summary>
         <p>Zestimate строится на средних значениях по zip-коду и публичных записях, в которых нередко есть ошибки. CMA я готовлю на основе проверенных данных округа, недавних сопоставимых продаж рядом с вашим адресом и реального состояния дома. Точный итог продажи не гарантирует никто, но CMA учитывает то, чего алгоритм не видит: состояние, вид, школы и особенности вашего квартала.</p>
-    </div>
-    <div class="qa">
-        <h3>Что входит в бесплатный CMA?</h3>
+    </details>
+    <details>
+        <summary>Что входит в бесплатный CMA?</summary>
         <p>Сопоставимые продажи в радиусе примерно полумили от вашего адреса, реалистичный диапазон стоимости (минимум, вероятно, максимум) и честная рекомендация по таймингу: выходить на рынок сейчас или подождать, и какие точечные улучшения сильнее всего двигают цену. Я готовлю каждый отчет лично, без алгоритмов.</p>
-    </div>
-    <div class="qa">
-        <h3>Обязывает ли запрос CMA выставлять дом на продажу?</h3>
+    </details>
+    <details>
+        <summary>Обязывает ли запрос CMA выставлять дом на продажу?</summary>
         <p>Нет. CMA это информация для вашего решения, а не обязательство передо мной. Многие владельцы запрашивают оценку просто чтобы понимать, сколько стоит их дом сегодня. Ваши данные остаются у меня и никому не передаются, и никакого давления продавать не будет.</p>
-    </div>
-    <div class="qa">
-        <h3>Сколько времени занимает подготовка CMA?</h3>
+    </details>
+    <details>
+        <summary>Сколько времени занимает подготовка CMA?</summary>
         <p>Как правило, 1-2 рабочих дня с момента, когда вы прислали адрес. Я подбираю и проверяю сопоставимые продажи вручную, поэтому отчет занимает чуть больше времени, чем мгновенная онлайн-оценка, зато отражает ваш конкретный дом, а не среднее по zip-коду.</p>
-    </div>
+    </details>
 </section>
 
 <section class="what-inside">
