@@ -397,18 +397,119 @@
             font-size: 12px;
             margin-top: 12px;
         }
+    
+        /* Shared site header (navbar) - solid dark bar variant for this light page */
+        body.menu-open { overflow: hidden; }
+        .navbar { position: sticky; top: 0; left: 0; right: 0; z-index: 1000; background-color: var(--color-dark); padding: 14px 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { display: flex; align-items: center; }
+        .nav-logo img { height: 50px; width: auto; filter: brightness(0) invert(1); transform: scale(2); transform-origin: left center; }
+        .nav-menu { display: flex; gap: 32px; list-style: none; align-items: center; }
+        .nav-mobile { display: none; }
+        .nav-menu a { font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.1em; color: var(--color-white); position: relative; transition: color 0.3s ease; }
+        .nav-menu a:hover { color: var(--color-accent-green); }
+        .nav-menu a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px; background-color: currentColor; transition: width 0.3s ease; }
+        .nav-menu a:hover::after { width: 100%; }
+        .nav-dropdown { position: relative; }
+        .dropdown-toggle { cursor: pointer; }
+        .dropdown-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background-color: var(--color-white); min-width: 180px; padding: 10px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 1000; margin-top: 14px; list-style: none; }
+        .nav-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
+        .dropdown-menu li { list-style: none; }
+        .dropdown-menu a { display: block; padding: 10px 20px; color: var(--color-dark) !important; font-size: 12px !important; white-space: nowrap; }
+        .dropdown-menu a::after { display: none; }
+        .dropdown-menu a:hover { background-color: var(--color-light-gray); color: var(--color-dark) !important; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+        .nav-toggle span { width: 25px; height: 2px; background-color: var(--color-white); transition: all 0.3s ease; }
+        @media (max-width: 768px) {
+            .nav-toggle { display: flex; z-index: 10; }
+            .nav-desktop { display: none !important; }
+            .nav-mobile { display: none; position: fixed; top: 0; left: 0; right: 0; height: 100vh; height: 100dvh; background-color: var(--color-dark); flex-direction: column; justify-content: flex-start; align-items: center; gap: 18px; padding: 76px 0 40px; list-style: none; margin: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 5; }
+            .nav-mobile.active { display: flex; }
+            .navbar .nav-toggle.active span { background-color: var(--color-white); }
+            .nav-mobile li { text-align: center; list-style: none; }
+            .nav-mobile a { color: var(--color-white) !important; font-size: 16px; font-family: var(--font-heading); letter-spacing: 0.1em; }
+        }
     </style>
 </head>
 <body>
 
-<!-- Top contact bar -->
-<div class="top-bar">
-    <a href="/" class="brand">LILY GARIPOVA</a>
-    <div class="contact-row">
-        <a href="tel:+14159103958">📞 (415) 910-3958</a>
-        <a href="mailto:lilyagaripova@gmail.com">✉ lilyagaripova@gmail.com</a>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/ru/" class="nav-logo">
+            <img src="/photos/logo.png" alt="Lily Garipova Real Estate">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- NAV-DESKTOP-START -->
+        <ul class="nav-menu nav-desktop">
+            <li><a href="/ru/#home">ГЛАВНАЯ</a></li>
+            <li><a href="/ru/#about">ОБО МНЕ</a></li>
+            <li><a href="/ru/#testimonials">ОТЗЫВЫ</a></li>
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle">ОБЪЕКТЫ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/ru/#recent-sales">СДЕЛКИ</a></li>
+                    <li><a href="/ru/listings/">ТЕКУЩИЕ ЛИСТИНГИ</a></li>
+                    <li><a href="/ru/luxury-real-estate-bay-area/">ЛЮКС</a></li>
+                    <li><a href="/ru/off-market/">OFF-MARKET</a></li>
+                    <li><a href="/ru/off-market-listings-bay-area/">OFF-MARKET ГИД</a></li>
+                </ul>
+            </li>
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle">РЕСУРСЫ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/ru/faq/">FAQ</a></li>
+                    <li><a href="/ru/home-value/">ОЦЕНКА ДОМА</a></li>
+                    <li><a href="/ru/mello-roos/">MELLO-ROOS</a></li>
+                    <li><a href="/ru/buyer-guide/">ГИД ПОКУПАТЕЛЯ</a></li>
+                    <li><a href="/ru/flip-opportunities/">FLIP-ОБЪЕКТЫ</a></li>
+                    <li><a href="/ru/cities/">ГОРОДА</a></li>
+                    <li><a href="/ru/webinars/">ВЕБИНАРЫ</a></li>
+                </ul>
+            </li>
+            <li><a href="/ru/#contact">КОНТАКТЫ</a></li>
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle">СОЦСЕТИ</a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.facebook.com/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+                    <li><a href="/ru/#instagram">INSTAGRAM</a></li>
+                    <li><a href="https://www.youtube.com/@lilygaripovarealestate?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
+                    <li><a href="https://t.me/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">TELEGRAM</a></li>
+                </ul>
+            </li>
+            <li><a href="/off-market/" lang="en" hreflang="en" title="English version">EN</a></li>
+        </ul>
+        <!-- NAV-DESKTOP-END -->
     </div>
-</div>
+        <!-- NAV-MOBILE-START -->
+    <ul class="nav-mobile">
+        <li><a href="/ru/#home">ГЛАВНАЯ</a></li>
+        <li><a href="/ru/#about">ОБО МНЕ</a></li>
+        <li><a href="/ru/#testimonials">ОТЗЫВЫ</a></li>
+        <li><a href="/ru/#recent-sales">СДЕЛКИ</a></li>
+        <li><a href="/ru/listings/">ТЕКУЩИЕ ЛИСТИНГИ</a></li>
+        <li><a href="/ru/luxury-real-estate-bay-area/">ЛЮКС</a></li>
+        <li><a href="/ru/buyer-guide/">ГИД ПОКУПАТЕЛЯ</a></li>
+        <li><a href="/ru/home-value/">ОЦЕНКА ДОМА</a></li>
+        <li><a href="/ru/mello-roos/">MELLO-ROOS</a></li>
+        <li><a href="/ru/off-market/">OFF-MARKET</a></li>
+        <li><a href="/ru/off-market-listings-bay-area/">OFF-MARKET ГИД</a></li>
+        <li><a href="/ru/flip-opportunities/">FLIP-ОБЪЕКТЫ</a></li>
+        <li><a href="/ru/faq/">FAQ</a></li>
+        <li><a href="/ru/cities/">ГОРОДА</a></li>
+        <li><a href="/ru/webinars/">ВЕБИНАРЫ</a></li>
+        <li><a href="/ru/#contact">КОНТАКТЫ</a></li>
+        <li><a href="/ru/#instagram">INSTAGRAM</a></li>
+        <li><a href="https://www.facebook.com/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+        <li><a href="https://www.youtube.com/@lilygaripovarealestate?sub_confirmation=1" target="_blank" rel="noopener noreferrer">YOUTUBE</a></li>
+        <li><a href="https://t.me/lilygaripovarealestate" target="_blank" rel="noopener noreferrer">TELEGRAM</a></li>
+        <li><a href="/off-market/" lang="en" hreflang="en" title="English version">English</a></li>
+    </ul>
+    <!-- NAV-MOBILE-END -->
+</nav>
 
 <!-- Hero -->
 <section class="hero">
@@ -548,5 +649,25 @@
     <div class="copyright">© 2026 Lily Garipova Real Estate. Cal DRE# 02010731. All rights reserved.</div>
 </footer>
 
+
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),m=document.querySelector('.nav-mobile');
+  if(t&&m){
+    t.setAttribute('aria-expanded','false');
+    t.addEventListener('click',function(){
+      var open=m.classList.toggle('active');t.classList.toggle('active');
+      document.body.classList.toggle('menu-open',open);
+      t.setAttribute('aria-expanded',open?'true':'false');
+    });
+    m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){
+      m.classList.remove('active');t.classList.remove('active');document.body.classList.remove('menu-open');
+    });});
+  }
+  document.querySelectorAll('.dropdown-toggle').forEach(function(d){
+    d.addEventListener('click',function(e){e.preventDefault();});
+  });
+})();
+</script>
 </body>
 </html>
