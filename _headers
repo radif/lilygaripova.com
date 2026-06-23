@@ -8,12 +8,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# Long-cache static assets (filenames change rarely; HTML stays default)
+# Long-cache static assets (filenames change rarely; HTML stays default).
+# 1-year immutable per the PageSpeed "efficient cache lifetimes" audit.
 /photos/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000, immutable
 /assets/transactions/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000, immutable
 /css/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=31536000, immutable
 /js/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=31536000, immutable

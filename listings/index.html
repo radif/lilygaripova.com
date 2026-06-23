@@ -261,6 +261,9 @@
             transition: background-color 0.3s ease;
         }
         .property .property-cta:hover { background-color: var(--color-accent); color: var(--color-white); }
+        .property .property-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+        .property .property-share { align-self: center; margin-top: 14px; font-family: var(--font-body); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gray); background: none; border: none; cursor: pointer; transition: color 0.2s ease; }
+        .property .property-share:hover { color: var(--color-accent); }
         @media (max-width: 760px) {
             .properties { grid-template-columns: 1fr; gap: 24px; padding-bottom: 64px; }
             .property-media { height: 170px; }
@@ -407,12 +410,14 @@
             <span class="region-faint">Silicon Valley</span>
         </div>
         <div class="property-body">
-            <h2 class="property-place">Sunnyvale, Silicon Valley</h2>
+            <div class="property-eyebrow">Santa Clara County</div>
+            <h2 class="property-place">Sunnyvale</h2>
             <div class="property-addr">Address available on request</div>
             <div class="property-price">Price upon request</div>
             <div class="property-specs">3 bed · 3 bath · ~1,552 sqft · Detached single-family · Built 1976</div>
             <p class="property-note">Coming soon to the open market. Contact Lily for early details and a private preview before it lists.</p>
             <a class="property-cta" href="tel:+14159103958">Request details</a>
+            <button class="property-share" type="button" data-share="Coming soon in Sunnyvale, Silicon Valley, with Lily Garipova">Share</button>
         </div>
     </article>
     <article class="property">
@@ -421,12 +426,14 @@
             <span class="region-faint">Marin</span>
         </div>
         <div class="property-body">
-            <h2 class="property-place">Bel Aire, Tiburon (Marin)</h2>
+            <div class="property-eyebrow">Marin County</div>
+            <h2 class="property-place">Bel Aire, Tiburon</h2>
             <div class="property-addr">Address shared with qualified buyers</div>
             <div class="property-price">Price upon request</div>
             <div class="property-specs">High-value home · Shown by private appointment</div>
             <p class="property-note">A private exclusive, marketed discreetly within high-value circles and never placed on the open market. Contact Lily for details and to arrange a private showing.</p>
             <a class="property-cta" href="tel:+14159103958">Request a private showing</a>
+            <button class="property-share" type="button" data-share="A private exclusive in Bel Aire, Tiburon (Marin), with Lily Garipova">Share</button>
         </div>
     </article>
 </section>
@@ -486,6 +493,13 @@
   }
   document.querySelectorAll('.dropdown-toggle').forEach(function(d){
     d.addEventListener('click',function(e){e.preventDefault();});
+  });
+  document.querySelectorAll('.property-share').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.getAttribute('data-share')||document.title, url=location.href;
+      if(navigator.share){navigator.share({title:'Lily Garipova',text:txt,url:url}).catch(function(){});}
+      else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt+' '+url);var o=b.textContent;b.textContent='Link copied';setTimeout(function(){b.textContent=o;},1800);}
+    });
   });
 })();
 </script>

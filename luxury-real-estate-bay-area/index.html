@@ -93,6 +93,12 @@
   "@type": "FAQPage",
   "inLanguage": "en",
   "mainEntity": [
+    { "@type": "Question", "name": "I want to make an all-cash offer, but the money is still tied up in stock I haven't sold yet. How does that work?", "acceptedAnswer": { "@type": "Answer", "text": "This is one of the most common situations Lily handles for tech buyers, and the mechanics are about timing, not magic. She works backward from the closing date with you and your stock broker so the share sale settles in time, then assembles the proof of funds a seller expects: recent brokerage statements and, once shares are sold, the cash position the offer rests on. Whether or when you actually sell those shares is a decision for your financial and tax advisors, not the agent. Lily's part is to line that sale up cleanly with the escrow (the neutral third party that holds the funds and paperwork until the deal closes) so the offer is real on paper the day it is written." } },
+    { "@type": "Question", "name": "Can I win a bidding war by waiving the financing contingency without going truly all-cash, and how risky is that?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the distinction matters to a seller. A financing contingency is the clause that lets you walk away and keep your deposit if your loan falls through; waiving it tells the seller you will close even if financing stalls, while a true all-cash offer means no loan at all. A seller asks for different proof in each case, a lender pre-approval and reserves versus liquid funds, and Lily walks you through both so you know exactly what is being promised. The real exposure is your earnest money, the good-faith deposit you put down with the offer: waive the wrong protection and then fail to close, and that deposit is at risk, so this is a step Lily structures deliberately rather than reflexively." } },
+    { "@type": "Question", "name": "My equity is RSUs that vest over four years, not one big payout. Does that change how I buy?", "acceptedAnswer": { "@type": "Answer", "text": "It changes the financing path more than the search itself. RSUs, or restricted stock units, are company shares your employer grants you that you fully own only as they vest on a schedule, and lenders treat them carefully: most count only vested, publicly traded shares with a vesting history, and private-startup RSUs usually do not qualify as income or assets for a loan at all. That often shapes whether it makes sense to finance now against the equity that does count, or buy with cash and refinance later once more shares vest. Lily coordinates that conversation with your lender so the strategy fits your actual vesting calendar; she does not advise on the shares themselves." } },
+    { "@type": "Question", "name": "Can I buy privately through a trust or LLC so my name isn't on the public record?", "acceptedAnswer": { "@type": "Answer", "text": "Partly, and the line between what the agent does and what your attorney does is worth drawing clearly. Lily coordinates the real-estate side: sourcing off-market homes, arranging private showings, and keeping the transaction low-profile. Your attorney, not the agent, sets up the trust or LLC and advises on how to hold title, because that is legal and tax structuring. Two cautions she raises early: title companies, lenders, and the IRS still require beneficial-owner disclosure, meaning the real person behind the entity has to be identified to those parties even when the public deed shows only the entity, and many lenders will not finance a purchase held by an LLC, which often pushes an entity buy toward cash. The structuring decisions stay with your attorney and tax advisor." } },
+    { "@type": "Question", "name": "I'm relocating to the Bay Area from out of state after my company went public. What's the property-tax reality here?", "acceptedAnswer": { "@type": "Answer", "text": "California sets your tax base differently than many states, so this catches transplants off guard. Under Proposition 13, your assessed value is anchored to your purchase price and rises only modestly each year after that, which means a higher purchase price locks in a higher base. The base-transfer rules under Proposition 19, which let some owners carry a low assessment to a new home, apply to California sellers who are 55 or older, disabled, or displaced by disaster, so as a first-time California buyer relocating from out of state you should budget for the full reassessed tax bill on your purchase price. Lily flags the real-estate-relevant numbers so they are in your model from day one; the tax planning itself belongs with your CPA." } },
+    { "@type": "Question", "name": "Should I buy now, before the rest of the IPO cohort floods the market and prices spike?", "acceptedAnswer": { "@type": "Answer", "text": "Lily gives an honest read here rather than a fear pitch. The picture of everyone getting liquid at once is real, but the effect is more staggered than a single spike: lockup periods, the window after an IPO when employees still cannot sell their shares, expire on different dates and spread that new demand across months, and some existing owners list precisely to sell into stronger demand, which adds supply on the other side. So buying now before the surge oversimplifies what actually happens. What Lily can put in front of you is current local inventory and recent over-asking data for the cities you are considering, so you decide from real numbers; she does not promise where the market is headed. Reach out at lilygaripova.com or (415) 910-3958 to walk through your situation." } },
     {
       "@type": "Question",
       "name": "Who is the best luxury real estate agent in the Bay Area?",
@@ -554,9 +560,18 @@
         .btn { display: inline-block; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-dark); padding: 14px 30px; border: 1px solid var(--color-accent); transition: background-color 0.3s ease, color 0.3s ease; }
         .btn:hover { background-color: var(--color-accent); color: var(--color-white); }
         @media (max-width: 700px) { .representation .rep-row { grid-template-columns: 1fr; gap: 44px; } }
+        .recent { max-width: 980px; margin: 0 auto; padding: 8px 24px 72px; text-align: center; }
+        .recent .eyebrow { font-family: var(--font-body); font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px; }
+        .recent .recent-sub { font-size: 13px; letter-spacing: 0.04em; color: var(--color-gray); margin-bottom: 40px; }
+        .recent .recent-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
+        .recent .deal-price { font-family: var(--font-heading); font-size: clamp(26px, 3vw, 34px); color: var(--color-dark); line-height: 1; }
+        .recent .deal-place { margin-top: 12px; font-size: 13px; letter-spacing: 0.05em; color: var(--color-dark); }
+        .recent .deal-side { margin-top: 4px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gray); }
+        @media (max-width: 760px) { .recent .recent-row { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; } }
+
         @media (prefers-reduced-motion: no-preference) {
             @supports (animation-timeline: view()) {
-                .stats, .representation {
+                .stats, .representation, .recent {
                     animation: lux-reveal linear both;
                     animation-timeline: view();
                     animation-range: entry 0% entry 42%;
@@ -690,6 +705,17 @@
             <div class="stat"><div class="num"><span data-stat="buyer_side">91</span> of <span data-stat="transactions">104</span></div><div class="cap">on the buyer side</div></div>
             <div class="stat"><div class="num">5.0&#9733;</div><div class="cap">average across Zillow reviews</div></div>
         </div>
+    </div>
+</section>
+
+<section class="recent">
+    <div class="eyebrow">Recently Represented</div>
+    <div class="recent-sub">A sample of recent multi-million-dollar closings, each representing the buyer.</div>
+    <div class="recent-row">
+        <div class="deal"><div class="deal-price">$3.3M</div><div class="deal-place">Sunnyvale, Silicon Valley</div><div class="deal-side">Buyer represented</div></div>
+        <div class="deal"><div class="deal-price">$2.6M</div><div class="deal-place">Walnut Creek</div><div class="deal-side">Buyer represented</div></div>
+        <div class="deal"><div class="deal-price">$2.4M</div><div class="deal-place">Campbell</div><div class="deal-side">Buyer represented</div></div>
+        <div class="deal"><div class="deal-price">$2.25M</div><div class="deal-place">San Jose</div><div class="deal-side">Buyer represented</div></div>
     </div>
 </section>
 

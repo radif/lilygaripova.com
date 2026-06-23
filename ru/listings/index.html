@@ -261,6 +261,9 @@
             transition: background-color 0.3s ease;
         }
         .property .property-cta:hover { background-color: var(--color-accent); color: var(--color-white); }
+        .property .property-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px; }
+        .property .property-share { align-self: center; margin-top: 14px; font-family: var(--font-body); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gray); background: none; border: none; cursor: pointer; transition: color 0.2s ease; }
+        .property .property-share:hover { color: var(--color-accent); }
         @media (max-width: 760px) {
             .properties { grid-template-columns: 1fr; gap: 24px; padding-bottom: 64px; }
             .property-media { height: 170px; }
@@ -409,12 +412,14 @@
             <span class="region-faint">Silicon Valley</span>
         </div>
         <div class="property-body">
-            <h2 class="property-place">Sunnyvale, Silicon Valley</h2>
+            <div class="property-eyebrow">округ Santa Clara</div>
+            <h2 class="property-place">Sunnyvale</h2>
             <div class="property-addr">Адрес по запросу</div>
             <div class="property-price">Цена по запросу</div>
             <div class="property-specs">3 спальни · 3 санузла · ~1 552 кв. футов · отдельный дом (формат single-family) · 1976 год постройки</div>
             <p class="property-note">Скоро выходит на открытый рынок. Свяжитесь с Лилией, чтобы узнать детали заранее и посмотреть объект до выхода листинга.</p>
             <a class="property-cta" href="tel:+14159103958">Запросить детали</a>
+            <button class="property-share" type="button" data-share="Скоро в продаже: Sunnyvale, Silicon Valley, с Лилией Гариповой">Поделиться</button>
         </div>
     </article>
     <article class="property">
@@ -423,12 +428,14 @@
             <span class="region-faint">Marin</span>
         </div>
         <div class="property-body">
-            <h2 class="property-place">Bel Aire, Tiburon (Marin)</h2>
+            <div class="property-eyebrow">округ Marin</div>
+            <h2 class="property-place">Bel Aire, Tiburon</h2>
             <div class="property-addr">Адрес сообщается квалифицированным покупателям</div>
             <div class="property-price">Цена по запросу</div>
             <div class="property-specs">Объект верхнего сегмента · показ по записи</div>
             <p class="property-note">Закрытый эксклюзив: маркетинг ведётся конфиденциально в кругу состоятельных покупателей, объект не выходит на открытый рынок. Свяжитесь с Лилией для деталей и записи на закрытый показ.</p>
             <a class="property-cta" href="tel:+14159103958">Запросить закрытый показ</a>
+            <button class="property-share" type="button" data-share="Закрытый эксклюзив: Bel Aire, Tiburon (Marin), с Лилией Гариповой">Поделиться</button>
         </div>
     </article>
 </section>
@@ -488,6 +495,13 @@
   }
   document.querySelectorAll('.dropdown-toggle').forEach(function(d){
     d.addEventListener('click',function(e){e.preventDefault();});
+  });
+  document.querySelectorAll('.property-share').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.getAttribute('data-share')||document.title, url=location.href;
+      if(navigator.share){navigator.share({title:'Лилия Гарипова',text:txt,url:url}).catch(function(){});}
+      else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt+' '+url);var o=b.textContent;b.textContent='Ссылка скопирована';setTimeout(function(){b.textContent=o;},1800);}
+    });
   });
 })();
 </script>

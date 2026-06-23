@@ -522,9 +522,18 @@
         .btn { display: inline-block; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-dark); padding: 14px 30px; border: 1px solid var(--color-accent); transition: background-color 0.3s ease, color 0.3s ease; }
         .btn:hover { background-color: var(--color-accent); color: var(--color-white); }
         @media (max-width: 700px) { .representation .rep-row { grid-template-columns: 1fr; gap: 44px; } }
+        .recent { max-width: 980px; margin: 0 auto; padding: 8px 24px 72px; text-align: center; }
+        .recent .eyebrow { font-family: var(--font-body); font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px; }
+        .recent .recent-sub { font-size: 13px; letter-spacing: 0.02em; color: var(--color-gray); margin-bottom: 40px; }
+        .recent .recent-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
+        .recent .deal-price { font-family: var(--font-heading); font-size: clamp(26px, 3vw, 34px); color: var(--color-dark); line-height: 1; }
+        .recent .deal-place { margin-top: 12px; font-size: 13px; letter-spacing: 0.04em; color: var(--color-dark); }
+        .recent .deal-side { margin-top: 4px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gray); }
+        @media (max-width: 760px) { .recent .recent-row { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; } }
+
         @media (prefers-reduced-motion: no-preference) {
             @supports (animation-timeline: view()) {
-                .stats, .representation {
+                .stats, .representation, .recent {
                     animation: lux-reveal linear both;
                     animation-timeline: view();
                     animation-range: entry 0% entry 42%;
@@ -660,6 +669,17 @@
             <div class="stat"><div class="num"><span data-stat="buyer_side">91</span> из <span data-stat="transactions">104</span></div><div class="cap">на стороне покупателя</div></div>
             <div class="stat"><div class="num">5,0&#9733;</div><div class="cap">рейтинг по отзывам Zillow</div></div>
         </div>
+    </div>
+</section>
+
+<section class="recent">
+    <div class="eyebrow">Недавние сделки</div>
+    <div class="recent-sub">Несколько недавних многомиллионных сделок, в каждой Лилия представляла покупателя.</div>
+    <div class="recent-row">
+        <div class="deal"><div class="deal-price">$3,3M</div><div class="deal-place">Sunnyvale, Silicon Valley</div><div class="deal-side">Сторона покупателя</div></div>
+        <div class="deal"><div class="deal-price">$2,6M</div><div class="deal-place">Walnut Creek</div><div class="deal-side">Сторона покупателя</div></div>
+        <div class="deal"><div class="deal-price">$2,4M</div><div class="deal-place">Campbell</div><div class="deal-side">Сторона покупателя</div></div>
+        <div class="deal"><div class="deal-price">$2,25M</div><div class="deal-place">San Jose</div><div class="deal-side">Сторона покупателя</div></div>
     </div>
 </section>
 
