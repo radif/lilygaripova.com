@@ -246,7 +246,7 @@
         body {
             font-family: var(--font-body);
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.65;
             color: var(--color-dark);
             background-color: var(--color-cream);
         }
@@ -264,7 +264,7 @@
         .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: var(--color-dark); padding: 14px 0; }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { display: flex; align-items: center; }
-        .nav-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); }
+        .nav-logo img { height: 50px; width: auto; filter: brightness(0) invert(1); transform: scale(2); transform-origin: left center; }
         .nav-menu { display: flex; gap: 32px; list-style: none; align-items: center; }
         .nav-mobile { display: none; }
         .nav-menu a { font-family: var(--font-heading); font-size: 13px; letter-spacing: 0.1em; color: var(--color-white); position: relative; transition: color 0.3s ease; }
@@ -307,7 +307,7 @@
             margin-bottom: 34px;
         }
         .hero h1 {
-            font-size: 52px;
+            font-size: clamp(32px, 5vw, 56px);
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: var(--color-dark);
@@ -330,7 +330,6 @@
         }
         @media (max-width: 700px) {
             .hero { padding: 80px 22px 60px; }
-            .hero h1 { font-size: 33px; }
             .hero .tagline { font-size: 17px; }
         }
 
@@ -511,6 +510,32 @@
             color: var(--color-gray);
             font-size: 12px;
             margin-top: 12px;
+        }
+        /* --- Quiet-luxury refinements (2026-06-22): pillar hairlines + scroll-reveal --- */
+        @media (min-width: 761px) {
+            .pillars .pillar + .pillar { position: relative; }
+            .pillars .pillar + .pillar::before {
+                content: "";
+                position: absolute;
+                left: -28px;
+                top: 4px;
+                bottom: 4px;
+                width: 1px;
+                background-color: rgba(124, 122, 97, 0.2);
+            }
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            @supports (animation-timeline: view()) {
+                .pillars, .listings, .invite, .trust-strip {
+                    animation: lux-reveal linear both;
+                    animation-timeline: view();
+                    animation-range: entry 0% entry 42%;
+                }
+                @keyframes lux-reveal {
+                    from { opacity: 0; transform: translateY(26px); }
+                    to { opacity: 1; transform: none; }
+                }
+            }
         }
     </style>
 </head>
