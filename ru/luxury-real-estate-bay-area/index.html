@@ -505,6 +505,32 @@
                 }
             }
         }
+        /* Stats strip + Representation cards (2026-06-22) */
+        .stats { padding: 8px 24px 64px; }
+        .stats-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+        .stats .eyebrow { font-family: var(--font-body); font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 40px; }
+        .stats .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+        .stats .stat .num { font-family: var(--font-heading); font-size: clamp(30px, 3.4vw, 40px); letter-spacing: 0.02em; color: var(--color-dark); line-height: 1; }
+        .stats .stat .cap { margin-top: 12px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-gray); }
+        @media (max-width: 760px) { .stats .stat-row { grid-template-columns: repeat(2, 1fr); gap: 38px 24px; } }
+
+        .representation { max-width: 980px; margin: 0 auto; padding: 8px 24px 88px; text-align: center; }
+        .representation .eyebrow { font-family: var(--font-body); font-size: 12px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 40px; }
+        .representation .rep-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; text-align: left; }
+        .representation .rep-card h2 { font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-dark); margin-bottom: 16px; }
+        .representation .rep-card p { font-size: 15px; line-height: 1.7; color: var(--color-gray); margin-bottom: 24px; }
+        .btn { display: inline-block; font-family: var(--font-heading); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-dark); padding: 14px 30px; border: 1px solid var(--color-accent); transition: background-color 0.3s ease, color 0.3s ease; }
+        .btn:hover { background-color: var(--color-accent); color: var(--color-white); }
+        @media (max-width: 700px) { .representation .rep-row { grid-template-columns: 1fr; gap: 44px; } }
+        @media (prefers-reduced-motion: no-preference) {
+            @supports (animation-timeline: view()) {
+                .stats, .representation {
+                    animation: lux-reveal linear both;
+                    animation-timeline: view();
+                    animation-range: entry 0% entry 42%;
+                }
+            }
+        }
     </style>
 </head>
 <body>
@@ -603,7 +629,37 @@
     </div>
     <div class="pillar">
         <h2>Проверяемый результат</h2>
-        <p>104 задокументированные сделки и более 115 млн долларов объема, большинство на стороне покупателя.</p>
+        <p>Сделки на престижных рынках Bay Area с 2016 года, большинство на стороне покупателя.</p>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stats-inner">
+        <div class="eyebrow">Портфолио в цифрах</div>
+        <div class="stat-row">
+            <div class="stat"><div class="num"><span data-stat="transactions">104</span></div><div class="cap">закрытых сделок</div></div>
+            <div class="stat"><div class="num"><span data-stat="volume">$115M+</span></div><div class="cap">совокупный объём</div></div>
+            <div class="stat"><div class="num"><span data-stat="buyer_side">91</span> из <span data-stat="transactions">104</span></div><div class="cap">на стороне покупателя</div></div>
+            <div class="stat"><div class="num">5,0&#9733;</div><div class="cap">рейтинг по отзывам Zillow</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="representation">
+    <div class="rep-inner">
+        <div class="eyebrow">Покупателям и продавцам</div>
+        <div class="rep-row">
+            <div class="rep-card">
+                <h2>Представление покупателя</h2>
+                <p>Лилия защищает интересы покупателя и читает построчно весь объём документов: раскрытия по объекту (disclosures) и результаты осмотра дома (home inspection). Если сделка невыгодна, она прямо советует отказаться. Работает на русском и английском.</p>
+                <a class="btn" href="#consult">Личный разговор</a>
+            </div>
+            <div class="rep-card">
+                <h2>Продажа объекта</h2>
+                <p>Лилия ведёт продажу конфиденциально, а когда это уместно, предлагает закрытый формат без публичного объявления (off-market). Цену определяет по недавним похожим сделкам (comparable sales), а не чтобы продать побыстрее.</p>
+                <a class="btn" href="#consult">Обсудить продажу</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -623,7 +679,7 @@
     <p class="listings-note">Лилия сейчас ведёт off-market объект в Tiburon, закрытый показ по записи. <a href="tel:+14159103958">Свяжитесь с Лилией</a> по любым вопросам или посмотрите <a href="/ru/listings/">текущие листинги</a> и <a href="/ru/off-market/">off-market предложения</a>.</p>
 </section>
 
-<section class="invite">
+<section class="invite" id="consult">
     <div class="eyebrow">Личная консультация</div>
     <h2>Конфиденциальный разговор, без обязательств</h2>
     <div class="contact-line">
