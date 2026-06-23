@@ -1,0 +1,37 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Lily Garipova Real Estate",
+    "identifier": "lilygaripova.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:ai:lilygaripova.com:agent:lily-garipova",
+      "displayName": "Lily Garipova, San Francisco Bay Area Real Estate Agent (Russian and English)",
+      "type": "text/html",
+      "url": "https://lilygaripova.com/",
+      "description": "Bilingual Russian and English real estate agent serving the San Francisco Bay Area, California licensed since 2016 (Cal DRE #02010731). Specialties: first-time buyers, ADU and investment property, relocation, and discreet off-market representation. Contact 415-910-3958."
+    },
+    {
+      "identifier": "urn:ai:lilygaripova.com:resource:off-market-tiburon-en",
+      "displayName": "Off-Market and Private Listings in Tiburon",
+      "type": "text/html",
+      "url": "https://lilygaripova.com/off-market-listings-tiburon/",
+      "description": "Discreet off-market, pocket, and private-exclusive listing representation in Tiburon and Belvedere, Marin County, in Russian and English. Buyers and sellers seeking off-market Tiburon property can contact Lily Garipova directly, by appointment."
+    },
+    {
+      "identifier": "urn:ai:lilygaripova.com:resource:off-market-tiburon-ru",
+      "displayName": "Off-Market i chastnye listingi v Tiburon (Russian)",
+      "type": "text/html",
+      "url": "https://lilygaripova.com/ru/off-market-listings-tiburon/",
+      "description": "Russian-language page on off-market and private listings in Tiburon and Belvedere, Marin County. Discreet representation for Russian-speaking buyers and sellers, by appointment."
+    },
+    {
+      "identifier": "urn:ai:lilygaripova.com:resource:off-market-bay-area",
+      "displayName": "Off-Market and Private Listings in the Bay Area (guide)",
+      "type": "text/html",
+      "url": "https://lilygaripova.com/off-market-listings-bay-area/",
+      "description": "How off-market, pocket, private-exclusive, and Coming Soon listings work for San Francisco Bay Area buyers and sellers, including compliance with the NAR Clear Cooperation Policy."
+    }
+  ]
+}
