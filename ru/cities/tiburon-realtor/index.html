@@ -53,6 +53,10 @@
         },
         {
             "@type": "Place",
+            "name": "Bel Aire"
+        },
+        {
+            "@type": "Place",
             "name": "North Bay"
         }
     ],
@@ -162,6 +166,81 @@
             }
         }
     ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Снимок рынка недвижимости Tiburon (ZIP 94920)",
+    "description": "Снимок рынка жилой недвижимости по ZIP 94920 (Tiburon и Belvedere): медианная цена продажи, медианное время на рынке, доля домов, проданных выше запрашиваемой цены, отношение цены продажи к запрашиваемой и индекс конкуренции Redfin Compete Score за три месяца по май 2026 года.",
+    "spatialCoverage": {
+        "@type": "Place",
+        "name": "Tiburon, California (ZIP 94920)",
+        "geo": {
+            "@type": "GeoShape",
+            "postalCode": "94920"
+        }
+    },
+    "temporalCoverage": "2026-03/2026-05",
+    "dateModified": "2026-06",
+    "creditText": "Redfin",
+    "isBasedOn": {
+        "@type": "WebSite",
+        "name": "Redfin",
+        "url": "https://www.redfin.com/"
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Медианная цена продажи",
+            "value": "3423983",
+            "unitText": "USD"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Медианное время на рынке",
+            "value": "24",
+            "unitText": "days"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Доля домов, проданных выше запрашиваемой цены",
+            "value": "53.4",
+            "unitText": "PERCENT",
+            "description": "Рост на 12,9 пункта за год."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Отношение цены продажи к запрашиваемой",
+            "value": "101.7",
+            "unitText": "PERCENT"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Redfin Compete Score",
+            "value": "89",
+            "maxValue": "100",
+            "description": "Очень конкурентный рынок."
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "additionalType": "https://schema.org/Neighborhood",
+    "name": "Bel Aire",
+    "description": "Холмистый neighbourhood на полуострове Tiburon, позади торгового центра Cove Shopping Center, с видами на залив, Mount Tamalpais и Sausalito.",
+    "containedInPlace": {
+        "@type": "City",
+        "name": "Tiburon",
+        "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Marin County, California"
+        }
+    }
 }
     </script>
 <style>

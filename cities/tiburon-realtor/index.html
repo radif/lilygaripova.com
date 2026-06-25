@@ -52,6 +52,10 @@
         },
         {
             "@type": "Place",
+            "name": "Bel Aire"
+        },
+        {
+            "@type": "Place",
             "name": "North Bay"
         }
     ],
@@ -161,6 +165,81 @@
             }
         }
     ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Tiburon (ZIP 94920) residential market snapshot",
+    "description": "Residential real estate market snapshot for ZIP 94920 (Tiburon and Belvedere), covering median sale price, median days on market, percent of homes sold above list price, sale-to-list ratio, and the Redfin Compete Score, for the three months ending May 2026.",
+    "spatialCoverage": {
+        "@type": "Place",
+        "name": "Tiburon, California (ZIP 94920)",
+        "geo": {
+            "@type": "GeoShape",
+            "postalCode": "94920"
+        }
+    },
+    "temporalCoverage": "2026-03/2026-05",
+    "dateModified": "2026-06",
+    "creditText": "Redfin",
+    "isBasedOn": {
+        "@type": "WebSite",
+        "name": "Redfin",
+        "url": "https://www.redfin.com/"
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Median sale price",
+            "value": "3423983",
+            "unitText": "USD"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Median days on market",
+            "value": "24",
+            "unitText": "days"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Homes sold above list price",
+            "value": "53.4",
+            "unitText": "PERCENT",
+            "description": "Up 12.9 points year over year."
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Sale-to-list ratio",
+            "value": "101.7",
+            "unitText": "PERCENT"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Redfin Compete Score",
+            "value": "89",
+            "maxValue": "100",
+            "description": "Very competitive."
+        }
+    ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "additionalType": "https://schema.org/Neighborhood",
+    "name": "Bel Aire",
+    "description": "A hillside neighbourhood on the Tiburon peninsula, behind the Cove Shopping Center, with views of the Bay, Mount Tamalpais, and Sausalito.",
+    "containedInPlace": {
+        "@type": "City",
+        "name": "Tiburon",
+        "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Marin County, California"
+        }
+    }
 }
     </script>
 <style>
