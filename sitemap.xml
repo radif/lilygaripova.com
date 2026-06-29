@@ -1406,4 +1406,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/knowledge/pre-listing-inspections-bay-area/"/>
   </url>
 
+  <url>
+    <loc>https://lilygaripova.com/knowledge/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/knowledge/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/knowledge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/knowledge/"/>
+  </url>
+
+  <url>
+    <loc>https://lilygaripova.com/ru/knowledge/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lilygaripova.com/knowledge/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://lilygaripova.com/ru/knowledge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lilygaripova.com/knowledge/"/>
+  </url>
+
 </urlset>
